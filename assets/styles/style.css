@@ -1,7 +1,98 @@
+/* ================ Init ================*/
 * {
   box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: "Motiva Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* ================ Common ================ */
+:root {
+  --white-text: #fff;
+  --category-cover: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+  width: 940px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 1.4rem;
+  color: var(--white-text);
+}
+
+/* ================ Main ================ */
+.main {
+  background-color: #213d58;
+}
+
+/* ================ Feature ================ */
+.feature {
+  padding: 20px 0;
+}
+
+.feature__main-content {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #0a141d;
+}
+
+.feature__game-thumb,
+.feature__screenshots img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.feature__info {
+  padding: 25px 10px 15px;
+}
+
+.feature__app-name {
+  font-size: 2.4rem;
+  color: var(--white-text);
+}
+
+.feature__screenshots {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.feature__game-tags {
+  margin-top: 10px;
+}
+
+.feature__game-tags span {
+  display: inline-block;
+  padding: 3px 5px;
+  border-radius: 2px;
+  font-size: 1rem;
+  color: #b6b9bc;
+  background-color: var(--category-cover);
+}
+
+.feature__more-info {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feautre__price {
+  font-size: 1rem;
+  color: var(--white-text);
+}
+
+.fa-windows {
+  color: #b6b9bc;
 }

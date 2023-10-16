@@ -3,13 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Welcome to Steam</title>
 
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./assets/styles/reset.css" />
 
     <!-- Style -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <!-- Embed font -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <main class="main">
+      <div class="container">
+        <!-- Feature -->
+        <section class="feature">
+          <!-- Heading -->
+          <h2 class="heading">FEATURED & RECOMMENDED</h2>
+
+          <!-- Main content -->
+          <div class="feature__main-content">
+            <!-- Main image -->
+            <img
+              src="./assets/images/game-thumb.jpg"
+              alt="naruto-storm-thumb"
+              class="feature__game-thumb"
+            />
+
+            <!-- Info -->
+            <article class="feature__info">
+              <!-- Game title -->
+              <h3 class="feature__app-name">Naruto Storm</h3>
+
+              <!-- Screenshots group -->
+              <div class="feature__screenshots">
+                <img src="./assets/images/screenshot-01.jpg" alt="" />
+                <img src="./assets/images/screenshot-02.jpg" alt="" />
+                <img src="./assets/images/screenshot-03.jpg" alt="" />
+                <img src="./assets/images/screenshot-04.jpg" alt="" />
+              </div>
+
+              <!-- Category tags -->
+              <div class="feature__game-tags">
+                <span>Action</span>
+                <span>Anime</span>
+              </div>
+
+              <!-- Price and platform -->
+              <div class="feature__more-info">
+                <span class="feautre__price">500.000đ</span>
+                <div class="feature__platform">
+                  <i class="fa fa-windows"></i>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
