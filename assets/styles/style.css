@@ -29,6 +29,35 @@ body {
   color: var(--white-text);
 }
 
+/* Slide control group */
+.slide-control-group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.slide-control-item {
+  width: 16px;
+  height: 9px;
+  background-color: hsla(202, 60%, 100%, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.slide-control-item:hover {
+  background-color: hsla(202, 60%, 100%, 0.35);
+}
+
+.slide-control-item.active {
+  background-color: hsla(202, 60%, 100%, 0.5);
+}
+
+.slide-control-item.active:hover {
+  background-color: hsla(202, 60%, 100%, 0.4);
+}
+
 /* ================ Main ================ */
 .main {
   background-color: #213d58;
@@ -86,12 +115,17 @@ body {
   margin-top: 13px;
 }
 
+.feature__game-tags span,
+.feature__price {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--white-text);
+}
+
 .feature__game-tags span {
   display: inline-block;
-  padding: 3px 5px;
+  padding: 4px 5px;
   border-radius: 2px;
-  font-size: 1rem;
-  color: #b6b9bc;
   background-color: var(--category-cover);
 }
 
@@ -102,11 +136,7 @@ body {
   align-items: center;
 }
 
-.feature__price {
-  font-size: 1rem;
-  color: var(--white-text);
-}
-
+/* Control group */
 .fa-windows {
   color: #b6b9bc;
 }
