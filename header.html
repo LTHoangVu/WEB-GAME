@@ -10,11 +10,6 @@
 
 <body>
     <header>
-        <video id="video-background" autoplay muted loop>
-            <source
-                src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/40c14a0bef16a5f75d7e1930/webm_page_bg_english.webm?t=1697739595"
-                type="video/mp4">
-        </video>
         <div id="global-header">
             <div class="global-header-content">
                 <nav class="global-nav">
@@ -70,75 +65,79 @@
                 </div>
             </div>
         </div>
-        <div class="home-page-content">
-            <div class="home-page-nav-container">
-                <nav class="home-page-nav">
-                    <ul>
-                        <li id="li-your-store">
-                            <a class="home-page-nav-content" href="#">
-                                Your Store
-                            </a>
-                            <div class="home-page-submenu-yourstore">
-                                <a class="home-page-submenu-item" href="">Home</a>
-                                <a class="home-page-submenu-item" href="">Community Recommenations</a>
-                                <a class="home-page-submenu-item" href="">Recently Viewed</a>
-                                <a class="home-page-submenu-item" href="">Steam Curators</a>
-                            </div>
-                        </li>
-                        <li id="li-new">
-                            <a class="home-page-nav-content" href="#">
-                                New & Noteworthy
-                            </a>
-                            <div class="home-page-submenu-New&Noteworthy">
-                                <a class="home-page-submenu-item" href="">POPULAR</a>
-                                <a class="home-page-submenu-item" href="">NEWS & UPDATES</a>
-                                <a class="home-page-submenu-item" href="">PROMOS & EVENT</a>
-                            </div>
-                        </li>
-                        <li id="li-categories">
-                            <a class="home-page-nav-content" href="#">
-                                Categories
-                            </a>
-                            <div class="home-page-submenu-categories">
-                                <a class="home-page-submenu-item" href="">Action</a>
-                                <a class="home-page-submenu-item" href="">Adventure</a>
-                                <a class="home-page-submenu-item" href="">Role-Playing</a>
-                                <a class="home-page-submenu-item" href="">Simulation</a>
-                                <a class="home-page-submenu-item" href="">Strategy</a>
-                                <a class="home-page-submenu-item" href="">Sports & Racing</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a class="home-page-nav-content" href="#">
-                                Points Shop
-                            </a>
-                        </li>
-                        <li>
-                            <a class="home-page-nav-content" href="#">
-                                News
-                            </a>
-                        </li>
-                        <li id="li-labs">
-                            <a class="home-page-nav-content" href="#">
-                                Labs
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <form id="search-form" name="search-form" action="#">
-                    <div>
-                        <input id="store-search-box" name="search-box" type="text" placeholder="  search"
-                            maxlength="64">
-                        <a id="store-search-link" href="">
-                            <img id="search-icon" src="assets/images/search.png" alt="Search-Icon">
-                        </a>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-        </div>
     </header>
+    <div class="home-page-content">
+        <div class="home-page-nav-container">
+            <nav class="home-page-nav">
+                <ul>
+                    <li id="li-your-store">
+                        <a class="home-page-nav-content" href="#">
+                            Your Store
+                        </a>
+                        <div class="home-page-submenu-yourstore">
+                            <a class="home-page-submenu-item" href="">Home</a>
+                            <a class="home-page-submenu-item" href="">Community Recommenations</a>
+                            <a class="home-page-submenu-item" href="">Recently Viewed</a>
+                            <a class="home-page-submenu-item" href="">Steam Curators</a>
+                        </div>
+                    </li>
+                    <li id="li-new">
+                        <a class="home-page-nav-content" href="#">
+                            New & Noteworthy
+                        </a>
+                        <div class="home-page-submenu-New&Noteworthy">
+                            <a class="home-page-submenu-item" href="">POPULAR</a>
+                            <a class="home-page-submenu-item" href="">NEWS & UPDATES</a>
+                            <a class="home-page-submenu-item" href="">PROMOS & EVENT</a>
+                        </div>
+                    </li>
+                    <li id="li-categories">
+                        <a class="home-page-nav-content" href="#">
+                            Categories
+                        </a>
+                        <div class="home-page-submenu-categories">
+                            <a class="home-page-submenu-item" href="">Action</a>
+                            <a class="home-page-submenu-item" href="">Adventure</a>
+                            <a class="home-page-submenu-item" href="">Role-Playing</a>
+                            <a class="home-page-submenu-item" href="">Simulation</a>
+                            <a class="home-page-submenu-item" href="">Strategy</a>
+                            <a class="home-page-submenu-item" href="">Sports & Racing</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="home-page-nav-content" href="#">
+                            Points Shop
+                        </a>
+                    </li>
+                    <li>
+                        <a class="home-page-nav-content" href="#">
+                            News
+                        </a>
+                    </li>
+                    <li id="li-labs">
+                        <a class="home-page-nav-content" href="#">
+                            Labs
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <form id="search-form" name="search-form" action="#">
+                <div>
+                    <input id="store-search-box" name="search-box" type="text" placeholder="  search" maxlength="64">
+                    <a id="store-search-link" href="">
+                        <img id="search-icon" src="assets/images/search.png" alt="Search-Icon">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="video-background-container">
+        <video id="video-background" autoplay muted loop>
+            <source
+                src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/40c14a0bef16a5f75d7e1930/webm_page_bg_english.webm?t=1697739595"
+                type="video/mp4">
+        </video>
+    </div>
 </body>
 
 </html>
