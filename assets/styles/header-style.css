@@ -1,0 +1,311 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+
+header
+{
+    align-items: center;
+    height: 100vh;
+    flex: 1; /* stretch children to fill  */
+    position: relative;
+} 
+
+#video-background {
+    position: absolute; /* Fixed positioning to cover the entire viewport */
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the video behind other content */
+    object-fit:cover;
+}
+
+#global-header 
+{
+    display: flex;
+    padding: 0px 16px;
+    height: 104px;
+    width: auto;
+    background-color: rgb(23,29,37);
+}
+.global-header-content
+{
+    margin-right: auto;
+    margin-left: auto;
+    /* margin: 0px 9.65vw 0 9vw; */
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+/* ----------------------------------LOGO------------------------------ */
+.logo
+{
+    padding-top: 25px;
+    padding-right: 50px;
+    width: 176px;
+    height: 84px;
+    overflow: hidden;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    height: auto;
+}
+/* ----------------------------------GLOBAL NAV------------------------------ */
+.global-nav>*
+{
+    height: 104px;
+    padding-right: 200px;
+}
+.global-nav ul
+{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+}
+
+
+.global-nav-content
+{
+    color: white;
+    font-family: "Motiva Sans",Helvetica, sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+
+.global-nav ul li
+{
+    padding: 42px 7px 7px 7px;
+    height: fit-content;
+    position: relative;
+}
+
+.global-nav ul li>a:hover
+{
+    color: rgb(26,159,255); /*set global nav color and add underline when hover */
+    text-decoration: underline solid 3px; 
+}
+
+.global-nav ul li>a:nth-of-type(1):hover + div a
+{
+    display:flex; /*when hover over nav bar section change dislay property of <a>s inside nearest sibling div to flex*/
+
+}
+
+
+/* hide popup by default */
+.global-nav ul li div{ 
+    display: none; 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width:max-content;
+    background-color: rgb(61, 68, 80);
+} 
+
+
+.global-nav ul li div:hover a
+{
+    display: flex;
+}
+
+.global-nav ul li div a{
+    display: none; 
+    color: rgb(201, 198, 198);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    font-weight:50;
+    font-size: smaller;
+    padding: 10px 15px;
+} 
+
+.global-nav ul li div a:hover
+{
+    background-color: rgb(201, 198, 198);
+    color: rgb(61, 68, 80);
+}
+
+/* ---------------------------------------GLOBAL_ACTION-------------------------------- */
+
+
+.global-action-container
+{
+    display:flex;
+    flex-direction: row;
+    width: fit-content;
+    margin-top: 5px;
+}
+
+.global-action-container>a
+{
+    color: rgb(146, 146, 146);
+    font-family: "Arial",Helvetica, sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    width: max-content;
+    font-size: 12px;
+    padding: 7px 8px;
+}
+
+.global-action-container>a:hover
+{
+    color: white;
+}
+
+#global-action-install-steam
+{
+    color: white;
+    background-color: olivedrab;
+    padding: 7px 12px 7px 12px;
+    border-radius: 2px;
+}
+
+#global-action-install-steam:hover
+{
+    background-color: rgb(122, 163, 40);
+}
+
+
+#global-action-login
+{
+    border-right: 2px solid white;
+}
+
+
+
+.language-popup
+{
+    display: none;
+}
+
+/* _________________________________________________________Homepage Nav & SeachBar_______________________________________________________________ */
+
+.home-page-content{
+    margin-top: 2%;
+}
+
+
+.home-page-nav-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home-page-nav
+{
+    background: #396291;
+    background: linear-gradient(90deg, rgba(57,98,145,0.95) 0%, rgba(57,98,145,0.95) 50%, rgba(15,33,110,0.95) 100%);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 50px;
+    border: none;
+}
+
+.home-page-nav ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding-left: 0px;
+}
+
+/* hide popup by default */
+.home-page-nav ul li div
+{
+    display: none;
+}
+
+
+
+.home-page-nav-content
+{
+    color: white;
+    font-family: "Motiva Sans",Helvetica, sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 8px 15px;
+}
+
+.home-page-nav-content:hover
+{
+    background: rgb(46,125,192);
+    background: linear-gradient(90deg, rgba(46,125,192,0.6) 0%, rgba(46,125,192,0.6) 50%, rgba(31,76,143,0.6) 100%);
+}
+
+#li-labs
+{
+    padding-right: 200px;
+}
+
+/*--------------search box-----------------*/
+
+#search-form div
+{
+    height: 34px;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+    background-color: #0F216E;
+}
+
+#store-search-box
+{
+    border: none;
+    height: 26px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: rgb(49,98,130,0.9);
+    border: #0F216E 1px solid;
+    box-sizing:content-box;
+}
+
+#store-search-box:hover
+{
+    border: #36a4ee 1px solid;
+}
+
+#store-search-box::placeholder
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-style: italic;
+    color:rgb(9, 24, 34);
+}
+
+#search-icon    
+{
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 3px;
+    left: 177px;
+
+}
+
+#search-icon:hover  #store-search-box
+{
+    border: #36a4ee 1px solid;
+}
+/* -------------------FONT-------------------- */
+@font-face {
+    font-family: 'Motiva Sans';
+    src: url("C:\Users\Admin\source\repos\Internet And Web Technology\Final-Project\IE104.O11.CNCL-Group-06\assets\fonts\MotivaSans\MotivaSansMedium.woff.ttf")
+  }
