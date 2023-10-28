@@ -1,0 +1,94 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23, 26, 33);
+    padding: 30px 0px 40px 0px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    border-top: 1px solid rgb(90, 89, 89);
+    border-bottom: 1px solid rgb(90, 89, 89);
+}
+
+
+.valve-logo{
+    width: 10%;
+}
+
+.valve-logo img{
+    width: 100%;
+}
+
+.steam-logo{
+    width: 10%;
+    height: fit-content;
+    object-fit:contain;
+}
+
+
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding-left: 15px;
+    width: 80%;
+}
+
+.footer-text>div{
+    color: #8F98A0;
+    padding-bottom: 3px;
+}
+
+.footer-text div a{
+    text-decoration: none;
+    color: rgb(207, 207, 207);
+}
+
+.footer-text div a:hover{
+    color: white;
+}
+
+.footer-text button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(103, 193, 245);
+    background-color: rgb(33, 44, 61);
+    border-style: none;
+    border-radius: 2px;
+    padding: 5px 15px;
+    margin: 15px auto 40px auto;
+    cursor: pointer;
+}
+
+.footer-text button:hover{
+    color:white;
+    background-color: rgb(100, 184, 233);
+}
+
+.valve-link{
+    font-family: 'Motiva Sans';
+    font-size: 13px;
+    margin-right: 20%;
+    padding-top: 20px;
+    color: rgb(207, 207, 207);
+}
+
+.valve-link a{
+    text-decoration: none;
+    color: rgb(207, 207, 207);
+}
+
+.valve-link a:hover{
+    color: white;
+}
+
+@font-face {
+    font-family: 'Motiva Sans';
+    src: url("../fonts/MotivaSans/MotivaSans-Light.woff");
+}
