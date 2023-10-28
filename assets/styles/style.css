@@ -4,6 +4,7 @@
   --main-background: #213d58;
   --category-cover: rgba(255, 255, 255, 0.2);
   --white-text: #fff;
+  --global-header-active: rgb(26, 159, 255);
 }
 
 * {
@@ -65,7 +66,7 @@ a {
   background-color: hsla(202, 60%, 100%, 0.4);
 }
 
-/* Control group */
+/* Control group homepage*/
 .fa-windows {
   color: #b6b9bc;
 }
@@ -115,18 +116,119 @@ body {
 }
 
 /* ================ Header ================ */
-.header {
-  background-color: var(--header-background);
-  text-align: center;
-  padding: 20px;
+
+/* ================ Global Header ================ */
+.global-header {
+  padding: 40px 0;
+  background-color: rgb(23, 29, 37);
 }
 
-.header__heading {
-  font-size: 30px;
-  color: var(--white-text);
+.global-header-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
 }
 
-/* ================ Aside Nav ================ */
+/* Logo */
+.global-header__logo {
+  width: 144px;
+}
+
+/* Global nav */
+.global-nav-list {
+  display: flex;
+  column-gap: 13px;
+}
+
+.global-nav-item {
+  position: relative;
+}
+
+.global-nav-item__header {
+  padding: 5px 0;
+  color: #dcdedf;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.global-nav-item:hover .global-nav-item__header {
+  color: var(--global-header-active);
+  text-decoration: underline solid 3px;
+}
+
+.global-nav-submenu {
+  min-width: 130px;
+  background-color: rgb(61, 68, 80);
+  position: absolute;
+  top: 21px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.1s ease;
+}
+
+.global-nav-item:hover .global-nav-submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.global-nav-submenu-item {
+  display: block;
+  color: rgb(201, 198, 198);
+  font-weight: normal;
+  font-size: 1.2rem;
+  padding: 6px 15px;
+}
+
+.global-nav-submenu-item:hover {
+  background-color: rgb(201, 198, 198);
+  color: rgb(61, 68, 80);
+}
+
+/* Action group */
+.global-action-container {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-top: 5px;
+}
+
+.global-action-container > a {
+  color: rgb(146, 146, 146);
+  font-family: "Arial", Helvetica, sans-serif;
+  text-transform: none;
+  text-decoration: none;
+  width: max-content;
+  font-size: 12px;
+  padding: 7px 8px;
+}
+
+.global-action-container > a:hover {
+  color: white;
+}
+
+#global-action-install-steam {
+  color: white;
+  background-color: olivedrab;
+  padding: 7px 12px 7px 12px;
+  border-radius: 2px;
+}
+
+#global-action-install-steam:hover {
+  background-color: rgb(122, 163, 40);
+}
+
+#global-action-login {
+  border-right: 2px solid white;
+}
+
+.language-popup {
+  display: none;
+}
+/* =================================================================== */
+
+/* ================ Aside Nav Homepage ================ */
 .aside {
   float: left;
   margin-top: 100px;
