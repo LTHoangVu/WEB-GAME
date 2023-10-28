@@ -272,7 +272,7 @@ body {
   color: white;
   font-weight: 500;
   font-size: 1.4rem;
-  padding: 10px 15px;
+  padding: 10px 15px 9px;
 }
 
 .nav-item__header:hover {
