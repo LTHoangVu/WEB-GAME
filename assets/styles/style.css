@@ -614,7 +614,7 @@ body {
 
 /* __________________________________FILTER GAME NAVVAR_________________________________ */
 .game-filter-tabs {
-  margin: 0px 30% 0px 0px;
+  margin: 0px 27% 0px 0px;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
@@ -629,7 +629,7 @@ body {
 }
 
 /* change tabs style when focus(may be replace bt javascript later on) */
-.game-filter-tabs li:focus {
+.game-filter-tabs .active {
   color: white;
   font-size: 15px;
   background-color: rgb(42, 71, 94);
