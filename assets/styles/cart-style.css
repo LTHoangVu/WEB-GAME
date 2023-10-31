@@ -9,7 +9,7 @@ body {
     background-color: #1b2838;
     color: #ffffff;
     font-family: Verdana, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -73,6 +73,7 @@ h2.page_header {
 
 .cart_status_message {
     color: #ffffff;
+    font-size: 12px;
     font-weight: bold;
     line-height: 30px;
     background-color: #758e9d;
