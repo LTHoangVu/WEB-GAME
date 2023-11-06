@@ -96,6 +96,7 @@ h2.page_heading {
 
 .checkout_content_box {
     margin: 12px auto;
+    max-width: 705px;
 }
 
 .cart_item_list {
