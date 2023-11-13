@@ -75,10 +75,4 @@ class Slide {
   }
 }
 
-const featureSlide = new Slide("feature", "grid", 9000);
-const specialSlide = new Slide("special", "grid", 5000);
-const categorySlide = new Slide("category", "grid");
-
-featureSlide.start();
-specialSlide.start();
-categorySlide.start();
+export { Slide };

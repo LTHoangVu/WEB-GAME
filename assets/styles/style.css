@@ -441,7 +441,13 @@ body {
   cursor: pointer;
 }
 
-.feature-item__game-thumb,
+.feature-item__game-thumb {
+  width: 616px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .feature-item__screenshots img {
   width: 100%;
   object-fit: cover;
