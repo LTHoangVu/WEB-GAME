@@ -1,123 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Steam</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Steam</title>
+    <!-- Add favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <!-- Add favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="./assets/favicon/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
 
-  <!-- Reset CSS -->
-  <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
 
-  <!-- Style -->
-  <link rel="stylesheet" href="./assets/styles/style.css" />
+    <!-- Embed font -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
 
-  <!-- Embed font -->
-  <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-  <!-- Font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-</head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Global header -->
+      <div class="global-header">
+        <div class="container">
+          <div class="global-header-wrap">
+            <!-- Global header logo -->
+            <a href="/">
+              <img
+                src="assets/images/logo.png"
+                alt="steam-logo"
+                class="global-header__logo"
+              />
+            </a>
 
-<body>
-  <!-- Header -->
-  <header class="header">
-    <!-- Global header -->
-    <div class="global-header">
-      <div class="container">
-        <div class="global-header-wrap">
-          <!-- Global header logo -->
-          <a href="/">
-            <img src="assets/images/logo.png" alt="steam-logo" class="global-header__logo" />
-          </a>
+            <!-- Global header nav -->
+            <nav class="global-nav">
+              <ul class="global-nav-list">
+                <!-- Store item -->
+                <li class="global-nav-item">
+                  <a class="global-nav-item__header" href="#">STORE</a>
+                  <ul class="global-nav-submenu">
+                    <li><a class="global-nav-submenu-item" href="">Home</a></li>
+                    <li>
+                      <a class="global-nav-submenu-item" href=""
+                        >Discovery Queue</a
+                      >
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Wishlist</a>
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Points Shop</a>
+                    </li>
+                    <li><a class="global-nav-submenu-item" href="">News</a></li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Stats</a>
+                    </li>
+                  </ul>
+                </li>
 
-          <!-- Global header nav -->
-          <nav class="global-nav">
-            <ul class="global-nav-list">
-              <!-- Store item -->
-              <li class="global-nav-item">
-                <a class="global-nav-item__header" href="#">STORE</a>
-                <ul class="global-nav-submenu">
-                  <li><a class="global-nav-submenu-item" href="">Home</a></li>
-                  <li>
-                    <a class="global-nav-submenu-item" href="">Discovery Queue</a>
-                  </li>
-                  <li>
-                    <a class="global-nav-submenu-item" href="">Wishlist</a>
-                  </li>
-                  <li>
-                    <a class="global-nav-submenu-item" href="">Points Shop</a>
-                  </li>
-                  <li><a class="global-nav-submenu-item" href="">News</a></li>
-                  <li>
-                    <a class="global-nav-submenu-item" href="">Stats</a>
-                  </li>
-                </ul>
-              </li>
+                <!-- Community item -->
+                <li class="global-nav-item">
+                  <a class="global-nav-item__header" href="#">COMMUNITY</a>
+                  <ul class="global-nav-submenu">
+                    <li><a class="global-nav-submenu-item" href="">Home</a></li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Discussion</a>
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Work Shop</a>
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Market</a>
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Broadcasts</a>
+                    </li>
+                  </ul>
+                </li>
 
-              <!-- Community item -->
-              <li class="global-nav-item">
-                <a class="global-nav-item__header" href="#">COMMUNITY</a>
-                <ul class="global-nav-submenu">
-                  <li><a class="global-nav-submenu-item" href="">Home</a></li>
-                  <li>
-                    <a class="global-nav-submenu-item" href="">Discussion</a>
-                  </li>
-                  <li>
-                    <a class="global-nav-submenu-item" href="">Work Shop</a>
-                  </li>
-                  <li>
-                    <a class="global-nav-submenu-item" href="">Market</a>
-                  </li>
-                  <li>
-                    <a class="global-nav-submenu-item" href="">Broadcasts</a>
-                  </li>
-                </ul>
-              </li>
+                <!-- About item -->
+                <li class="global-nav-item">
+                  <a class="global-nav-item__header" href="#">ABOUT</a>
+                </li>
 
-              <!-- About item -->
-              <li class="global-nav-item">
-                <a class="global-nav-item__header" href="#">ABOUT</a>
-              </li>
+                <!-- Support item -->
+                <li class="global-nav-item">
+                  <a class="global-nav-item__header" href="#">SUPPORT</a>
+                </li>
+              </ul>
+            </nav>
 
-              <!-- Support item -->
-              <li class="global-nav-item">
-                <a class="global-nav-item__header" href="#">SUPPORT</a>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Global header action  -->
-          <div class="global-header-action">
-            <div class="global-header-action-container">
-              <a class="global-header__install-btn global-header__btn" href="#!">
-                <i class="fa fa-download"></i> Install Steam
-              </a>
-              <a class="global-header__login-btn global-header__btn" href="#!">login</a>
-              <button class="global-header__language-btn global-header__btn">
-                language <i class="fa fa-caret-down"></i>
-              </button>
-            </div>
-            <!-- <div class="language-popup">
+            <!-- Global header action  -->
+            <div class="global-header-action">
+              <div class="global-header-action-container">
+                <a
+                  class="global-header__install-btn global-header__btn"
+                  href="#!"
+                >
+                  <i class="fa fa-download"></i> Install Steam
+                </a>
+                <a class="global-header__login-btn global-header__btn" href="#!"
+                  >login</a
+                >
+                <button class="global-header__language-btn global-header__btn">
+                  language <i class="fa fa-caret-down"></i>
+                </button>
+              </div>
+              <!-- <div class="language-popup">
                 <a class="language-popup-compoents" href=""
                   >简体中文 (Simplified Chinese)</a
                 >
@@ -131,155 +200,168 @@
                   >Tiếng Việt (Vietnamese)</a
                 >
               </div> -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Hero -->
-    <div class="hero">
-      <div class="container">
-        <div class="hero-nav-group">
-          <!-- Nav bar -->
-          <nav class="nav">
-            <ul class="nav-list">
-              <!-- Your store -->
-              <li class="nav-item">
-                <a class="nav-item__header" href="#!">Your Store</a>
-                <ul class="nav-submenu">
-                  <li>
-                    <a class="nav-submenu-item" href="#!">Home</a>
-                  </li>
-                  <li>
-                    <a class="nav-submenu-item" href="#!">Community Recommendations</a>
-                  </li>
-                  <li>
-                    <a class="nav-submenu-item" href="#!">Recently Viewed</a>
-                  </li>
-                  <li>
-                    <a class="nav-submenu-item" href="#!">Steam Curators</a>
-                  </li>
-                </ul>
-              </li>
+      <!-- Hero -->
+      <div class="hero">
+        <div class="container">
+          <div class="hero-nav-group">
+            <!-- Nav bar -->
+            <nav class="nav">
+              <ul class="nav-list">
+                <!-- Your store -->
+                <li class="nav-item">
+                  <a class="nav-item__header" href="#!">Your Store</a>
+                  <ul class="nav-submenu">
+                    <li>
+                      <a class="nav-submenu-item" href="#!">Home</a>
+                    </li>
+                    <li>
+                      <a class="nav-submenu-item" href="#!"
+                        >Community Recommendations</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-submenu-item" href="#!">Recently Viewed</a>
+                    </li>
+                    <li>
+                      <a class="nav-submenu-item" href="#!">Steam Curators</a>
+                    </li>
+                  </ul>
+                </li>
 
-              <!-- Popular -->
-              <li class="nav-item">
-                <a class="nav-item__header" href="#"> New & Noteworthy </a>
-                <ul class="nav-submenu">
-                  <li><a class="nav-submenu-item" href="">Popular</a></li>
-                  <li>
-                    <a class="nav-submenu-item" href="">New & Updates</a>
-                  </li>
-                  <li>
-                    <a class="nav-submenu-item" href="">Promotes & Events</a>
-                  </li>
-                </ul>
-              </li>
+                <!-- Popular -->
+                <li class="nav-item">
+                  <a class="nav-item__header" href="#"> New & Noteworthy </a>
+                  <ul class="nav-submenu">
+                    <li><a class="nav-submenu-item" href="">Popular</a></li>
+                    <li>
+                      <a class="nav-submenu-item" href="">New & Updates</a>
+                    </li>
+                    <li>
+                      <a class="nav-submenu-item" href="">Promotes & Events</a>
+                    </li>
+                  </ul>
+                </li>
 
-              <!-- Categories -->
-              <li class="nav-item">
-                <a class="nav-item__header" href="#"> Categories </a>
-                <ul class="nav-submenu">
-                  <li><a class="nav-submenu-item" href="">Action</a></li>
-                  <li><a class="nav-submenu-item" href="">Adventure</a></li>
-                  <li>
-                    <a class="nav-submenu-item" href="">Role-Playing</a>
-                  </li>
-                  <li><a class="nav-submenu-item" href="">Simulation</a></li>
-                  <li><a class="nav-submenu-item" href="">Strategy</a></li>
-                  <li>
-                    <a class="nav-submenu-item" href="">Sports & Racing</a>
-                  </li>
-                </ul>
-              </li>
+                <!-- Categories -->
+                <li class="nav-item">
+                  <a class="nav-item__header" href="#"> Categories </a>
+                  <ul class="nav-submenu">
+                    <li><a class="nav-submenu-item" href="">Action</a></li>
+                    <li><a class="nav-submenu-item" href="">Adventure</a></li>
+                    <li>
+                      <a class="nav-submenu-item" href="">Role-Playing</a>
+                    </li>
+                    <li><a class="nav-submenu-item" href="">Simulation</a></li>
+                    <li><a class="nav-submenu-item" href="">Strategy</a></li>
+                    <li>
+                      <a class="nav-submenu-item" href="">Sports & Racing</a>
+                    </li>
+                  </ul>
+                </li>
 
-              <!-- Points shop -->
-              <li class="nav-item">
-                <a class="nav-item__header" href="#"> Points Shop </a>
-              </li>
+                <!-- Points shop -->
+                <li class="nav-item">
+                  <a class="nav-item__header" href="#"> Points Shop </a>
+                </li>
 
-              <!-- News -->
-              <li class="nav-item">
-                <a class="nav-item__header" href="#"> News </a>
-              </li>
+                <!-- News -->
+                <li class="nav-item">
+                  <a class="nav-item__header" href="#"> News </a>
+                </li>
 
-              <!-- Labs -->
-              <li class="nav-item">
-                <a class="nav-item__header" href="#"> Labs </a>
-              </li>
-            </ul>
-          </nav>
+                <!-- Labs -->
+                <li class="nav-item">
+                  <a class="nav-item__header" href="#"> Labs </a>
+                </li>
+              </ul>
+            </nav>
 
-          <!-- Search box -->
-          <form class="search-form">
-            <input id="search-form-input" class="search-form-input" name="search-box" type="text"
-              placeholder="search" />
-            <button class="search-submit-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path
-                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-              </svg>
-            </button>
-          </form>
+            <!-- Search box -->
+            <form class="search-form">
+              <input
+                id="search-form-input"
+                class="search-form-input"
+                name="search-box"
+                type="text"
+                placeholder="search"
+              />
+              <button class="search-submit-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 512 512"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="video-background-container">
+          <video class="video-background" autoplay muted loop>
+            <source
+              src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/40c14a0bef16a5f75d7e1930/webm_page_bg_english.webm?t=1697739595"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </div>
+    </header>
 
-      <div class="video-background-container">
-        <video class="video-background" autoplay muted loop>
-          <source
-            src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/40c14a0bef16a5f75d7e1930/webm_page_bg_english.webm?t=1697739595"
-            type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </header>
+    <!-- Aside Nav-->
+    <aside class="aside">
+      <nav class="aside-nav">
+        <div class="aside-nav-group">
+          <h4 class="aside-nav__header">RECOMMENDED</h4>
+          <ul class="aside-nav__list">
+            <li><a href="#!" class="aside-nav__item">By Friends</a></li>
+            <li><a href="#!" class="aside-nav__item">By Curator</a></li>
+            <li><a href="#!" class="aside-nav__item">Tags</a></li>
+          </ul>
+        </div>
+        <div class="aside-nav-group">
+          <h4 class="aside-nav__header">BROWSE CATEGORIES</h4>
+          <ul class="aside-nav__list">
+            <li><a href="#!" class="aside-nav__item">Top Seller</a></li>
+            <li><a href="#!" class="aside-nav__item">New Releases</a></li>
+            <li><a href="#!" class="aside-nav__item">Upcoming</a></li>
+            <li><a href="#!" class="aside-nav__item">Specials</a></li>
+            <li><a href="#!" class="aside-nav__item">VR Titles</a></li>
+            <li>
+              <a href="#!" class="aside-nav__item">Controller-Friendly</a>
+            </li>
+            <li><a href="#!" class="aside-nav__item">Great on Deck </a></li>
+          </ul>
+        </div>
+        <div class="aside-nav-group">
+          <h4 class="aside-nav__header">BROWSE BY GENRE</h4>
+          <ul class="aside-nav__list">
+            <li><a href="#!" class="aside-nav__item">Action</a></li>
+            <li><a href="#!" class="aside-nav__item">Role-Playing</a></li>
+            <li><a href="#!" class="aside-nav__item">Action RPG</a></li>
+            <li><a href="#!" class="aside-nav__item">Adventure</a></li>
+            <li><a href="#!" class="aside-nav__item">Stimulation</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
 
-  <!-- Aside Nav-->
-  <aside class="aside">
-    <nav class="aside-nav">
-      <div class="aside-nav-group">
-        <h4 class="aside-nav__header">RECOMMENDED</h4>
-        <ul class="aside-nav__list">
-          <li><a href="#!" class="aside-nav__item">By Friends</a></li>
-          <li><a href="#!" class="aside-nav__item">By Curator</a></li>
-          <li><a href="#!" class="aside-nav__item">Tags</a></li>
-        </ul>
-      </div>
-      <div class="aside-nav-group">
-        <h4 class="aside-nav__header">BROWSE CATEGORIES</h4>
-        <ul class="aside-nav__list">
-          <li><a href="#!" class="aside-nav__item">Top Seller</a></li>
-          <li><a href="#!" class="aside-nav__item">New Releases</a></li>
-          <li><a href="#!" class="aside-nav__item">Upcoming</a></li>
-          <li><a href="#!" class="aside-nav__item">Specials</a></li>
-          <li><a href="#!" class="aside-nav__item">VR Titles</a></li>
-          <li>
-            <a href="#!" class="aside-nav__item">Controller-Friendly</a>
-          </li>
-          <li><a href="#!" class="aside-nav__item">Great on Deck </a></li>
-        </ul>
-      </div>
-      <div class="aside-nav-group">
-        <h4 class="aside-nav__header">BROWSE BY GENRE</h4>
-        <ul class="aside-nav__list">
-          <li><a href="#!" class="aside-nav__item">Action</a></li>
-          <li><a href="#!" class="aside-nav__item">Role-Playing</a></li>
-          <li><a href="#!" class="aside-nav__item">Action RPG</a></li>
-          <li><a href="#!" class="aside-nav__item">Adventure</a></li>
-          <li><a href="#!" class="aside-nav__item">Stimulation</a></li>
-        </ul>
-      </div>
-    </nav>
-  </aside>
-
-  <!-- Main -->
-  <main class="main">
-    <div class="container">
-      <!-- Feature -->
-      <section class="feature">
-        <!-- Heading -->
-        <h2 class="heading">FEATURED & RECOMMENDED</h2>
+    <!-- Main -->
+    <main class="main">
+      <div class="container">
+        <!-- Feature -->
+        <section class="feature">
+          <!-- Heading -->
+          <h2 class="heading">FEATURED & RECOMMENDED</h2>
 
           <!-- Main content -->
           <div class="feature-group">
@@ -292,46 +374,156 @@
                 class="feature-item__game-thumb"
               />
 
-            <!-- Info -->
-            <article class="feature__info">
-              <!-- Game title -->
-              <h3 class="feature__app-name">Naruto Storm 4</h3>
+              <!-- Info -->
+              <div class="feature-item__info">
+                <!-- Game title -->
+                <h3 class="feature-item__app-name">Naruto Storm 4</h3>
 
-              <!-- Screenshots group -->
-              <div class="feature__screenshots">
-                <img src="./assets/images/screenshot-01.jpg" alt="" />
-                <img src="./assets/images/screenshot-02.jpg" alt="" />
-                <img src="./assets/images/screenshot-03.jpg" alt="" />
-                <img src="./assets/images/screenshot-04.jpg" alt="" />
-              </div>
+                <!-- Screenshots group -->
+                <div class="feature-item__screenshots">
+                  <img src="./assets/images/screenshot-01.jpg" alt="" />
+                  <img src="./assets/images/screenshot-02.jpg" alt="" />
+                  <img src="./assets/images/screenshot-03.jpg" alt="" />
+                  <img src="./assets/images/screenshot-04.jpg" alt="" />
+                </div>
 
-              <!-- Category tags -->
-              <div class="feature__game-tags">
-                <span>Top Seller</span>
-              </div>
+                <!-- Category tags -->
+                <div class="feature-item__game-tags">
+                  <span>Top Seller</span>
+                </div>
 
-              <!-- Price and platform -->
-              <div class="feature__more-info">
-                <span class="feature__price">500.000₫</span>
-                <div class="feature__platform">
-                  <i class="fa fa-windows"></i>
+                <!-- Price and platform -->
+                <div class="feature-item__more-info">
+                  <span class="feature-item__price">500.000₫</span>
+                  <div class="feature-item__platform">
+                    <i class="fa fa-windows"></i>
+                  </div>
                 </div>
               </div>
             </article>
 
-          <!-- Control group -->
-          <div class="chevron chevron-left">
-            <i class="fa fa-chevron-left fa-3x"></i>
+            <!-- Item 02 -->
+            <article class="feature-item fade">
+              <!-- Main image -->
+              <img
+                src="./assets/images/game-thumb.jpg"
+                alt="naruto-storm-thumb"
+                class="feature-item__game-thumb"
+              />
+
+              <!-- Info -->
+              <div class="feature-item__info">
+                <!-- Game title -->
+                <h3 class="feature-item__app-name">Naruto Storm 4</h3>
+
+                <!-- Screenshots group -->
+                <div class="feature-item__screenshots">
+                  <img src="./assets/images/screenshot-01.jpg" alt="" />
+                  <img src="./assets/images/screenshot-02.jpg" alt="" />
+                  <img src="./assets/images/screenshot-03.jpg" alt="" />
+                  <img src="./assets/images/screenshot-04.jpg" alt="" />
+                </div>
+
+                <!-- Category tags -->
+                <div class="feature-item__game-tags">
+                  <span>Top Seller</span>
+                </div>
+
+                <!-- Price and platform -->
+                <div class="feature-item__more-info">
+                  <span class="feature-item__price">500.000₫</span>
+                  <div class="feature-item__platform">
+                    <i class="fa fa-windows"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 03 -->
+            <article class="feature-item fade">
+              <!-- Main image -->
+              <img
+                src="./assets/images/game-thumb.jpg"
+                alt="naruto-storm-thumb"
+                class="feature-item__game-thumb"
+              />
+
+              <!-- Info -->
+              <div class="feature-item__info">
+                <!-- Game title -->
+                <h3 class="feature-item__app-name">Naruto Storm 4</h3>
+
+                <!-- Screenshots group -->
+                <div class="feature-item__screenshots">
+                  <img src="./assets/images/screenshot-01.jpg" alt="" />
+                  <img src="./assets/images/screenshot-02.jpg" alt="" />
+                  <img src="./assets/images/screenshot-03.jpg" alt="" />
+                  <img src="./assets/images/screenshot-04.jpg" alt="" />
+                </div>
+
+                <!-- Category tags -->
+                <div class="feature-item__game-tags">
+                  <span>Top Seller</span>
+                </div>
+
+                <!-- Price and platform -->
+                <div class="feature-item__more-info">
+                  <span class="feature-item__price">500.000₫</span>
+                  <div class="feature-item__platform">
+                    <i class="fa fa-windows"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 04 -->
+            <article class="feature-item fade">
+              <!-- Main image -->
+              <img
+                src="./assets/images/game-thumb.jpg"
+                alt="naruto-storm-thumb"
+                class="feature-item__game-thumb"
+              />
+
+              <!-- Info -->
+              <div class="feature-item__info">
+                <!-- Game title -->
+                <h3 class="feature-item__app-name">Naruto Storm 4</h3>
+
+                <!-- Screenshots group -->
+                <div class="feature-item__screenshots">
+                  <img src="./assets/images/screenshot-01.jpg" alt="" />
+                  <img src="./assets/images/screenshot-02.jpg" alt="" />
+                  <img src="./assets/images/screenshot-03.jpg" alt="" />
+                  <img src="./assets/images/screenshot-04.jpg" alt="" />
+                </div>
+
+                <!-- Category tags -->
+                <div class="feature-item__game-tags">
+                  <span>Top Seller</span>
+                </div>
+
+                <!-- Price and platform -->
+                <div class="feature-item__more-info">
+                  <span class="feature-item__price">500.000₫</span>
+                  <div class="feature-item__platform">
+                    <i class="fa fa-windows"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Control group -->
+            <div class="chevron chevron-left">
+              <i class="fa fa-chevron-left fa-3x"></i>
+            </div>
+            <div class="chevron chevron-right">
+              <i class="fa fa-chevron-right fa-3x"></i>
+            </div>
           </div>
-          <div class="chevron chevron-right">
-            <i class="fa fa-chevron-right fa-3x"></i>
-          </div>
-        </div>
 
           <!-- Slide control group -->
           <div class="feature__slide-control-group slide-control-group">
-            <div class="slide-control-item active"></div>
-            <div class="slide-control-item"></div>
             <div class="slide-control-item"></div>
             <div class="slide-control-item"></div>
             <div class="slide-control-item"></div>
@@ -339,78 +531,204 @@
           </div>
         </section>
 
-      <!-- Special -->
-      <section class="special">
-        <!-- Heading -->
-        <h2 class="heading">SPECIAL OFFERS</h2>
+        <!-- Special -->
+        <section class="special">
+          <!-- Heading -->
+          <h2 class="heading">SPECIAL OFFERS</h2>
 
           <!-- Main content -->
-          <div class="special__main-content">
-            <!-- Item 1 -->
-            <article class="special-item">
-              <!-- Game thumb -->
-              <img
-                src="./assets/images/game-thumb.jpg"
-                alt="naruto-storm"
-                class="special-item__thumb"
-              />
-              <div class="special-item__content">
-                <!-- Game title -->
-                <h3 class="special-item__app-name">Naruto Storm 4</h3>
+          <div class="special-group">
+            <!-- Item 01 -->
+            <div class="special-item fade">
+              <!-- Item child 1 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
 
-                <!-- Sale % -->
-                <strong class="special-item__sale-off">Up to -90%</strong>
-              </div>
-            </article>
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
 
-            <!-- Item 2 -->
-            <article class="special-item">
-              <!-- Game thumb -->
-              <img
-                src="./assets/images/game-thumb.jpg"
-                alt="naruto-storm"
-                class="special-item__thumb"
-              />
-              <div class="special-item__content">
-                <!-- Game title -->
-                <h3 class="special-item__app-name">Naruto Storm 4</h3>
+              <!-- Item child 2 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
 
-                <!-- Sale % -->
-                <strong class="special-item__sale-off">Up to -90%</strong>
-              </div>
-            </article>
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
 
-            <!-- Item 3 -->
-            <article class="special-item">
-              <!-- Game thumb -->
-              <img
-                src="./assets/images/game-thumb.jpg"
-                alt="naruto-storm"
-                class="special-item__thumb"
-              />
-              <div class="special-item__content">
-                <!-- Game title -->
-                <h3 class="special-item__app-name">Naruto Storm 4</h3>
+              <!-- Item child  3 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
 
-                <!-- Sale % -->
-                <strong class="special-item__sale-off">Up to -90%</strong>
-              </div>
-            </article>
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
+            </div>
 
-          <!-- Control group -->
-          <div class="chevron chevron-left">
-            <i class="fa fa-chevron-left fa-3x"></i>
+            <!-- Item 02 -->
+            <div class="special-item fade">
+              <!-- Item child 1 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
+
+              <!-- Item child 2 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
+
+              <!-- Item child  3 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
+            </div>
+
+            <!-- Item 03 -->
+            <div class="special-item fade">
+              <!-- Item child 1 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
+
+              <!-- Item child 2 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
+
+              <!-- Item child  3 -->
+              <article class="special-item-child">
+                <!-- Game thumb -->
+                <img
+                  src="./assets/images/game-thumb.jpg"
+                  alt="naruto-storm"
+                  class="special-item-child__thumb"
+                />
+                <div class="special-item-child__content">
+                  <!-- Game title -->
+                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                  <!-- Sale % -->
+                  <strong class="special-item-child__sale-off"
+                    >Up to -90%</strong
+                  >
+                </div>
+              </article>
+            </div>
+
+            <!-- Control group -->
+            <div class="chevron chevron-left">
+              <i class="fa fa-chevron-left fa-3x"></i>
+            </div>
+            <div class="chevron chevron-right">
+              <i class="fa fa-chevron-right fa-3x"></i>
+            </div>
           </div>
-          <div class="chevron chevron-right">
-            <i class="fa fa-chevron-right fa-3x"></i>
-          </div>
-        </div>
 
           <!-- Slide control group -->
           <div class="feature__slide-control-group slide-control-group">
-            <div class="slide-control-item active"></div>
-            <div class="slide-control-item"></div>
-            <div class="slide-control-item"></div>
             <div class="slide-control-item"></div>
             <div class="slide-control-item"></div>
             <div class="slide-control-item"></div>
@@ -461,14 +779,14 @@
               <span class="category-item__label">ADVENTURE</span>
             </a>
 
-          <!-- Control group -->
-          <div class="chevron chevron-left">
-            <i class="fa fa-chevron-left fa-3x"></i>
+            <!-- Control group -->
+            <div class="chevron chevron-left">
+              <i class="fa fa-chevron-left fa-3x"></i>
+            </div>
+            <div class="chevron chevron-right">
+              <i class="fa fa-chevron-right fa-3x"></i>
+            </div>
           </div>
-          <div class="chevron chevron-right">
-            <i class="fa fa-chevron-right fa-3x"></i>
-          </div>
-        </div>
 
           <!-- Slide control group -->
           <div class="category__slide-control-group slide-control-group">
@@ -815,5 +1133,6 @@
       src="https://kit.fontawesome.com/66df57de56.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js"></script>
   </body>
 </html>

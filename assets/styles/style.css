@@ -432,10 +432,9 @@ body {
 /* Feature item */
 .feature-item {
   margin-top: 12px;
-  display: grid;
+  display: none;
   grid-template-columns: 2fr 1fr;
   background-color: #0a141d;
-  display: none;
 }
 
 .feature-item:hover {
@@ -762,22 +761,21 @@ body {
   width: 100%;
 }
 
-
 .filtered-game img {
   width: 30%;
   object-fit: stretch;
   cursor: pointer;
 }
 
-.filtered-game img:hover + .filtered-game-description{
+.filtered-game img:hover + .filtered-game-description {
   background-color: rgb(160, 197, 219);
 }
 
-.filtered-game img:hover + .filtered-game-description .filtered-game-name{
+.filtered-game img:hover + .filtered-game-description .filtered-game-name {
   color: black;
 }
 
-.filtered-game img:hover + .filtered-game-description .discounted-price{
+.filtered-game img:hover + .filtered-game-description .discounted-price {
   color: rgb(31, 40, 49);
 }
 
