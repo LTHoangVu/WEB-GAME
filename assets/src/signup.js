@@ -45,6 +45,9 @@ function checkValidInput(inputElement) {
   inputElement.classList.remove('form-input--error');
   var errorMessage = inputElement.parentElement.querySelector('.error-message');
   errorMessage.style.display = 'none';
+  for (var i = 0; i < inputElements.length; ++i) {
+    inputElements[i].classList.remove('form-input--error');
+  }
 }
 
 function inputHandler(event) {
@@ -80,10 +83,13 @@ async function submitHandler(event) {
 
     window.location.assign('./login.html');
   } catch (error) {
-    console.log(error.info);
     var errorForm = document.querySelector('.error');
     errorForm.innerText = error.info.data[0].msg;
     errorForm.style.display = 'block';
+
+    for (var i = 0; i < inputElements.length; ++i) {
+      inputElements[i].classList.add('form-input--error');
+    }
   }
 }
 

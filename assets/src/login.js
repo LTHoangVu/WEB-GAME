@@ -34,10 +34,16 @@ function checkValidInput(inputElement) {
   inputElement.classList.remove('form-input--error');
   var errorMessage = inputElement.parentElement.querySelector('.error-message');
   errorMessage.style.display = 'none';
+
+  for (var i = 0; i < inputElements.length; ++i) {
+    inputElements[i].classList.remove('form-input--error');
+  }
 }
 
 function inputHandler(event) {
   checkValidationOfInput(event);
+  var errorForm = document.querySelector('.error');
+  errorForm.style.display = 'none';
 }
 
 async function submitHandler(event) {
@@ -66,9 +72,12 @@ async function submitHandler(event) {
     window.location.assign('./profile.html');
   } catch (error) {
     var errorForm = document.querySelector('.error');
-    errorForm.innerText =
-      'Please check your password and account name and try again.';
+    errorForm.innerText = error.info.message;
     errorForm.style.display = 'block';
+
+    for (var i = 0; i < inputElements.length; ++i) {
+      inputElements[i].classList.add('form-input--error');
+    }
   }
 }
 
