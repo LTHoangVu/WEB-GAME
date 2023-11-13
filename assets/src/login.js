@@ -66,7 +66,8 @@ async function submitHandler(event) {
     window.location.assign('./profile.html');
   } catch (error) {
     var errorForm = document.querySelector('.error');
-    errorForm.innerText = error.info.message;
+    errorForm.innerText =
+      'Please check your password and account name and try again.';
     errorForm.style.display = 'block';
   }
 }
