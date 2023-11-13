@@ -425,68 +425,78 @@ body {
   padding: 20px 0;
 }
 
-.feature__main-content {
+.feature-group {
   position: relative;
+}
+
+/* Feature item */
+.feature-item {
   margin-top: 12px;
-  display: grid;
+  display: none;
   grid-template-columns: 2fr 1fr;
   background-color: #0a141d;
 }
 
-.feature__main-content:hover {
+.feature-item:hover {
   cursor: pointer;
 }
 
-.feature__game-thumb,
-.feature__screenshots img {
+.feature-item__game-thumb {
+  width: 616px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.feature-item__screenshots img {
   width: 100%;
   object-fit: cover;
 }
 
-.feature__info {
+.feature-item__info {
   padding: 25px 10px 0;
 }
 
-.feature__app-name {
+.feature-item__app-name {
   font-size: 2.4rem;
   color: var(--white-text);
 }
 
-.feature__screenshots {
+.feature-item__screenshots {
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
 }
 
-.feature__screenshots img {
+.feature-item__screenshots img {
   opacity: 0.5;
   transition: opacity 0.2s;
 }
 
-.feature__screenshots img:hover {
+.feature-item__screenshots img:hover {
   opacity: 1;
 }
 
-.feature__game-tags {
+.feature-item__game-tags {
   margin-top: 13px;
 }
 
-.feature__game-tags span,
-.feature__price {
+.feature-item__game-tags span,
+.feature-item__price {
   font-size: 1.1rem;
   font-weight: 300;
   color: var(--white-text);
 }
 
-.feature__game-tags span {
+.feature-item__game-tags span {
   display: inline-block;
   padding: 4px 5px;
   border-radius: 2px;
   background-color: var(--category-cover);
 }
 
-.feature__more-info {
+.feature-item__more-info {
   margin-top: 46px;
   display: flex;
   justify-content: space-between;
@@ -498,37 +508,42 @@ body {
   margin-top: 20px;
 }
 
-.special__main-content {
+.special-group {
+  position: relative;
+}
+
+.special-item {
   position: relative;
   margin-top: 14px;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
 }
 
-.special-item {
+/* Special item child */
+.special-item-child {
   width: 100%;
 }
 
-.special-item__thumb {
+.special-item-child__thumb {
   width: 100%;
   height: 276px;
   object-fit: cover;
   cursor: pointer;
 }
 
-.special-item__content {
+.special-item-child__content {
   padding: 25px 20px;
   background-image: url("https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg");
 }
 
-.special-item__app-name {
+.special-item-child__app-name {
   color: var(--white-text);
   font-size: 1.7rem;
   font-weight: 300;
 }
 
-.special-item__sale-off {
+.special-item-child__sale-off {
   display: inline-block;
   padding: 5px 6px;
   margin-top: 10px;
@@ -545,54 +560,54 @@ body {
   position: relative;
 }
 
-.category-list {
+.category-item {
   position: relative;
   margin-top: 15px;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
 }
 
-.category-item {
+.category-item-child {
   height: 235px;
   position: relative;
   transition: transform 0.15s ease;
 }
 
-.category-item:hover {
+.category-item-child:hover {
   filter: brightness(1.25);
   transform: scale(1.038);
 }
 
-.category-item__img,
-.category-item__gradient {
+.category-item-child__img,
+.category-item-child__gradient {
   width: 100%;
   height: 100%;
 }
 
-.category-item__gradient {
+.category-item-child__gradient {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.category-item:first-child .category-item__gradient {
+.category-item-child:first-child .category-item-child__gradient {
   background: linear-gradient(rgba(0, 0, 0, 0), rgb(139, 0, 0) 100%);
 }
 
-.category-item:nth-child(2) .category-item__gradient {
+.category-item-child:nth-child(2) .category-item-child__gradient {
   background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 139) 100%);
 }
 
-.category-item:nth-child(3) .category-item__gradient {
+.category-item-child:nth-child(3) .category-item-child__gradient {
   background: linear-gradient(rgba(0, 0, 0, 0), rgb(184, 134, 11) 100%);
 }
 
-.category-item:nth-child(4) .category-item__gradient {
+.category-item-child:nth-child(4) .category-item-child__gradient {
   background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 100, 0) 100%);
 }
 
-.category-item__label {
+.category-item-child__label {
   bottom: 30px;
   left: 50%;
   translate: -50% 0;
@@ -752,22 +767,21 @@ body {
   width: 100%;
 }
 
-
 .filtered-game img {
   width: 30%;
   object-fit: stretch;
   cursor: pointer;
 }
 
-.filtered-game img:hover + .filtered-game-description{
+.filtered-game img:hover + .filtered-game-description {
   background-color: rgb(160, 197, 219);
 }
 
-.filtered-game img:hover + .filtered-game-description .filtered-game-name{
+.filtered-game img:hover + .filtered-game-description .filtered-game-name {
   color: black;
 }
 
-.filtered-game img:hover + .filtered-game-description .discounted-price{
+.filtered-game img:hover + .filtered-game-description .discounted-price {
   color: rgb(31, 40, 49);
 }
 
@@ -971,4 +985,20 @@ body {
 
 .valve-link a:hover {
   color: white;
+}
+
+/* ================ Animation ================ */
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
