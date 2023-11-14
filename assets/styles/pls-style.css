@@ -4,7 +4,7 @@
 
 :root {
   --primary-color: #1999ff;
-  --background-color: #171d25;
+  --background-color: #181a21;
   --primary-btn: linear-gradient(90deg, #06bfff 0%, #2d73ff 100%);
   --primary-btn-hover: linear-gradient(90deg, #06bfff 30%, #2d73ff 100%);
 
@@ -147,12 +147,27 @@ header .container {
   color: #fff;
   font-size: 28px;
   font-weight: 800;
+  @media screen and (max-width: 700px) {
+    text-align: center;
+  }
 }
 
 .page-content {
-  background-image: url('../images/background.jpg');
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 104px);
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media screen and (max-width: 700px) {
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181a21 100%) fixed
+        repeat,
+      url(https://community.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg)
+        center top repeat,
+      #181a21;
+    min-height: 100vh;
+  }
 }
 
 .signup-top,
@@ -161,8 +176,11 @@ header .container {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 100px 0 0;
+  padding: 100px 0 150px;
   flex-grow: 1;
+  /* @media screen and (max-width: 700px) {
+    padding-bottom: 0;
+  } */
 }
 
 .signup-form,
@@ -172,6 +190,12 @@ header .container {
   border-radius: 4px;
   width: 500px;
   margin: 0 auto;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    padding: 32px 24px;
+    background-color: transparent;
+  }
 }
 
 .signup-form form,
@@ -214,8 +238,9 @@ header .container {
 }
 
 .form-action {
-  width: 270px;
+  width: 246px;
   margin: 0 auto;
+  padding: 12px;
 }
 
 .error {
@@ -236,13 +261,16 @@ header .container {
 
 .signup-bottom,
 .login-bottom {
-  margin-top: 150px;
   padding: 50px 0 120px;
   background: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    /* background-color: transparent; */
+  }
 }
 
 .signup-bottom__action,
