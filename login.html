@@ -19,10 +19,6 @@
       <div class="global-header">
         <div class="container">
           <div class="global-header-wrap">
-            <!-- Header More -->
-            <div class="header-more">
-              <img src="./assets/images/header_menu_hamburger.png" alt="" />
-            </div>
             <!-- Global header logo -->
             <a href="/">
               <img
@@ -31,13 +27,23 @@
                 class="global-header__logo"
               />
             </a>
-
+            <!-- Header More -->
+            <button class="header-more js-toggle" toggle-target="#global-nav">
+              <img src="./assets/images/header_menu_hamburger.png" alt="" />
+            </button>
             <!-- Global header nav -->
-            <nav class="global-nav">
+            <nav class="global-nav hide" id="global-nav">
               <ul class="global-nav-list">
                 <!-- Store item -->
+                <li class="global-nav-item mobile">
+                  <a class="global-nav-item__header" href="#!">LOGIN</a>
+                </li>
+                <li class="global-nav-item mobile">
+                  <a class="global-nav-item__header" href="#!">SIGNUP</a>
+                </li>
+
                 <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">STORE</a>
+                  <a class="global-nav-item__header" href="#!">STORE</a>
                   <ul class="global-nav-submenu">
                     <li><a class="global-nav-submenu-item" href="">Home</a></li>
                     <li>
@@ -60,7 +66,7 @@
 
                 <!-- Community item -->
                 <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">COMMUNITY</a>
+                  <a class="global-nav-item__header" href="#!">COMMUNITY</a>
                   <ul class="global-nav-submenu">
                     <li><a class="global-nav-submenu-item" href="">Home</a></li>
                     <li>
@@ -89,6 +95,10 @@
                 </li>
               </ul>
             </nav>
+            <div
+              class="navbar__overlay js-toggle"
+              toggle-target="#global-nav"
+            ></div>
 
             <!-- Global header action  -->
             <div class="global-header-action">
