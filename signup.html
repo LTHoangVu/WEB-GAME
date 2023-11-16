@@ -11,121 +11,15 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script src="./assets/src/scripts.js"></script>
   </head>
   <body>
     <!-- Header -->
 
-    <header class="header">
-      <!-- Global header -->
-      <div class="global-header">
-        <div class="container">
-          <div class="global-header-wrap">
-            <!-- Header More -->
-            <div class="header-more">
-              <img src="./assets/images/header_menu_hamburger.png" alt="" />
-            </div>
-            <!-- Global header logo -->
-            <a href="/">
-              <img
-                src="assets/images/logo.png"
-                alt="steam-logo"
-                class="global-header__logo"
-              />
-            </a>
-
-            <!-- Global header nav -->
-            <nav class="global-nav">
-              <ul class="global-nav-list">
-                <!-- Store item -->
-                <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">STORE</a>
-                  <ul class="global-nav-submenu">
-                    <li><a class="global-nav-submenu-item" href="">Home</a></li>
-                    <li>
-                      <a class="global-nav-submenu-item" href=""
-                        >Discovery Queue</a
-                      >
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Wishlist</a>
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Points Shop</a>
-                    </li>
-                    <li><a class="global-nav-submenu-item" href="">News</a></li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Stats</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <!-- Community item -->
-                <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">COMMUNITY</a>
-                  <ul class="global-nav-submenu">
-                    <li><a class="global-nav-submenu-item" href="">Home</a></li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Discussion</a>
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Work Shop</a>
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Market</a>
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Broadcasts</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <!-- About item -->
-                <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">ABOUT</a>
-                </li>
-
-                <!-- Support item -->
-                <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">SUPPORT</a>
-                </li>
-              </ul>
-            </nav>
-
-            <!-- Global header action  -->
-            <div class="global-header-action">
-              <div class="global-header-action-container">
-                <a
-                  class="global-header__install-btn global-header__btn"
-                  href="#!"
-                >
-                  <i class="fa fa-download"></i> Install Steam
-                </a>
-                <a class="global-header__login-btn global-header__btn" href="#!"
-                  >login</a
-                >
-                <button class="global-header__language-btn global-header__btn">
-                  language <i class="fa fa-caret-down"></i>
-                </button>
-              </div>
-              <!-- <div class="language-popup">
-                <a class="language-popup-compoents" href=""
-                  >简体中文 (Simplified Chinese)</a
-                >
-                <a class="language-popup-compoents" href=""
-                  >日本語 (Japanese)</a
-                >
-                <a class="language-popup-compoents" href=""
-                  >Русский (Russian)</a
-                >
-                <a class="language-popup-compoents" href=""
-                  >Tiếng Việt (Vietnamese)</a
-                >
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header class="header" id="header"></header>
+    <script>
+      load('#header', './assets/templates/header.html');
+    </script>
     <main>
       <div class="page-content">
         <div class="signup-top">

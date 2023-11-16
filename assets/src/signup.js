@@ -45,9 +45,6 @@ function checkValidInput(inputElement) {
   inputElement.classList.remove('form-input--error');
   var errorMessage = inputElement.parentElement.querySelector('.error-message');
   errorMessage.style.display = 'none';
-  for (var i = 0; i < inputElements.length; ++i) {
-    inputElements[i].classList.remove('form-input--error');
-  }
 }
 
 function inputHandler(event) {

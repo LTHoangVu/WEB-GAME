@@ -1,6 +1,3 @@
-//const $ = document.querySelector.bind(document);
-//const $$ = document.querySelectorAll.bind(document);
-
 function blurHandler(event) {
   checkValidationOfInput(event);
 }
@@ -37,10 +34,6 @@ function checkValidInput(inputElement) {
   inputElement.classList.remove('form-input--error');
   var errorMessage = inputElement.parentElement.querySelector('.error-message');
   errorMessage.style.display = 'none';
-
-  for (var i = 0; i < inputElements.length; ++i) {
-    inputElements[i].classList.remove('form-input--error');
-  }
 }
 
 function inputHandler(event) {
@@ -98,5 +91,3 @@ for (var i = 0; i < inputElementsLength; ++i) {
   inputElements[i].onblur = blurHandler;
   inputElements[i].oninput = inputHandler;
 }
-
-
