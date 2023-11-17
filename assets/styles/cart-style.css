@@ -42,12 +42,9 @@ body {
     color: #ffffff;
     font-family: "Motiva Sans", sans-serif;
     font-size: 1.4rem;
-    margin: 0;
-    padding: 0;
-    border: 0;
     width: 100%;
-    @media screen and (max-width: 700px) {
-        min-width: 700px;
+    @media screen and (max-width: 705px) {
+        min-width: 705px;
     }
 }
 
@@ -312,7 +309,7 @@ button {
 
 .page_content_header {
     background-color: #223e59;
-    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -320,11 +317,10 @@ button {
 .breadcrumps_page_heading {
     margin: 0px auto;
     width: 663px;
-    padding: 20px 20px;
+    padding: 20px 20px; 
 }
 
 .page_content_section {
-    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -356,7 +352,7 @@ h2.page_heading {
 
 .cart_status {
     margin: 0px auto;
-    max-width: 705px;  
+    max-width: 705px;
 }
 
 .cart_status_message_area {
