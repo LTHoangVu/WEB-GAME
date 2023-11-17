@@ -113,6 +113,7 @@ a {
   left: 0;
   right: 0;
   background-color: rgb(23, 29, 37);
+  z-index: 999;
   @media screen and (max-width: 912px) {
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
     overflow: hidden;
@@ -497,8 +498,7 @@ a {
 /* Profile */
 .profile-content {
   background-image: url(../images/profile_bg.png);
-  height: calc(100vh - 104px);
-  overflow-y: scroll;
+  background-repeat: repeat;
 }
 
 .profile-container {
@@ -516,7 +516,10 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   padding: 12px;
-  min-height: calc(100vh - 104px);
+  height: 100%;
+  @media screen and (max-width: 700px) {
+    height: auto;
+  }
 }
 
 .profile-header {
@@ -529,6 +532,10 @@ a {
 .profile-avatar {
   width: 166px;
   height: 166px;
+  @media screen and (max-width: 700px) {
+    width: 125px;
+    height: 125px;
+  }
 }
 
 .profile-name {
@@ -543,7 +550,6 @@ a {
 /* Orders*/
 .orders {
   margin-top: 24px;
-  height: 100%;
 }
 
 .orders h2,
@@ -572,13 +578,20 @@ a {
 .order-item {
   padding: 12px;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  column-gap: 12px;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 12px;
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr 3fr;
+  }
 }
 
 .order__img {
   width: 184px;
   height: 69px;
+  @media screen and (max-width: 700px) {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .order__name {
@@ -590,7 +603,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 133px;
+  /* max-width: 133px; */
+  @media screen and (max-width: 700px) {
+    grid-column: 1 / span 2;
+  }
 }
 
 .order-prices {
@@ -643,6 +659,9 @@ a {
 
 .order__tags-list {
   display: flex;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 }
 
 .order__tag-item {

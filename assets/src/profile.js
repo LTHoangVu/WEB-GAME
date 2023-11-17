@@ -28,11 +28,12 @@ const profileContainer = document.querySelector('.profile-container');
 profileContainer.innerHTML = '<span class="loader"></span>';
 
 fetchUser().then(({ user }) => {
-  const ordersList = user.games.map((game) => {
-    let priceText = game.price === 0 ? '' : game.price;
-    let saleOffText = game.price === 0 ? 'Free to play' : `-${game.saleoff}%`;
-    let oldPriceText = game.price === 0 ? '' : game.oldprice;
-    return `
+  const ordersList = user.games
+    .map((game) => {
+      let priceText = game.price === 0 ? '' : game.price;
+      let saleOffText = game.price === 0 ? 'Free to play' : `-${game.saleoff}%`;
+      let oldPriceText = game.price === 0 ? '' : game.oldprice;
+      return `
     <li class="order-item">
     <img
         src="${game.imageUrl}"
@@ -42,22 +43,25 @@ fetchUser().then(({ user }) => {
     <div class="order__info__left">
         <p class="order__name">${game.title}</p>
         <ul class="order__tags-list">
-            ${game.tags.map((tag) => {
-              return `<li class="order__tag-item">${tag.tagName}</li>`;
-            })}
+            ${game.tags
+              .map((tag) => {
+                return `<li class="order__tag-item">${tag.tagName}</li>`;
+              })
+              .join('')}
         </ul>
     </div>
     <section class="order__info__right">
         <div class="order-saleoff">${saleOffText}</div>
    
         <div class="order-prices">
-            <p class="order-oldprice">${priceText}</p>
-            <p class="order-newprice">${oldPriceText}</p>
+            <p class="order-oldprice">${oldPriceText}</p>
+            <p class="order-newprice">${priceText}</p>
         </div>
     </section>
     </li>
     `;
-  });
+    })
+    .join('');
 
   profileContainer.innerHTML = `
     <section class="profile-header">
