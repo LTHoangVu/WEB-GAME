@@ -1,112 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cart page</title>
-        <link rel="stylesheet" href="./assets/styles/reset.css">
-        <link rel="stylesheet" href="./assets/styles/cart-style.css">
-        <link rel="stylesheet" href="https://store.cloudflare.steamstatic.com/public/shared/css/motiva_sans.css?v=2C1Oh9QFVTyK&amp;l=english&amp;_cdn=cloudflare" type="text/css">
-        <script src="./assets/src/scripts.js"></script>
-    </head>
-    <body>
-        <header class="header" id="header"></header>
-        <script>
-            load('#header', './assets/templates/header.html');
-        </script>
-        
-        <main>
-            <div class="page_content_header">
-                <div class="breadcrumps_page_heading">
-                    <div class="breadcrumps"><a href="#">All Products</a> &gt; Your Shopping Cart</div>
-                    <h2 class="page_heading">Your Shopping Cart</h2>
-                </div>
-            </div>
-            <div class="page_content_section">
-                <div class="cart_status">
-                    <div class="cart_status_message_area">
-                        <div class="cart_status_message">Your item has been added!</div>
-                        <div class="cart_status_message_arrow"></div>
-                    </div> 
-                </div>
-                <div style="clear: left;"></div>
-                <div class="checkout_content_box">
-                    <div class="cart_item_list">
-                        
-                        <div class="cart_item">
-                            <div class="cart_item_price">
-                                <div class="price">321.000₫</div>
-                                <a class="remove_link" href="javascript:console.log('Remove');">Remove</a>
-                            </div>
-                            <div class="cart_item_img">
-                                <a href="#">
-                                    <img src="./assets/images/game/wildmender.jpg" alt="Wildmender">
-                                </a>
-                            </div>
-                            <div class="cart_item_desc">
-                                <div class="cart_item_platform">
-                                    <span class="win_platform_img"></span>
-                                </div>
-                                <a href="#">Wildmender</a><br>
-                            </div>
-                        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart page</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/cart-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://store.cloudflare.steamstatic.com/public/shared/css/motiva_sans.css?v=2C1Oh9QFVTyK&amp;l=english&amp;_cdn=cloudflare"
+      type="text/css"
+    />
+    <!-- <script src="./assets/src/scripts.js"></script> -->
+  </head>
+  <body>
+    <header class="header">
+      <!-- Global header -->
+      <div class="global-header">
+        <div class="container">
+          <div class="global-header-wrap">
+            <!-- Global header logo -->
+            <a href="/"
+              ><img
+                src="assets/images/logo.png"
+                alt="steam-logo"
+                class="global-header__logo"
+            /></a>
+            <!-- Header More -->
+            <button class="header-more js-toggle" toggle-target="#global-nav">
+              <img src="./assets/images/header_menu_hamburger.png" alt="" />
+            </button>
+            <!-- Global header nav -->
+            <nav class="global-nav hide" id="global-nav">
+              <ul class="global-nav-list">
+                <!-- Store item -->
+                <li class="global-nav-item mobile">
+                  <a class="global-nav-item__header" href="#">LOGOUT</a>
+                </li>
 
-                        <div class="cart_item">
-                            <div class="cart_item_price">
-                                <div class="price">249.000₫</div>
-                                <a class="remove_link" href="javascript:console.log('Remove');">Remove</a>
-                            </div>
-                            <div class="cart_item_img">
-                                <a href="#">
-                                    <img src="./assets/images/game/child-of-light.jpg" alt="Child of Light">
-                                </a>
-                            </div>
-                            <div class="cart_item_desc">
-                                <div class="cart_item_platform">
-                                    <span class="win_platform_img"></span>
-                                </div>
-                                <a href="#">Child of Light</a><br>
-                            </div>
-                        </div>
+                <li class="global-nav-item">
+                  <a class="global-nav-item__header" href="#">STORE</a>
+                  <ul class="global-nav-submenu">
+                    <li><a class="global-nav-submenu-item" href="">Home</a></li>
+                    <li>
+                      <a class="global-nav-submenu-item" href=""
+                        >Discovery Queue</a
+                      >
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Wishlist</a>
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Points Shop</a>
+                    </li>
+                    <li><a class="global-nav-submenu-item" href="">News</a></li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Stats</a>
+                    </li>
+                  </ul>
+                </li>
 
-                    </div>
-                    <div class="purchase_section">
-                        <div class="cart_total">
-                            <div class="cart_estimated_total_text">Estimated total</div>
-                            <div id="cart_estimated_total" class="price">570.000₫</div>
-                        </div>
-                        <div class="cart_purchase_desc">
-                            Is this a purchase for yourself or is it a gift? Select one to continue to checkout.
-                        </div>
-                        <div class="cart_purchase_button">
-                            <a id="myself_purchase_button" href="javascript:console.log('Purchase');">
-                                <span>Purchase for myself</span>
-                            </a>
-                            <a id="gift_purchase_button" href="javascript:console.log('Purchase');">
-                                <span>Purchase as a gift</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="payment_methods_section">
-                        <div class="payment_methods_desc">We accept the following payment methods:</div>
-                        <div class="payment_methods_img">
-                            <img src="./assets/images/visa-logo.png" alt="Visa">
-                            <img src="./assets/images/mastercard-logo.png" alt="Mastercard">
-                            <img src="./assets/images/paypal-logo.png" alt="PayPal">
-                            <img src="./assets/images/american-express-logo.png" alt="American Express">
-                            <img src="./assets/images/momo-logo.png" alt="MoMo">
-                            <img src="./assets/images/zalopay-logo.png" alt="ZaloPay">
-                            <img src="./assets/images/vnpay-logo.png" alt="VNPAY">
-                            <img src="./assets/images/discover-logo.png" alt="Discover">
-                        </div>
-                    </div>
-                    <div class="cart_side_desc">All prices include VAT where applicable</div>
-                    <div class="continue_shopping">
-                        <a id="continue_shopping_button" href="#"><span>Continue Shopping</span></a>
-                        <a class="remove_link" href="javascript:console.log('Remove');">Remove all items</a>
-                    </div>
-                </div>
+                <!-- Community item -->
+                <li class="global-nav-item">
+                  <a class="global-nav-item__header" href="#">COMMUNITY</a>
+                  <ul class="global-nav-submenu">
+                    <li><a class="global-nav-submenu-item" href="">Home</a></li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Discussion</a>
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Work Shop</a>
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Market</a>
+                    </li>
+                    <li>
+                      <a class="global-nav-submenu-item" href="">Broadcasts</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- About item -->
+                <li class="global-nav-item">
+                  <a class="global-nav-item__header" href="#">ABOUT</a>
+                </li>
+
+                <!-- Support item -->
+                <li class="global-nav-item">
+                  <a class="global-nav-item__header" href="#">SUPPORT</a>
+                </li>
+              </ul>
+            </nav>
+            <div
+              class="navbar__overlay js-toggle"
+              toggle-target="#global-nav"
+            ></div>
+
+            <!-- Global header action  -->
+            <div class="global-header-action">
+              <div class="global-header-action-container">
+                <a
+                  class="global-header__install-btn global-header__btn"
+                  href="#"
+                >
+                  <i class="fa fa-download"></i> Install Steam
+                </a>
+                <a class="global-header__action-btn global-header__btn" href="#"
+                  >logout</a
+                >
+                <button class="global-header__language-btn global-header__btn">
+                  language <i class="fa fa-caret-down"></i>
+                </button>
+              </div>
+              <!-- <div class="language-popup">
+                                <a class="language-popup-compoents" href=""
+                                >简体中文 (Simplified Chinese)</a
+                                >
+                                <a class="language-popup-compoents" href=""
+                                >日本語 (Japanese)</a
+                                >
+                                <a class="language-popup-compoents" href=""
+                                >Русский (Russian)</a
+                                >
+                                <a class="language-popup-compoents" href=""
+                                >Tiếng Việt (Vietnamese)</a
+                                >
+                            </div> -->
             </div>
-        </main>
-    </body>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="page_content_header">
+        <div class="breadcrumps_page_heading">
+          <div class="breadcrumps">
+            <a href="#">All Products</a> &gt; Your Shopping Cart
+          </div>
+          <h2 class="page_heading">Your Shopping Cart</h2>
+        </div>
+      </div>
+      <div class="page_content_section">
+        <div class="cart_status">
+          <div class="cart_status_message_area">
+            <div class="cart_status_message">Your item has been added!</div>
+            <div class="cart_status_message_arrow"></div>
+          </div>
+        </div>
+        <div style="clear: left"></div>
+        <div class="checkout_content_box">
+          <div class="cart_item_list">
+            <div class="cart_item">
+              <div class="cart_item_price">
+                <div class="price">321.000₫</div>
+                <a class="remove_link" href="javascript:console.log('Remove');"
+                  >Remove</a
+                >
+              </div>
+              <div class="cart_item_img">
+                <a href="#">
+                  <img
+                    src="./assets/images/game/wildmender.jpg"
+                    alt="Wildmender"
+                  />
+                </a>
+              </div>
+              <div class="cart_item_desc">
+                <div class="cart_item_platform">
+                  <span class="win_platform_img"></span>
+                </div>
+                <a href="#">Wildmender</a><br />
+              </div>
+            </div>
+
+            <div class="cart_item">
+              <div class="cart_item_price">
+                <div class="price">249.000₫</div>
+                <a class="remove_link" href="javascript:console.log('Remove');"
+                  >Remove</a
+                >
+              </div>
+              <div class="cart_item_img">
+                <a href="#">
+                  <img
+                    src="./assets/images/game/child-of-light.jpg"
+                    alt="Child of Light"
+                  />
+                </a>
+              </div>
+              <div class="cart_item_desc">
+                <div class="cart_item_platform">
+                  <span class="win_platform_img"></span>
+                </div>
+                <a href="#">Child of Light</a><br />
+              </div>
+            </div>
+          </div>
+          <div class="purchase_section">
+            <div class="cart_total">
+              <div class="cart_estimated_total_text">Estimated total</div>
+              <div id="cart_estimated_total" class="price">570.000₫</div>
+            </div>
+            <div class="cart_purchase_desc">
+              Is this a purchase for yourself or is it a gift? Select one to
+              continue to checkout.
+            </div>
+            <div class="cart_purchase_button">
+              <a
+                id="myself_purchase_button"
+                href="javascript:console.log('Purchase');"
+              >
+                <span>Purchase for myself</span>
+              </a>
+              <a
+                id="gift_purchase_button"
+                href="javascript:console.log('Purchase');"
+              >
+                <span>Purchase as a gift</span>
+              </a>
+            </div>
+          </div>
+          <div class="payment_methods_section">
+            <div class="payment_methods_desc">
+              We accept the following payment methods:
+            </div>
+            <div class="payment_methods_img">
+              <img src="./assets/images/visa-logo.png" alt="Visa" />
+              <img src="./assets/images/mastercard-logo.png" alt="Mastercard" />
+              <img src="./assets/images/paypal-logo.png" alt="PayPal" />
+              <img
+                src="./assets/images/american-express-logo.png"
+                alt="American Express"
+              />
+              <img src="./assets/images/momo-logo.png" alt="MoMo" />
+              <img src="./assets/images/zalopay-logo.png" alt="ZaloPay" />
+              <img src="./assets/images/vnpay-logo.png" alt="VNPAY" />
+              <img src="./assets/images/discover-logo.png" alt="Discover" />
+            </div>
+          </div>
+          <div class="cart_side_desc">
+            All prices include VAT where applicable
+          </div>
+          <div class="continue_shopping">
+            <a id="continue_shopping_button" href="#"
+              ><span>Continue Shopping</span></a
+            >
+            <a class="remove_link" href="javascript:console.log('Remove');"
+              >Remove all items</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
+
+<script src="./assets/src/scripts.js"></script>

@@ -9,6 +9,7 @@ const $$ = document.querySelectorAll.bind(document);
  * <div id="box">Content show/hide</div>
  */
 function initJsToggle() {
+  console.log(123);
   $$('.js-toggle').forEach((button) => {
     const target = button.getAttribute('toggle-target');
     if (!target) {
@@ -57,3 +58,13 @@ function load(selector, path) {
       window.dispatchEvent(new Event('template-loaded'));
     });
 }
+
+function logout() {
+  const logoutBtn = $('.global-header__action-btn');
+  logoutBtn.onclick = () => {
+    localStorage.removeItem('token');
+    window.location.assign('./login.html');
+  };
+}
+
+window.addEventListener('template-loaded', logout);
