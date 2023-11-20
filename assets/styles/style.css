@@ -836,12 +836,14 @@ body {
 }
 
 .filtered-game-discount span {
+  width: 70%;
   font-family: "Motiva Sans", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   color: rgb(190, 238, 17);
   border-radius: 2px;
   padding: 8px 8px;
   background-color: rgb(76, 107, 34);
+  text-align: center;
 }
 
 /* style for section .filtered-game-price of .filtered-game-description */
