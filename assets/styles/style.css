@@ -629,7 +629,7 @@ body {
 
 /* __________________________________FILTER GAME NAVVAR_________________________________ */
 .game-filter-tabs {
-  margin: 0px 27% 0px 0px;
+  margin: 0px 35% 0px 0px;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
@@ -646,13 +646,13 @@ body {
 /* change tabs style when focus(may be replace bt javascript later on) */
 .game-filter-tabs .active {
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   background-color: rgb(42, 71, 94);
 }
 
 .filter-tab {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   color: rgb(79, 148, 188);
   font-weight: 400;
   padding: 6px 12px;
@@ -673,12 +673,12 @@ body {
 }
 
 .filtered-game-content {
-  margin-right: 120px; /* margin to shift content */
+  /* margin-right: 120px; margin to shift content */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%; /* set width to 50% to .filtered-game-list */
+  width: 100%; /* set width to 100% to .filtered-game-list */
 }
 
 /* add background color for displayed games */
@@ -693,9 +693,9 @@ body {
   display: flex;
   align-items: center;
   margin: 12px 0px 6px 0px;
-  padding: 6px 0px;
+  padding: 10px 0px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   color: rgb(207, 204, 204);
 }
 
@@ -741,7 +741,7 @@ body {
 /* ------------style for "see more" part -------------*/
 .filtered-game-see-more {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   color: rgb(207, 204, 204);
   display: inline-block;
   padding: 7px 5px 12px 5px;
@@ -750,7 +750,7 @@ body {
 .filtered-game-see-more a {
   border: 1px solid rgb(155, 152, 152);
   border-radius: 2px;
-  padding: 5px 14px;
+  padding: 8px 14px;
   text-decoration: none;
   color: white;
 }
@@ -819,21 +819,23 @@ body {
 /* name part of .filtered-game-name-platform-tags */
 .filtered-game-name {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: rgb(207, 204, 204);
   margin-top: 2px;
+  margin-bottom: 7%;
 }
 
 /* icon part of .filtered-game-name-platform-tags */
 .filtered-game-platform {
+  font-size: 1.1em;
   padding: 5px 0px;
 }
 
 /* tag part of .filtered-game-name-platform-tags */
 .filtered-game-tags {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  color: rgb(56, 73, 89);
+  font-size: 15px;
+  color: rgb(75, 95, 112);
 }
 
 /* style for section .filtered-game-discount of .filtered-game-description */
@@ -845,10 +847,10 @@ body {
 
 .filtered-game-discount span {
   font-family: 'Motiva Sans', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: rgb(190, 238, 17);
   border-radius: 2px;
-  padding: 5px 5px;
+  padding: 8px 8px;
   background-color: rgb(76, 107, 34);
 }
 
@@ -870,13 +872,13 @@ body {
 /* style for two <span> children of .filtered-game-price */
 .original-price {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   color: RGB(115, 136, 149);
 }
 
 .discounted-price {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 19px;
   color: white;
 }
 
