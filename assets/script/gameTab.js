@@ -1,7 +1,7 @@
 import { fetchProductsData } from "./fetchData.js";
 
 async function loadDataGameTab() {
-  const data = await fetchData();
+  const data = await fetchProductsData();
   const games = data.games;
   loadGameTab(games);
 
@@ -22,7 +22,7 @@ function loadGameTab(games) {
             <div class="filtered-game-platform">
               <i
                 class="fa-brands fa-windows fa-lg"
-                style="color: #7f97a5"
+                style="color: # 7f97a5"
               ></i>
               <i
                 class="fa-brands fa-apple fa-lg"
@@ -54,7 +54,22 @@ function loadGameTab(games) {
   for (let i = 0; i < gameTabContainers.length; i++) {
     gameTabContainers[i].innerHTML += html[randomArray[i]];
   }
+
+  console.log(gameTabContainers[0]);
 }
+
+function cleanDataGameTab() {
+  const gameTabContainers = document.querySelectorAll(
+    ".filtered-game-container"
+  );
+
+  gameTabContainers[0].removeChild(gameTabContainers[0].lastChild);
+
+  for (let i = 1; i < gameTabContainers.length; i++) {
+    gameTabContainers[i].innerHTML = "";
+  }
+}
+
 // get game tag
 function getGameTag(game) {
   let html = "";
@@ -67,7 +82,7 @@ function getGameTag(game) {
 }
 
 //effect for filterTab
-function setFilterTabActive() {
+async function setFilterTabActive() {
   const filter_tab = document.querySelectorAll(".filter-tab");
 
   const anchor = document.querySelector(".see-more-anchor");
@@ -94,6 +109,12 @@ function setFilterTabActive() {
       anchor.innerText = "Specials";
       break;
   }
+  console.log("OK");
+
+  cleanDataGameTab();
+  const data = await fetchProductsData();
+  const games = data.games;
+  loadGameTab(games);
 }
 
 function addEffectFilterTab() {
