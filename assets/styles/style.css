@@ -5,6 +5,8 @@
   --category-cover: rgba(255, 255, 255, 0.2);
   --white-text: #fff;
   --global-header-active: rgb(26, 159, 255);
+  --sale-off-text: #beee11;
+  --sale-off-background: #4c6b22;
 }
 
 * {
@@ -473,8 +475,11 @@ body {
 }
 
 .feature-item__game-tags span,
-.feature-item__price {
-  font-size: 1.1rem;
+.feature-item__price-normal,
+.feature-item__percent,
+.feature-item__old-price,
+.feature-item__current-price {
+  font-size: 1.2rem;
   font-weight: 300;
   color: var(--white-text);
 }
@@ -487,10 +492,50 @@ body {
 }
 
 .feature-item__more-info {
-  margin-top: 46px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.feature-item__price-group {
+  display: flex;
+  align-items: center;
+  background-color: #344654;
+}
+
+.feature-item__percent {
+  font-weight: bold;
+  color: var(--sale-off-text);
+  background-color: var(--sale-off-background);
+  padding: 4px 3px;
+}
+
+.feature-item__old-price {
+  color: #738895;
+  padding: 0 3px;
+  position: relative;
+}
+
+.feature-item__old-price::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: inherit;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.feature-item__current-price {
+  font-weight: 400;
+  color: var(--sale-off-text);
+  padding: 0 5px;
 }
 
 /* ================ Special ================ */

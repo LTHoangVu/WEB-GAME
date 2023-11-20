@@ -1,14 +1,10 @@
 import { Slide } from "./slide.js";
-import { fetchProductsData, fetchUserInfo } from "./fetchData.js";
+import { fetchProductsData } from "./fetchData.js";
 
 // Load game data on Homepage
 async function loadDataOnHomepage() {
-  const userInfo = await fetchUserInfo();
   const data = await fetchProductsData();
   const gamesData = data.games;
-  const globalHeader = document.getElementById("global-header-action");
-
-  // If user has logged in, show profile
 
   // Load 4 first games on feature
   loadGamesOnFeature(
@@ -68,7 +64,19 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
 
       <!-- Price and platform -->
       <div class="feature-item__more-info">
-        <span class="feature-item__price">${item.price}₫</span>
+          ${
+            !item.saleoff
+              ? `<span class="feature-item__price-normal">${
+                  item.price ? item.price + "₫" : "Free to play"
+                }</span>`
+              : `<div class="feature-item__price-group">
+                    <span class="feature-item__percent">
+                    -${item.saleoff}%
+                    </span>
+                    <span class= "feature-item__old-price">${item.oldprice}₫</span>
+                    <span class= "feature-item__current-price">${item.price}₫</span>
+                </div>`
+          }
         <div class="feature-item__platform">
           <i class="fa fa-windows"></i>
         </div>
