@@ -12,6 +12,14 @@ async function loadDataOnHomepage() {
     "feature-group",
     "feature__slide-control-group"
   );
+
+  // Load the most 9 sold off games
+  const mostSaleOffGames = gamesData.filter((item) => item.saleoff);
+  loadGamesOnSpecial(
+    mostSaleOffGames.slice(0, 9),
+    "special-group",
+    "special__slide-control-group"
+  );
 }
 
 // Load game on specific part (game data, game list container, dots group container, list item)
@@ -47,7 +55,7 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
     <!-- Info -->
     <div class="feature-item__info">
       <!-- Game title -->
-      <h3 class="feature-item__app-name">${item.title}</h3>
+      <h3 class="feature-item__app-name line-clamp-2">${item.title}</h3>
 
       <!-- Screenshots group -->
       <div class="feature-item__screenshots">
@@ -93,11 +101,53 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
   featureSlide.start();
 }
 
+function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
+  const smallGroup = [];
+
+  const chunkSize = 3;
+  for (let i = 0; i < data.length; i += chunkSize) {
+    const chunk = data.slice(i, i + chunkSize);
+    smallGroup.push(chunk);
+  }
+
+  const html = smallGroup
+    .map((item) => {
+      return ` <div class="special-item fade">
+         ${item
+           .map((game) => {
+             return `<article class="special-item-child">
+          <!-- Game thumb -->
+          <img
+            src="${game.imageUrl}"
+            alt="${game.title}"
+            class="special-item-child__thumb"
+          />
+          <div class="special-item-child__content">
+            <!-- Game title -->
+            <h3 class="special-item-child__app-name">${game.title}</h3>
+
+            <!-- Sale % -->
+            <strong class="special-item-child__sale-off"
+              >Up to -${game.saleoff}%</strong
+            >
+          </div>
+        </article>`;
+           })
+           .join("\n")}
+        </div>`;
+    })
+    .join("\n");
+
+  loadGamesOnSpecificPart(smallGroup, listGameID, dotsGroupID, html);
+
+  // Slide effect
+  const specialSlide = new Slide("special", "grid", 5000);
+  specialSlide.start();
+}
+
 // Slide effect
-const specialSlide = new Slide("special", "grid", 5000);
 const categorySlide = new Slide("category", "grid");
 
-specialSlide.start();
 categorySlide.start();
 
 export { loadDataOnHomepage };

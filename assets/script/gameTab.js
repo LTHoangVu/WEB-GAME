@@ -1,19 +1,20 @@
-import fetchData from "./fetchData.js";
+import { fetchProductsData } from "./fetchData.js";
 
-async function loadDataGameTab(){
-    const data = await fetchData();
-    const games = data.games;
-    loadGameTab(games)
+async function loadDataGameTab() {
+  const data = await fetchData();
+  const games = data.games;
+  loadGameTab(games);
 
-    addEffectFilterTab();
+  addEffectFilterTab();
 }
 
 //create game tab
-function loadGameTab(games)
-{
-    const gameTabContainers = document.querySelectorAll(".filtered-game-container");
-    const html = games.map((item)=>{
-        return `<div class="filtered-game">
+function loadGameTab(games) {
+  const gameTabContainers = document.querySelectorAll(
+    ".filtered-game-container"
+  );
+  const html = games.map((item) => {
+    return `<div class="filtered-game">
         <img src="${item.imageUrl}" alt="game image" />
         <div class="filtered-game-description">
           <div class="filtered-game-name-platform-tags">
@@ -40,99 +41,86 @@ function loadGameTab(games)
             <span class="discounted-price">${item.price}</span>
           </div>
         </div>
-    </div>`
-    })
+    </div>`;
+  });
 
-    let randomArray = [];
-    for (let i = 0; i < 20; i++) {
-        randomArray.push(i);
-    }
-    randomArray = shuffle(randomArray);
-    console.log(randomArray)
+  let randomArray = [];
+  for (let i = 0; i < 20; i++) {
+    randomArray.push(i);
+  }
+  randomArray = shuffle(randomArray);
+  console.log(randomArray);
 
-
-    for (let i=0; i<gameTabContainers.length; i++)
-    {
-        gameTabContainers[i].innerHTML += html[randomArray[i]]
-    }
+  for (let i = 0; i < gameTabContainers.length; i++) {
+    gameTabContainers[i].innerHTML += html[randomArray[i]];
+  }
 }
 // get game tag
-function getGameTag(game)
-{
-    let html = ""
-    for (let i = 0; i<game.tags.length; i++)
-    {
-        if(i === game.tags.length-1)
-        {
-            html+=`<span class="game-tag">${game.tags[i].tagName}</span>\n`
-        }
-        else
-            html+=`<span class="game-tag">${game.tags[i].tagName},</span>\n`
-    }
-    return html;
+function getGameTag(game) {
+  let html = "";
+  for (let i = 0; i < game.tags.length; i++) {
+    if (i === game.tags.length - 1) {
+      html += `<span class="game-tag">${game.tags[i].tagName}</span>\n`;
+    } else html += `<span class="game-tag">${game.tags[i].tagName},</span>\n`;
+  }
+  return html;
 }
-
-
-
 
 //effect for filterTab
-function setFilterTabActive()
-{
-    const filter_tab = document.querySelectorAll(".filter-tab")
-    
-    const anchor = document.querySelector('.see-more-anchor')
-    const checkbox = document.querySelector('#checkbox-container')
-    filter_tab.forEach(element =>{
-        if(element.classList.contains('active'))
-        {
-            element.classList.remove('active')
-        }
-    })
-    this.classList.add('active')
-    checkbox.style.display = 'none'
-    switch(this.innerText)
-    {
-        case "News & Trending":
-            anchor.innerText = "New Realeases"
-            break;
-        case "Top Sellers":
-            anchor.innerText = "Top Sellers"
-            checkbox.style.display = "flex"
-            break
-        case "Popular Upcoming":
-            anchor.innerText = "Upcomming Realeases"
-            break;
-        case "Specials":
-            anchor.innerText = "Specials"
-            break;
+function setFilterTabActive() {
+  const filter_tab = document.querySelectorAll(".filter-tab");
+
+  const anchor = document.querySelector(".see-more-anchor");
+  const checkbox = document.querySelector("#checkbox-container");
+  filter_tab.forEach((element) => {
+    if (element.classList.contains("active")) {
+      element.classList.remove("active");
     }
+  });
+  this.classList.add("active");
+  checkbox.style.display = "none";
+  switch (this.innerText) {
+    case "News & Trending":
+      anchor.innerText = "New Realeases";
+      break;
+    case "Top Sellers":
+      anchor.innerText = "Top Sellers";
+      checkbox.style.display = "flex";
+      break;
+    case "Popular Upcoming":
+      anchor.innerText = "Upcomming Realeases";
+      break;
+    case "Specials":
+      anchor.innerText = "Specials";
+      break;
+  }
 }
 
-function addEffectFilterTab()
-{
-    const filter_tab = document.querySelectorAll(".filter-tab")
-    filter_tab.forEach(element => {
-        element.addEventListener('click', setFilterTabActive)
-    });
+function addEffectFilterTab() {
+  const filter_tab = document.querySelectorAll(".filter-tab");
+  filter_tab.forEach((element) => {
+    element.addEventListener("click", setFilterTabActive);
+  });
 }
 
 function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-  
-    // While there remain elements to shuffle.
-    while (currentIndex > 0) {
-  
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
-  
-    return array;
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex > 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
   }
 
-export {loadDataGameTab}
+  return array;
+}
 
+export { loadDataGameTab };

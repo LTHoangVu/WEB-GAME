@@ -112,6 +112,13 @@ a {
   color: var(--white-text);
 }
 
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* ================ Body ================ */
 body {
   background-color: var(--main-background);
@@ -446,7 +453,7 @@ body {
 }
 
 .feature-item__info {
-  padding: 25px 10px 0;
+  padding: 15px 10px 0;
 }
 
 .feature-item__app-name {
@@ -553,6 +560,7 @@ body {
   display: none;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
+  overflow: hidden;
 }
 
 /* Special item child */
@@ -570,6 +578,7 @@ body {
 .special-item-child__content {
   padding: 25px 20px;
   background-image: url("https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg");
+  height: 100%;
 }
 
 .special-item-child__app-name {
