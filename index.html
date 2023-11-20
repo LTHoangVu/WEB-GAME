@@ -1,192 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Steam</title>
 
-    <!-- Add favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./assets/favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./assets/favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./assets/favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./assets/favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./assets/favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./assets/favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./assets/favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./assets/favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./assets/favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./assets/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Steam</title>
 
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="./assets/styles/reset.css" />
+  <!-- Add favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
 
-    <!-- Style -->
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="./assets/styles/reset.css" />
 
-    <!-- Embed font -->
-    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+  <!-- Style -->
+  <link rel="stylesheet" href="./assets/styles/style.css" />
 
-    <!-- Font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+  <!-- Embed font -->
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
 
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <!-- Global header -->
-      <div class="global-header">
-        <div class="container">
-          <div class="global-header-wrap">
-            <!-- Global header logo -->
-            <a href="/">
-              <img
-                src="assets/images/logo.png"
-                alt="steam-logo"
-                class="global-header__logo"
-              />
-            </a>
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
 
-            <!-- Global header nav -->
-            <nav class="global-nav">
-              <ul class="global-nav-list">
-                <!-- Store item -->
-                <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">STORE</a>
-                  <ul class="global-nav-submenu">
-                    <li><a class="global-nav-submenu-item" href="">Home</a></li>
-                    <li>
-                      <a class="global-nav-submenu-item" href=""
-                        >Discovery Queue</a
-                      >
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Wishlist</a>
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Points Shop</a>
-                    </li>
-                    <li><a class="global-nav-submenu-item" href="">News</a></li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Stats</a>
-                    </li>
-                  </ul>
-                </li>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <!-- Global header -->
+    <div class="global-header">
+      <div class="container">
+        <div class="global-header-wrap">
+          <!-- Global header logo -->
+          <a href="/">
+            <img src="assets/images/logo.png" alt="steam-logo" class="global-header__logo" />
+          </a>
 
-                <!-- Community item -->
-                <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">COMMUNITY</a>
-                  <ul class="global-nav-submenu">
-                    <li><a class="global-nav-submenu-item" href="">Home</a></li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Discussion</a>
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Work Shop</a>
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Market</a>
-                    </li>
-                    <li>
-                      <a class="global-nav-submenu-item" href="">Broadcasts</a>
-                    </li>
-                  </ul>
-                </li>
+          <!-- Global header nav -->
+          <nav class="global-nav">
+            <ul class="global-nav-list">
+              <!-- Store item -->
+              <li class="global-nav-item">
+                <a class="global-nav-item__header" href="#">STORE</a>
+                <ul class="global-nav-submenu">
+                  <li><a class="global-nav-submenu-item" href="">Home</a></li>
+                  <li>
+                    <a class="global-nav-submenu-item" href="">Discovery Queue</a>
+                  </li>
+                  <li>
+                    <a class="global-nav-submenu-item" href="">Wishlist</a>
+                  </li>
+                  <li>
+                    <a class="global-nav-submenu-item" href="">Points Shop</a>
+                  </li>
+                  <li><a class="global-nav-submenu-item" href="">News</a></li>
+                  <li>
+                    <a class="global-nav-submenu-item" href="">Stats</a>
+                  </li>
+                </ul>
+              </li>
 
-                <!-- About item -->
-                <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">ABOUT</a>
-                </li>
+              <!-- Community item -->
+              <li class="global-nav-item">
+                <a class="global-nav-item__header" href="#">COMMUNITY</a>
+                <ul class="global-nav-submenu">
+                  <li><a class="global-nav-submenu-item" href="">Home</a></li>
+                  <li>
+                    <a class="global-nav-submenu-item" href="">Discussion</a>
+                  </li>
+                  <li>
+                    <a class="global-nav-submenu-item" href="">Work Shop</a>
+                  </li>
+                  <li>
+                    <a class="global-nav-submenu-item" href="">Market</a>
+                  </li>
+                  <li>
+                    <a class="global-nav-submenu-item" href="">Broadcasts</a>
+                  </li>
+                </ul>
+              </li>
 
-                <!-- Support item -->
-                <li class="global-nav-item">
-                  <a class="global-nav-item__header" href="#">SUPPORT</a>
-                </li>
-              </ul>
-            </nav>
+              <!-- About item -->
+              <li class="global-nav-item">
+                <a class="global-nav-item__header" href="#">ABOUT</a>
+              </li>
 
-            <!-- Global header action  -->
-            <div class="global-header-action">
-              <div class="global-header-action-container">
-                <a
-                  class="global-header__install-btn global-header__btn"
-                  href="#!"
-                >
-                  <i class="fa fa-download"></i> Install Steam
-                </a>
-                <a class="global-header__login-btn global-header__btn" href="#!"
-                  >login</a
-                >
-                <button class="global-header__language-btn global-header__btn">
-                  language <i class="fa fa-caret-down"></i>
-                </button>
-              </div>
-              <!-- <div class="language-popup">
+              <!-- Support item -->
+              <li class="global-nav-item">
+                <a class="global-nav-item__header" href="#">SUPPORT</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Global header action  -->
+          <div class="global-header-action">
+            <div class="global-header-action-container">
+              <a class="global-header__install-btn global-header__btn" href="#!">
+                <i class="fa fa-download"></i> Install Steam
+              </a>
+              <a class="global-header__login-btn global-header__btn" href="#!">login</a>
+              <button class="global-header__language-btn global-header__btn">
+                language <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+            <!-- <div class="language-popup">
                 <a class="language-popup-compoents" href=""
                   >简体中文 (Simplified Chinese)</a
                 >
@@ -200,886 +131,597 @@
                   >Tiếng Việt (Vietnamese)</a
                 >
               </div> -->
-            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Hero -->
-      <div class="hero">
-        <div class="container">
-          <div class="hero-nav-group">
-            <!-- Nav bar -->
-            <nav class="nav">
-              <ul class="nav-list">
-                <!-- Your store -->
-                <li class="nav-item">
-                  <a class="nav-item__header" href="#!">Your Store</a>
-                  <ul class="nav-submenu">
-                    <li>
-                      <a class="nav-submenu-item" href="#!">Home</a>
-                    </li>
-                    <li>
-                      <a class="nav-submenu-item" href="#!"
-                        >Community Recommendations</a
-                      >
-                    </li>
-                    <li>
-                      <a class="nav-submenu-item" href="#!">Recently Viewed</a>
-                    </li>
-                    <li>
-                      <a class="nav-submenu-item" href="#!">Steam Curators</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <!-- Popular -->
-                <li class="nav-item">
-                  <a class="nav-item__header" href="#"> New & Noteworthy </a>
-                  <ul class="nav-submenu">
-                    <li><a class="nav-submenu-item" href="">Popular</a></li>
-                    <li>
-                      <a class="nav-submenu-item" href="">New & Updates</a>
-                    </li>
-                    <li>
-                      <a class="nav-submenu-item" href="">Promotes & Events</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <!-- Categories -->
-                <li class="nav-item">
-                  <a class="nav-item__header" href="#"> Categories </a>
-                  <ul class="nav-submenu">
-                    <li><a class="nav-submenu-item" href="">Action</a></li>
-                    <li><a class="nav-submenu-item" href="">Adventure</a></li>
-                    <li>
-                      <a class="nav-submenu-item" href="">Role-Playing</a>
-                    </li>
-                    <li><a class="nav-submenu-item" href="">Simulation</a></li>
-                    <li><a class="nav-submenu-item" href="">Strategy</a></li>
-                    <li>
-                      <a class="nav-submenu-item" href="">Sports & Racing</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <!-- Points shop -->
-                <li class="nav-item">
-                  <a class="nav-item__header" href="#"> Points Shop </a>
-                </li>
-
-                <!-- News -->
-                <li class="nav-item">
-                  <a class="nav-item__header" href="#"> News </a>
-                </li>
-
-                <!-- Labs -->
-                <li class="nav-item">
-                  <a class="nav-item__header" href="#"> Labs </a>
-                </li>
-              </ul>
-            </nav>
-
-            <!-- Search box -->
-            <form class="search-form">
-              <input
-                id="search-form-input"
-                class="search-form-input"
-                name="search-box"
-                type="text"
-                placeholder="search"
-              />
-              <button class="search-submit-btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 512 512"
-                >
-                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path
-                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                  />
-                </svg>
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <div class="video-background-container">
-          <video class="video-background" autoplay muted loop>
-            <source
-              src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/40c14a0bef16a5f75d7e1930/webm_page_bg_english.webm?t=1697739595"
-              type="video/mp4"
-            />
-          </video>
-        </div>
-      </div>
-    </header>
-
-    <!-- Aside Nav-->
-    <aside class="aside">
-      <nav class="aside-nav">
-        <div class="aside-nav-group">
-          <h4 class="aside-nav__header">RECOMMENDED</h4>
-          <ul class="aside-nav__list">
-            <li><a href="#!" class="aside-nav__item">By Friends</a></li>
-            <li><a href="#!" class="aside-nav__item">By Curator</a></li>
-            <li><a href="#!" class="aside-nav__item">Tags</a></li>
-          </ul>
-        </div>
-        <div class="aside-nav-group">
-          <h4 class="aside-nav__header">BROWSE CATEGORIES</h4>
-          <ul class="aside-nav__list">
-            <li><a href="#!" class="aside-nav__item">Top Seller</a></li>
-            <li><a href="#!" class="aside-nav__item">New Releases</a></li>
-            <li><a href="#!" class="aside-nav__item">Upcoming</a></li>
-            <li><a href="#!" class="aside-nav__item">Specials</a></li>
-            <li><a href="#!" class="aside-nav__item">VR Titles</a></li>
-            <li>
-              <a href="#!" class="aside-nav__item">Controller-Friendly</a>
-            </li>
-            <li><a href="#!" class="aside-nav__item">Great on Deck </a></li>
-          </ul>
-        </div>
-        <div class="aside-nav-group">
-          <h4 class="aside-nav__header">BROWSE BY GENRE</h4>
-          <ul class="aside-nav__list">
-            <li><a href="#!" class="aside-nav__item">Action</a></li>
-            <li><a href="#!" class="aside-nav__item">Role-Playing</a></li>
-            <li><a href="#!" class="aside-nav__item">Action RPG</a></li>
-            <li><a href="#!" class="aside-nav__item">Adventure</a></li>
-            <li><a href="#!" class="aside-nav__item">Stimulation</a></li>
-          </ul>
-        </div>
-      </nav>
-    </aside>
-
-    <!-- Main -->
-    <main class="main">
+    <!-- Hero -->
+    <div class="hero">
       <div class="container">
-        <!-- Feature -->
-        <section class="feature">
-          <!-- Heading -->
-          <h2 class="heading">FEATURED & RECOMMENDED</h2>
+        <div class="hero-nav-group">
+          <!-- Nav bar -->
+          <nav class="nav">
+            <ul class="nav-list">
+              <!-- Your store -->
+              <li class="nav-item">
+                <a class="nav-item__header" href="#!">Your Store</a>
+                <ul class="nav-submenu">
+                  <li>
+                    <a class="nav-submenu-item" href="#!">Home</a>
+                  </li>
+                  <li>
+                    <a class="nav-submenu-item" href="#!">Community Recommendations</a>
+                  </li>
+                  <li>
+                    <a class="nav-submenu-item" href="#!">Recently Viewed</a>
+                  </li>
+                  <li>
+                    <a class="nav-submenu-item" href="#!">Steam Curators</a>
+                  </li>
+                </ul>
+              </li>
 
-          <!-- Main content -->
-          <div class="feature-group" id="feature-group">
-            <!-- Control group -->
-            <div class="chevron chevron-left">
-              <i class="fa fa-chevron-left fa-3x"></i>
-            </div>
-            <div class="chevron chevron-right">
-              <i class="fa fa-chevron-right fa-3x"></i>
-            </div>
-          </div>
-          <!-- Slide control group -->
-          <div class="feature__slide-control-group slide-control-group"></div>
-        </section>
+              <!-- Popular -->
+              <li class="nav-item">
+                <a class="nav-item__header" href="#"> New & Noteworthy </a>
+                <ul class="nav-submenu">
+                  <li><a class="nav-submenu-item" href="">Popular</a></li>
+                  <li>
+                    <a class="nav-submenu-item" href="">New & Updates</a>
+                  </li>
+                  <li>
+                    <a class="nav-submenu-item" href="">Promotes & Events</a>
+                  </li>
+                </ul>
+              </li>
 
-        <!-- Special -->
-        <section class="special">
-          <!-- Heading -->
-          <h2 class="heading">SPECIAL OFFERS</h2>
+              <!-- Categories -->
+              <li class="nav-item">
+                <a class="nav-item__header" href="#"> Categories </a>
+                <ul class="nav-submenu">
+                  <li><a class="nav-submenu-item" href="">Action</a></li>
+                  <li><a class="nav-submenu-item" href="">Adventure</a></li>
+                  <li>
+                    <a class="nav-submenu-item" href="">Role-Playing</a>
+                  </li>
+                  <li><a class="nav-submenu-item" href="">Simulation</a></li>
+                  <li><a class="nav-submenu-item" href="">Strategy</a></li>
+                  <li>
+                    <a class="nav-submenu-item" href="">Sports & Racing</a>
+                  </li>
+                </ul>
+              </li>
 
-          <!-- Main content -->
-          <div class="special-group">
-            <!-- Item 01 -->
-            <div class="special-item fade">
-              <!-- Item child 1 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+              <!-- Points shop -->
+              <li class="nav-item">
+                <a class="nav-item__header" href="#"> Points Shop </a>
+              </li>
 
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
+              <!-- News -->
+              <li class="nav-item">
+                <a class="nav-item__header" href="#"> News </a>
+              </li>
 
-              <!-- Item child 2 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
-
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
-
-              <!-- Item child  3 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
-
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
-            </div>
-
-            <!-- Item 02 -->
-            <div class="special-item fade">
-              <!-- Item child 1 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
-
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
-
-              <!-- Item child 2 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
-
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
-
-              <!-- Item child  3 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
-
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
-            </div>
-
-            <!-- Item 03 -->
-            <div class="special-item fade">
-              <!-- Item child 1 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
-
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
-
-              <!-- Item child 2 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
-
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
-
-              <!-- Item child  3 -->
-              <article class="special-item-child">
-                <!-- Game thumb -->
-                <img
-                  src="./assets/images/game-thumb.jpg"
-                  alt="naruto-storm"
-                  class="special-item-child__thumb"
-                />
-                <div class="special-item-child__content">
-                  <!-- Game title -->
-                  <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
-
-                  <!-- Sale % -->
-                  <strong class="special-item-child__sale-off"
-                    >Up to -90%</strong
-                  >
-                </div>
-              </article>
-            </div>
-
-            <!-- Control group -->
-            <div class="chevron chevron-left">
-              <i class="fa fa-chevron-left fa-3x"></i>
-            </div>
-            <div class="chevron chevron-right">
-              <i class="fa fa-chevron-right fa-3x"></i>
-            </div>
-          </div>
-
-          <!-- Slide control group -->
-          <div class="feature__slide-control-group slide-control-group">
-            <div class="slide-control-item"></div>
-            <div class="slide-control-item"></div>
-            <div class="slide-control-item"></div>
-          </div>
-        </section>
-
-        <!-- Categories -->
-        <section class="category">
-          <!-- Heading -->
-          <h2 class="heading">BROWSE BY CATEGORY</h2>
-
-          <!-- Category group -->
-          <div class="category-group">
-            <!-- Item 1 -->
-            <div class="category-item fade">
-              <!-- Item child 1 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">FIGHTING</span>
-              </a>
-
-              <!-- Item child 2 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/racing?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">ACTION</span>
-              </a>
-
-              <!-- Item child 3 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/story_rich?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">MULTIPLAYER</span>
-              </a>
-
-              <!-- Item child 4 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/rogue_like_rogue_lite?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">ADVENTURE</span>
-              </a>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="category-item fade">
-              <!-- Item child 1 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">FIGHTING</span>
-              </a>
-
-              <!-- Item child 2 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/racing?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">ACTION</span>
-              </a>
-
-              <!-- Item child 3 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/story_rich?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">MULTIPLAYER</span>
-              </a>
-
-              <!-- Item child 4 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/rogue_like_rogue_lite?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">ADVENTURE</span>
-              </a>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="category-item fade">
-              <!-- Item child 1 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">FIGHTING</span>
-              </a>
-
-              <!-- Item child 2 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/racing?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">ACTION</span>
-              </a>
-
-              <!-- Item child 3 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/story_rich?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">MULTIPLAYER</span>
-              </a>
-
-              <!-- Item child 4 -->
-              <a href="#!" class="category-item-child">
-                <img
-                  src="https://store.steampowered.com/categories/homepageimage/category/rogue_like_rogue_lite?cc=us&l=english"
-                  alt=""
-                  class="category-item-child__img"
-                />
-                <div class="category-item-child__gradient"></div>
-                <span class="category-item-child__label">ADVENTURE</span>
-              </a>
-            </div>
-
-            <!-- Control group -->
-            <div class="chevron chevron-left">
-              <i class="fa fa-chevron-left fa-3x"></i>
-            </div>
-            <div class="chevron chevron-right">
-              <i class="fa fa-chevron-right fa-3x"></i>
-            </div>
-          </div>
-
-          <!-- Slide control group -->
-          <div class="category__slide-control-group slide-control-group">
-            <div class="slide-control-item"></div>
-            <div class="slide-control-item"></div>
-            <div class="slide-control-item"></div>
-          </div>
-        </section>
-
-        <!-- Games -->
-        <div class="total-content">
-          <section class="game-filter-nav">
-            <ul class="game-filter-tabs">
-              <li class="filter-tab" tabindex="0">News & Trending</li>
-              <li class="filter-tab" tabindex="1">Top Sellers</li>
-              <li class="filter-tab" tabindex="2">Popular Upcoming</li>
-              <li class="filter-tab" tabindex="3">Specials</li>
+              <!-- Labs -->
+              <li class="nav-item">
+                <a class="nav-item__header" href="#"> Labs </a>
+              </li>
             </ul>
-          </section>
-          <section class="filtered-game-list">
-            <div class="filtered-game-content">
-              <div id="checkbox-container">
-                <input
-                  id="checkbox-include-free-game"
-                  type="checkbox"
-                  name="checkbox"
-                />
-                <label for="checkbox">Include free to play items</label>
-                <i
-                  class="fa-solid fa-circle-info fa-lg"
-                  style="color: #ffffff"
-                ></i>
-                <span class="checkbox-more-info"
-                  >Top games based on all sources of revenue, including from DLC
-                  and in-game purchases</span
-                >
-              </div>
-              <div class="filtered-game-container">
-                <span class="filtered-game-see-more">
-                  See more: <a href="#">New Realeases</a>
-                </span>
-                <div class="filtered-game">
-                  <img src="./assets/images/game/game.jpg" alt="game image" />
-                  <div class="filtered-game-description">
-                    <div class="filtered-game-name-platform-tags">
-                      <span class="filtered-game-name">Baldur's Gate 3</span>
-                      <div class="filtered-game-platform">
-                        <i
-                          class="fa-brands fa-windows fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                        <i
-                          class="fa-brands fa-apple fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                      </div>
-                      <div class="filtered-game-tags">
-                        <span class="game-tag">RPG</span>
-                        <span class="game-tag">, Choice Matter</span>
-                        <span class="game-tag">, Story Rich</span>
-                        <span class="game-tag">, Character Customization</span>
-                      </div>
-                    </div>
-                    <div class="filtered-game-discount">
-                      <span>-10%</span>
-                    </div>
-                    <div class="filtered-game-price">
-                      <span class="original-price">990.000</span>
-                      <span class="discounted-price">790.000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filtered-game-container">
-                <div class="filtered-game">
-                  <img src="./assets/images/game/game.jpg" alt="game image" />
-                  <div class="filtered-game-description">
-                    <div class="filtered-game-name-platform-tags">
-                      <span class="filtered-game-name">Baldur's Gate 3</span>
-                      <div class="filtered-game-platform">
-                        <i
-                          class="fa-brands fa-windows fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                        <i
-                          class="fa-brands fa-apple fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                      </div>
-                      <div class="filtered-game-tags">
-                        <span class="game-tag">RPG</span>
-                        <span class="game-tag">, Choice Matter</span>
-                        <span class="game-tag">, Story Rich</span>
-                        <span class="game-tag">, Character Customization</span>
-                      </div>
-                    </div>
-                    <div class="filtered-game-discount">
-                      <span>-10%</span>
-                    </div>
-                    <div class="filtered-game-price">
-                      <span class="original-price">990.000</span>
-                      <span class="discounted-price">790.000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filtered-game-container">
-                <div class="filtered-game">
-                  <img src="./assets/images/game/game.jpg" alt="game image" />
-                  <div class="filtered-game-description">
-                    <div class="filtered-game-name-platform-tags">
-                      <span class="filtered-game-name">Baldur's Gate 3</span>
-                      <div class="filtered-game-platform">
-                        <i
-                          class="fa-brands fa-windows fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                        <i
-                          class="fa-brands fa-apple fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                      </div>
-                      <div class="filtered-game-tags">
-                        <span class="game-tag">RPG</span>
-                        <span class="game-tag">, Choice Matter</span>
-                        <span class="game-tag">, Story Rich</span>
-                        <span class="game-tag">, Character Customization</span>
-                      </div>
-                    </div>
-                    <div class="filtered-game-discount">
-                      <span>-10%</span>
-                    </div>
-                    <div class="filtered-game-price">
-                      <span class="original-price">990.000</span>
-                      <span class="discounted-price">790.000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filtered-game-container">
-                <div class="filtered-game">
-                  <img src="./assets/images/game/game.jpg" alt="game image" />
-                  <div class="filtered-game-description">
-                    <div class="filtered-game-name-platform-tags">
-                      <span class="filtered-game-name">Baldur's Gate 3</span>
-                      <div class="filtered-game-platform">
-                        <i
-                          class="fa-brands fa-windows fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                        <i
-                          class="fa-brands fa-apple fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                      </div>
-                      <div class="filtered-game-tags">
-                        <span class="game-tag">RPG</span>
-                        <span class="game-tag">, Choice Matter</span>
-                        <span class="game-tag">, Story Rich</span>
-                        <span class="game-tag">, Character Customization</span>
-                      </div>
-                    </div>
-                    <div class="filtered-game-discount">
-                      <span>-10%</span>
-                    </div>
-                    <div class="filtered-game-price">
-                      <span class="original-price">990.000</span>
-                      <span class="discounted-price">790.000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filtered-game-container">
-                <div class="filtered-game">
-                  <img src="./assets/images/game/game.jpg" alt="game image" />
-                  <div class="filtered-game-description">
-                    <div class="filtered-game-name-platform-tags">
-                      <span class="filtered-game-name">Baldur's Gate 3</span>
-                      <div class="filtered-game-platform">
-                        <i
-                          class="fa-brands fa-windows fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                        <i
-                          class="fa-brands fa-apple fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                      </div>
-                      <div class="filtered-game-tags">
-                        <span class="game-tag">RPG</span>
-                        <span class="game-tag">, Choice Matter</span>
-                        <span class="game-tag">, Story Rich</span>
-                        <span class="game-tag">, Character Customization</span>
-                      </div>
-                    </div>
-                    <div class="filtered-game-discount">
-                      <span>-10%</span>
-                    </div>
-                    <div class="filtered-game-price">
-                      <span class="original-price">990.000</span>
-                      <span class="discounted-price">790.000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filtered-game-container">
-                <div class="filtered-game">
-                  <img src="./assets/images/game/game.jpg" alt="game image" />
-                  <div class="filtered-game-description">
-                    <div class="filtered-game-name-platform-tags">
-                      <span class="filtered-game-name">Baldur's Gate 3</span>
-                      <div class="filtered-game-platform">
-                        <i
-                          class="fa-brands fa-windows fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                        <i
-                          class="fa-brands fa-apple fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                      </div>
-                      <div class="filtered-game-tags">
-                        <span class="game-tag">RPG</span>
-                        <span class="game-tag">, Choice Matter</span>
-                        <span class="game-tag">, Story Rich</span>
-                        <span class="game-tag">, Character Customization</span>
-                      </div>
-                    </div>
-                    <div class="filtered-game-discount">
-                      <span>-10%</span>
-                    </div>
-                    <div class="filtered-game-price">
-                      <span class="original-price">990.000</span>
-                      <span class="discounted-price">790.000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filtered-game-container">
-                <div class="filtered-game">
-                  <img src="./assets/images/game/game.jpg" alt="game image" />
-                  <div class="filtered-game-description">
-                    <div class="filtered-game-name-platform-tags">
-                      <span class="filtered-game-name">Baldur's Gate 3</span>
-                      <div class="filtered-game-platform">
-                        <i
-                          class="fa-brands fa-windows fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                        <i
-                          class="fa-brands fa-apple fa-lg"
-                          style="color: #7f97a5"
-                        ></i>
-                      </div>
-                      <div class="filtered-game-tags">
-                        <span class="game-tag">RPG</span>
-                        <span class="game-tag">, Choice Matter</span>
-                        <span class="game-tag">, Story Rich</span>
-                        <span class="game-tag">, Character Customization</span>
-                      </div>
-                    </div>
-                    <div class="filtered-game-discount">
-                      <span>-10%</span>
-                    </div>
-                    <div class="filtered-game-price">
-                      <span class="original-price">990.000</span>
-                      <span class="discounted-price">790.000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <script
-          src="https://kit.fontawesome.com/66df57de56.js"
-          crossorigin="anonymous"
-        ></script>
-      </div>
-    </main>
+          </nav>
 
-    <!-- Global Footer -->
-    <footer class="global-footer">
-      <div class="footer-content">
-        <a href="#" class="valve-logo">
-          <img
-            src="https://store.cloudflare.steamstatic.com/public/images/footerLogo_valve_new.png"
-            alt="valve-logo"
-          />
-        </a>
-        <div class="footer-text">
-          <div>
-            © 2023 Valve Corporation. All rights reserved. All trademarks are
-            property of their respective owners in the US and other countries.
-          </div>
-          <div>
-            VAT included in all prices where applicable. &nbsp; &nbsp;
-            <a href="#">Privacy Policy</a>
-            &nbsp; | &nbsp;
-            <a href="#">Legal</a>
-            &nbsp; | &nbsp;
-            <a href="#">Steam Subscriber Agreement</a>
-            &nbsp; | &nbsp;
-            <a href="#">Refunds</a>
-            &nbsp; | &nbsp;
-            <a href="#">Cookies</a>
-          </div>
-          <button class="view-mobile-btn-footer">View mobile website</button>
+          <!-- Search box -->
+          <form class="search-form">
+            <input id="search-form-input" class="search-form-input" name="search-box" type="text"
+              placeholder="search" />
+            <button class="search-submit-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+              </svg>
+            </button>
+          </form>
         </div>
-        <img
-          class="steam-logo"
-          src="https://store.cloudflare.steamstatic.com/public/images/v6/logo_steam_footer.png"
-          alt="steam-logo"
-        />
       </div>
-      <div class="valve-link">
-        <a href="#">About Valve</a>
-        &nbsp; | &nbsp;
-        <a href="#">Jobs</a>
-        &nbsp; | &nbsp;
-        <a href="#">Steamworks</a>
-        &nbsp; | &nbsp;
-        <a href="#">Steam Distribution</a>
-        &nbsp; | &nbsp;
-        <a href="#">Support</a>
-        &nbsp; | &nbsp;
-        <a href="#">Gift Cards</a>
-        &nbsp; | &nbsp;
-        <a href="#">
-          <i class="fa-brands fa-square-facebook"></i>
-          Steam
-        </a>
-        &nbsp; | &nbsp;
-        <a href="#">
-          <i class="fa-brands fa-square-steam"></i>
-          @steam
-        </a>
+
+      <div class="video-background-container">
+        <video class="video-background" autoplay muted loop>
+          <source
+            src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/40c14a0bef16a5f75d7e1930/webm_page_bg_english.webm?t=1697739595"
+            type="video/mp4" />
+        </video>
       </div>
-    </footer>
-    <script
-      src="https://kit.fontawesome.com/66df57de56.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./main.js" type="module"></script>
-  </body>
+    </div>
+  </header>
+
+  <!-- Aside Nav-->
+  <aside class="aside">
+    <nav class="aside-nav">
+      <div class="aside-nav-group">
+        <h4 class="aside-nav__header">RECOMMENDED</h4>
+        <ul class="aside-nav__list">
+          <li><a href="#!" class="aside-nav__item">By Friends</a></li>
+          <li><a href="#!" class="aside-nav__item">By Curator</a></li>
+          <li><a href="#!" class="aside-nav__item">Tags</a></li>
+        </ul>
+      </div>
+      <div class="aside-nav-group">
+        <h4 class="aside-nav__header">BROWSE CATEGORIES</h4>
+        <ul class="aside-nav__list">
+          <li><a href="#!" class="aside-nav__item">Top Seller</a></li>
+          <li><a href="#!" class="aside-nav__item">New Releases</a></li>
+          <li><a href="#!" class="aside-nav__item">Upcoming</a></li>
+          <li><a href="#!" class="aside-nav__item">Specials</a></li>
+          <li><a href="#!" class="aside-nav__item">VR Titles</a></li>
+          <li>
+            <a href="#!" class="aside-nav__item">Controller-Friendly</a>
+          </li>
+          <li><a href="#!" class="aside-nav__item">Great on Deck </a></li>
+        </ul>
+      </div>
+      <div class="aside-nav-group">
+        <h4 class="aside-nav__header">BROWSE BY GENRE</h4>
+        <ul class="aside-nav__list">
+          <li><a href="#!" class="aside-nav__item">Action</a></li>
+          <li><a href="#!" class="aside-nav__item">Role-Playing</a></li>
+          <li><a href="#!" class="aside-nav__item">Action RPG</a></li>
+          <li><a href="#!" class="aside-nav__item">Adventure</a></li>
+          <li><a href="#!" class="aside-nav__item">Stimulation</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="container">
+      <!-- Feature -->
+      <section class="feature">
+        <!-- Heading -->
+        <h2 class="heading">FEATURED & RECOMMENDED</h2>
+
+        <!-- Main content -->
+        <div class="feature-group" id="feature-group">
+          <!-- Control group -->
+          <div class="chevron chevron-left">
+            <i class="fa fa-chevron-left fa-3x"></i>
+          </div>
+          <div class="chevron chevron-right">
+            <i class="fa fa-chevron-right fa-3x"></i>
+          </div>
+        </div>
+        <!-- Slide control group -->
+        <div class="feature__slide-control-group slide-control-group"></div>
+      </section>
+
+      <!-- Special -->
+      <section class="special">
+        <!-- Heading -->
+        <h2 class="heading">SPECIAL OFFERS</h2>
+
+        <!-- Main content -->
+        <div class="special-group">
+          <!-- Item 01 -->
+          <div class="special-item fade">
+            <!-- Item child 1 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+
+            <!-- Item child 2 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+
+            <!-- Item child  3 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 02 -->
+          <div class="special-item fade">
+            <!-- Item child 1 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+
+            <!-- Item child 2 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+
+            <!-- Item child  3 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 03 -->
+          <div class="special-item fade">
+            <!-- Item child 1 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+
+            <!-- Item child 2 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+
+            <!-- Item child  3 -->
+            <article class="special-item-child">
+              <!-- Game thumb -->
+              <img src="./assets/images/game-thumb.jpg" alt="naruto-storm" class="special-item-child__thumb" />
+              <div class="special-item-child__content">
+                <!-- Game title -->
+                <h3 class="special-item-child__app-name">Naruto Storm 4</h3>
+
+                <!-- Sale % -->
+                <strong class="special-item-child__sale-off">Up to -90%</strong>
+              </div>
+            </article>
+          </div>
+
+          <!-- Control group -->
+          <div class="chevron chevron-left">
+            <i class="fa fa-chevron-left fa-3x"></i>
+          </div>
+          <div class="chevron chevron-right">
+            <i class="fa fa-chevron-right fa-3x"></i>
+          </div>
+        </div>
+
+        <!-- Slide control group -->
+        <div class="feature__slide-control-group slide-control-group">
+          <div class="slide-control-item"></div>
+          <div class="slide-control-item"></div>
+          <div class="slide-control-item"></div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="category">
+        <!-- Heading -->
+        <h2 class="heading">BROWSE BY CATEGORY</h2>
+
+        <!-- Category group -->
+        <div class="category-group">
+          <!-- Item 1 -->
+          <div class="category-item fade">
+            <!-- Item child 1 -->
+            <a href="#!" class="category-item-child">
+              <img
+                src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">FIGHTING</span>
+            </a>
+
+            <!-- Item child 2 -->
+            <a href="#!" class="category-item-child">
+              <img src="https://store.steampowered.com/categories/homepageimage/category/racing?cc=us&l=english" alt=""
+                class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">ACTION</span>
+            </a>
+
+            <!-- Item child 3 -->
+            <a href="#!" class="category-item-child">
+              <img src="https://store.steampowered.com/categories/homepageimage/category/story_rich?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">MULTIPLAYER</span>
+            </a>
+
+            <!-- Item child 4 -->
+            <a href="#!" class="category-item-child">
+              <img
+                src="https://store.steampowered.com/categories/homepageimage/category/rogue_like_rogue_lite?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">ADVENTURE</span>
+            </a>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="category-item fade">
+            <!-- Item child 1 -->
+            <a href="#!" class="category-item-child">
+              <img
+                src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">FIGHTING</span>
+            </a>
+
+            <!-- Item child 2 -->
+            <a href="#!" class="category-item-child">
+              <img src="https://store.steampowered.com/categories/homepageimage/category/racing?cc=us&l=english" alt=""
+                class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">ACTION</span>
+            </a>
+
+            <!-- Item child 3 -->
+            <a href="#!" class="category-item-child">
+              <img src="https://store.steampowered.com/categories/homepageimage/category/story_rich?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">MULTIPLAYER</span>
+            </a>
+
+            <!-- Item child 4 -->
+            <a href="#!" class="category-item-child">
+              <img
+                src="https://store.steampowered.com/categories/homepageimage/category/rogue_like_rogue_lite?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">ADVENTURE</span>
+            </a>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="category-item fade">
+            <!-- Item child 1 -->
+            <a href="#!" class="category-item-child">
+              <img
+                src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">FIGHTING</span>
+            </a>
+
+            <!-- Item child 2 -->
+            <a href="#!" class="category-item-child">
+              <img src="https://store.steampowered.com/categories/homepageimage/category/racing?cc=us&l=english" alt=""
+                class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">ACTION</span>
+            </a>
+
+            <!-- Item child 3 -->
+            <a href="#!" class="category-item-child">
+              <img src="https://store.steampowered.com/categories/homepageimage/category/story_rich?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">MULTIPLAYER</span>
+            </a>
+
+            <!-- Item child 4 -->
+            <a href="#!" class="category-item-child">
+              <img
+                src="https://store.steampowered.com/categories/homepageimage/category/rogue_like_rogue_lite?cc=us&l=english"
+                alt="" class="category-item-child__img" />
+              <div class="category-item-child__gradient"></div>
+              <span class="category-item-child__label">ADVENTURE</span>
+            </a>
+          </div>
+
+          <!-- Control group -->
+          <div class="chevron chevron-left">
+            <i class="fa fa-chevron-left fa-3x"></i>
+          </div>
+          <div class="chevron chevron-right">
+            <i class="fa fa-chevron-right fa-3x"></i>
+          </div>
+        </div>
+
+        <!-- Slide control group -->
+        <div class="category__slide-control-group slide-control-group">
+          <div class="slide-control-item"></div>
+          <div class="slide-control-item"></div>
+          <div class="slide-control-item"></div>
+        </div>
+      </section>
+
+      <!-- Games -->
+      <div class="total-content">
+        <section class="game-filter-nav">
+          <ul class="game-filter-tabs">
+            <li class="filter-tab active" tabindex="0">News & Trending</li>
+            <li class="filter-tab" tabindex="1">Top Sellers</li>
+            <li class="filter-tab" tabindex="2">Popular Upcoming</li>
+            <li class="filter-tab" tabindex="3">Specials</li>
+          </ul>
+        </section>
+        <section class="filtered-game-list">
+          <div class="filtered-game-content">
+            <div id="checkbox-container">
+              <input id="checkbox-include-free-game" type="checkbox" name="checkbox" />
+              <label for="checkbox">Include free to play items</label>
+              <i class="fa-solid fa-circle-info fa-lg" style="color: #ffffff"></i>
+              <span class="checkbox-more-info">Top games based on all sources of revenue, including from DLC
+                and in-game purchases</span>
+            </div>
+            <div class="filtered-game-container">
+              <span class="filtered-game-see-more">
+                See more: <a class="see-more-anchor" href="#">New Realeases</a>
+              </span>
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+
+            </div>
+            <div class="filtered-game-container">
+            </div>
+          </div>
+        </section>
+      </div>
+      <script src="https://kit.fontawesome.com/66df57de56.js" crossorigin="anonymous"></script>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="global-footer">
+    <div class="footer-content">
+      <a href="#" class="valve-logo">
+        <img src="https://store.cloudflare.steamstatic.com/public/images/footerLogo_valve_new.png" alt="valve-logo" />
+      </a>
+      <div class="footer-text">
+        <div>
+          © 2023 Valve Corporation. All rights reserved. All trademarks are
+          property of their respective owners in the US and other countries.
+        </div>
+        <div>
+          VAT included in all prices where applicable. &nbsp; &nbsp;
+          <a href="#">Privacy Policy</a>
+          &nbsp; | &nbsp;
+          <a href="#">Legal</a>
+          &nbsp; | &nbsp;
+          <a href="#">Steam Subscriber Agreement</a>
+          &nbsp; | &nbsp;
+          <a href="#">Refunds</a>
+          &nbsp; | &nbsp;
+          <a href="#">Cookies</a>
+        </div>
+        <button class="view-mobile-btn-footer">View mobile website</button>
+      </div>
+      <img class="steam-logo" src="https://store.cloudflare.steamstatic.com/public/images/v6/logo_steam_footer.png"
+        alt="steam-logo" />
+    </div>
+    <div class="valve-link">
+      <a href="#">About Valve</a>
+      &nbsp; | &nbsp;
+      <a href="#">Jobs</a>
+      &nbsp; | &nbsp;
+      <a href="#">Steamworks</a>
+      &nbsp; | &nbsp;
+      <a href="#">Steam Distribution</a>
+      &nbsp; | &nbsp;
+      <a href="#">Support</a>
+      &nbsp; | &nbsp;
+      <a href="#">Gift Cards</a>
+      &nbsp; | &nbsp;
+      <a href="#">
+        <i class="fa-brands fa-square-facebook"></i>
+        Steam
+      </a>
+      &nbsp; | &nbsp;
+      <a href="#">
+        <i class="fa-brands fa-square-steam"></i>
+        @steam
+      </a>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/66df57de56.js" crossorigin="anonymous"></script>
+  <script src="./main.js" type="module"></script>
+</body>
+
 </html>

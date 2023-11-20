@@ -153,6 +153,14 @@ body {
   font-size: 1.7rem;
 }
 
+.global-nav-item__header {
+  padding: 5px 0;
+  color: #dcdedf;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
 .global-nav-item:hover .global-nav-item__header {
   color: var(--global-header-active);
   text-decoration: underline solid 3px;
@@ -690,7 +698,7 @@ body {
 /* _____________________check box style___________________ */
 #checkbox-container {
   position: relative;
-  display: flex;
+  display: none;
   align-items: center;
   margin: 12px 0px 6px 0px;
   padding: 10px 0px;
@@ -735,7 +743,6 @@ body {
   justify-content: flex-start;
   align-items: flex-end;
   margin-bottom: 6px;
-  width: auto;
 }
 
 /* ------------style for "see more" part -------------*/
@@ -745,6 +752,7 @@ body {
   color: rgb(207, 204, 204);
   display: inline-block;
   padding: 7px 5px 12px 5px;
+  margin-top: 1%;
 }
 
 .filtered-game-see-more a {
