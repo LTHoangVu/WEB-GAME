@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Motiva Sans', sans-serif;
+  font-family: "Motiva Sans", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -196,9 +196,9 @@ body {
 }
 
 /* Action group */
-.global-header-action-container {
+.global-header-action {
   position: absolute;
-  top: 8px;
+  top: 6px;
   right: 0;
   display: flex;
   align-items: center;
@@ -206,36 +206,18 @@ body {
 }
 
 .global-header__btn {
-  color: #b8b6b4;
-  font-size: 1.2rem;
-}
-
-.global-header__install-btn {
-  background-color: olivedrab;
-  color: #e5e4dc;
-  padding: 7px 12px;
-  border-radius: 2px;
-}
-
-.global-header__language-btn {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-left: 1px solid #b8b6b4;
-  padding-left: 8px;
-  cursor: pointer;
+  color: var(--white-text);
+  font-size: 1.5rem;
+  background-color: #316282;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.15s;
 }
 
 .global-header__btn:hover {
-  color: var(--white-text);
-}
-
-.global-header__install-btn:hover {
-  background-color: rgb(122, 163, 40);
-}
-
-.language-popup {
-  display: none;
+  color: #316282;
+  background-color: var(--white-text);
 }
 
 /* ================ Homepage Header ================ */
@@ -542,7 +524,7 @@ body {
 
 .special-item-child__content {
   padding: 25px 20px;
-  background-image: url('https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg');
+  background-image: url("https://store.akamai.steamstatic.com/public/images/v6/home/background_spotlight.jpg");
 }
 
 .special-item-child__app-name {
@@ -854,8 +836,8 @@ body {
 }
 
 .filtered-game-discount span {
-  font-family: 'Motiva Sans', sans-serif;
-  font-size: 18px;
+  font-family: "Motiva Sans", sans-serif;
+  font-size: 14px;
   color: rgb(190, 238, 17);
   border-radius: 2px;
   padding: 8px 8px;
@@ -896,7 +878,7 @@ body {
 
 .original-price::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   top: 50%;
   right: 0;

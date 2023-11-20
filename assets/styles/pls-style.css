@@ -34,7 +34,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Motiva Sans', 'sans-serif';
+  font-family: "Motiva Sans", "sans-serif";
 }
 
 button {
@@ -205,10 +205,6 @@ a {
 }
 
 .global-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: rgb(23, 29, 37);
   z-index: 10;
 }
@@ -395,36 +391,18 @@ a {
 }
 
 .global-header__btn {
-  color: #b8b6b4;
-  font-size: 1.2rem;
-}
-
-.global-header__install-btn {
-  background-color: olivedrab;
-  color: #e5e4dc;
-  padding: 7px 12px;
-  border-radius: 2px;
-}
-
-.global-header__language-btn {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-left: 1px solid #b8b6b4;
-  padding-left: 8px;
-  cursor: pointer;
+  color: var(--white-text);
+  font-size: 1.5rem;
+  background-color: #316282;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.15s;
 }
 
 .global-header__btn:hover {
-  color: var(--white-text);
-}
-
-.global-header__install-btn:hover {
-  background-color: rgb(122, 163, 40);
-}
-
-.language-popup {
-  display: none;
+  color: #316282;
+  background-color: var(--white-text);
 }
 
 /* Login Modal */
@@ -443,10 +421,9 @@ a {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 104px);
-  background-image: url('../images/background.jpg');
+  background-image: url("../images/background.jpg");
   background-repeat: repeat;
   background-position: top center;
-  margin-top: 104px;
 }
 
 @media screen and (max-width: 912px) {
@@ -568,7 +545,7 @@ a {
 
 .signup-bottom,
 .login-bottom {
-  padding: 50px 0 120px;
+  padding: 50px 0;
   background: var(--background-color);
   display: flex;
   justify-content: center;
@@ -765,7 +742,7 @@ a {
 }
 
 .order-oldprice::before {
-  content: '';
+  content: "";
   left: 0px;
   right: 0px;
   position: absolute;

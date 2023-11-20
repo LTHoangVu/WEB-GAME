@@ -1,23 +1,43 @@
 import { Slide } from "./slide.js";
-import fetchData from "./fetchData.js";
+import { fetchProductsData, fetchUserInfo } from "./fetchData.js";
 
 // Load game data on Homepage
 async function loadDataOnHomepage() {
-  const data = await fetchData();
-  const games = data.games;
+  const userInfo = await fetchUserInfo();
+  const data = await fetchProductsData();
+  const gamesData = data.games;
+  const globalHeader = document.getElementById("global-header-action");
 
-  loadGamesOnFeature(games.slice(0, 4));
+  // If user has logged in, show profile
 
-  // Slide effect start
-  const featureSlide = new Slide("feature", "grid", 9000);
-  featureSlide.start();
+  // Load 4 first games on feature
+  loadGamesOnFeature(
+    gamesData.slice(0, 4),
+    "feature-group",
+    "feature__slide-control-group"
+  );
 }
 
-function loadGamesOnFeature(games) {
-  const feature = document.getElementById("feature-group");
-  const featureDots = document.querySelector(".feature .slide-control-group");
+// Load game on specific part (game data, game list container, dots group container, list item)
+function loadGamesOnSpecificPart(
+  data,
+  listGameID,
+  dotsGroupID,
+  itemHtmlContent
+) {
+  // Load feature content
+  const gameListContainer = document.getElementById(listGameID);
+  gameListContainer.innerHTML += itemHtmlContent;
+
+  // Load dots by number of games
+  const dotsGroup = document.getElementById(dotsGroupID);
   let dots = [];
-  const html = games
+  data.forEach(() => dots.push('<div class="slide-control-item"></div>'));
+  dotsGroup.innerHTML = dots.join("\n");
+}
+
+function loadGamesOnFeature(data, listGameID, dotsGroupID) {
+  const html = data
     .map((item) => {
       return `
     <article class="feature-item fade">
@@ -58,12 +78,11 @@ function loadGamesOnFeature(games) {
     `;
     })
     .join("\n");
+  loadGamesOnSpecificPart(data, listGameID, dotsGroupID, html);
 
-  feature.innerHTML += html;
-  for (var i = 0; i < games.length; i++) {
-    dots.push('<div class="slide-control-item"></div>');
-  }
-  featureDots.innerHTML = dots.join("\n");
+  // Slide effect
+  const featureSlide = new Slide("feature", "grid", 9000);
+  featureSlide.start();
 }
 
 // Slide effect
