@@ -1,4 +1,45 @@
 import { fetchUserCart } from './fetchCart.js';
+/*
+import { fetchProductsData } from "./fetchData.js";
+
+async function addItemsToCart() {
+  const data = await fetchProductsData();
+  const gamesData = data.games;
+  for (let i = 0; i < 5; i++) {
+    addDataToCart(gamesData[i]._id);
+  }
+}
+
+async function addDataToCart(idGame) {
+  const token = localStorage.getItem('token');
+  if (token) {
+    try {
+      const response = await fetch('http://localhost:8080/shop/post-cart', { 
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({gameId: idGame})
+      });
+      if (!response.ok) {
+        const error = new Error('Adding game to cart failed');
+        error.code = response.status;
+        error.info = await response.json();
+        throw error;
+      }
+      const resData = await response.json();
+      return resData;
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    window.location.assign('./login.html');
+  }
+}
+
+export { addItemsToCart };
+*/
 
 async function loadDataOnCart() {
   const data = await fetchUserCart();
@@ -6,6 +47,8 @@ async function loadDataOnCart() {
   console.log(data);
   loadItemsOnCart(cartData);
   deleteItemsOnCart(cartData);
+  deleteAllItemsOnCart();
+  addItemsToProfile();
 }
 
 async function loadItemsOnCart(cart) {
@@ -54,7 +97,7 @@ async function deleteDataOnCart(idGame) {
         }
       );
       if (!response.ok) {
-        const error = new Error('Deleting game to cart failed');
+        const error = new Error('Removing game from cart failed');
         error.code = response.status;
         error.info = await response.json();
         throw error;
@@ -74,16 +117,97 @@ async function deleteItemsOnCart(cart) {
   console.log(deleteBtn);
   for (let i = 0; i < deleteBtn.length; i++) {
     let button = deleteBtn[i];
-    console.log(button);
-    button.onclick = async function (event) {
+    button.onclick = async function(event) {
       const buttonClicked = event.target;
-      console.log(cart[i]._id);
       await deleteDataOnCart(cart[i]._id);
       buttonClicked.parentElement.parentElement.remove();
-      /*location.reload();*/
+      window.location.reload();
       return false;
     };
   }
+}
+
+async function deleteAllDataOnCart() {
+  const token = localStorage.getItem('token');
+  if (token) {
+    try {
+      const response = await fetch('http://localhost:8080/shop/delete-all-cart', {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    if (!response.ok) {
+      const error = new Error('Removing all games from cart failed');
+      error.code = response.status;
+      error.info = await response.json();
+      throw error;
+    }
+    const resData = await response.json();
+    return resData;
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    window.location.assign('./login.html');
+  }
+}
+
+async function deleteAllItemsOnCart() {
+  const deleteBtn = document.getElementById('remove_all');
+  console.log(deleteBtn);
+  let button = deleteBtn;
+  button.onclick = async function(event) {
+    const buttonClicked = event.target;
+    await deleteAllDataOnCart();
+    let cartItemList = buttonClicked.parentElement.parentElement.firstElementChild;
+    while (cartItemList.childElementCount > 0) {
+        cartItemList.firstElementChild.remove();
+    }
+    let cartTotalPrice = buttonClicked.parentElement.parentElement.children[1].firstElementChild.children[1];
+    cartTotalPrice.textContent = "0₫";
+    let cartStatus = buttonClicked.parentElement.parentElement.parentElement.firstElementChild;
+    cartStatus.remove();
+    return false;
+  };
+}
+
+async function addDataToProfile() {
+  const token = localStorage.getItem('token');
+  if (token) {
+    try {
+      const response = await fetch('http://localhost:8080/shop/post-cart-to-user', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    if (!response.ok) {
+      const error = new Error('Posting cart to user failed');
+      error.code = response.status;
+      error.info = await response.json();
+      throw error;
+    }
+    const resData = await response.json();
+    return resData;
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    window.location.assign('./login.html');
+  }
+}
+
+async function addItemsToProfile() {
+  const purchaseBtn = document.getElementById('myself_purchase_button');
+  console.log(purchaseBtn);
+  let button = purchaseBtn;
+  button.onclick = async function() {
+    await addDataToProfile();
+    window.location.assign('./profile.html')
+  };
 }
 
 export { loadDataOnCart };
