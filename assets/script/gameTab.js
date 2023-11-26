@@ -6,6 +6,7 @@ async function loadDataGameTab() {
   loadGameTab(games);
 
   addEffectFilterTab();
+  addViewMoreEffect();
 }
 
 //create game tab
@@ -33,19 +34,33 @@ function loadGameTab(games) {
               ${getGameTag(item)}
             </div>
           </div>
-          <div class="filtered-game-discount">
+          ${
+            item.saleoff
+              ? `<div class="filtered-game-discount">
             <span>${item.saleoff}%</span>
-          </div>
+            </div>`
+              : ``
+          }
           <div class="filtered-game-price">
-            <span class="original-price">${item.oldprice}</span>
-            <span class="discounted-price">${item.price}</span>
+          ${
+            !item.saleoff
+              ? `<span class="original-price"></span>`
+              : `<span class="original-price">${item.oldprice}₫</span>`
+          }
+          ${
+            !item.price
+              ? `<span class="discounted-price">Free To Play</span>`
+              : `<span class="discounted-price">${item.price}₫</span>`
+            // <span class="original-price">${item.oldprice}₫</span>
+            // <span class="discounted-price">${item.price}₫</span>
+          }
           </div>
         </div>
     </div>`;
   });
 
   let randomArray = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 24; i++) {
     randomArray.push(i);
   }
   randomArray = shuffle(randomArray);
@@ -62,9 +77,7 @@ function cleanDataGameTab() {
   const gameTabContainers = document.querySelectorAll(
     ".filtered-game-container"
   );
-
   gameTabContainers[0].removeChild(gameTabContainers[0].lastChild);
-
   for (let i = 1; i < gameTabContainers.length; i++) {
     gameTabContainers[i].innerHTML = "";
   }
@@ -115,6 +128,38 @@ async function setFilterTabActive() {
   const data = await fetchProductsData();
   const games = data.games;
   loadGameTab(games);
+  addViewMoreEffect();
+}
+
+//view more button
+function addViewMoreEffect() {
+  const btn = document.querySelector(".see-more-anchor");
+  const btnLabel = document.querySelector(".see-more-less");
+
+  btn.addEventListener("click", () => {
+    const gameTabContainers = document.querySelectorAll(
+      ".filtered-game-container"
+    );
+    gameTabContainers.forEach((element) => {
+      if (element.classList.length === 2) {
+        if (element.classList.contains("hide")) {
+          element.classList.remove("hide");
+          element.classList.add("show");
+        } else {
+          element.classList.remove("show");
+          element.classList.add("hide");
+        }
+      }
+    });
+
+    if (btn.classList.contains("nonactive")) {
+      btn.classList.replace("nonactive", "active");
+      btnLabel.textContent = "Show less:";
+    } else {
+      btn.classList.replace("active", "nonactive");
+      btnLabel.textContent = "See more:";
+    }
+  });
 }
 
 function addEffectFilterTab() {

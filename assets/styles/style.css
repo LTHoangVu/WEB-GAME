@@ -731,6 +731,10 @@ body {
   background-color: rgba(0, 0, 0, 0.151);
   width: 100%;
 }
+
+.filtered-game-container.hide {
+  display: none;
+}
 /* _____________________check box style___________________ */
 #checkbox-container {
   position: relative;
@@ -797,10 +801,15 @@ body {
   padding: 8px 14px;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .filtered-game-see-more a:hover {
   border-color: white;
+}
+
+.see-more-anchor.active {
+  background-color: rgb(76, 107, 34);
 }
 /* ------------end style for "see more" part------------ */
 
@@ -823,6 +832,9 @@ body {
 
 .filtered-game img:hover + .filtered-game-description .filtered-game-name {
   color: black;
+}
+.discounted-price {
+  margin-top: 5px;
 }
 
 .filtered-game img:hover + .filtered-game-description .discounted-price {
@@ -853,11 +865,10 @@ body {
 
 .filtered-game-name-platform-tags {
   display: flex;
-  flex: 4; /* this part contribute 4/(4+1+1) of .filtered-game-description width*/
+  flex: 5; /* this part contribute 5/(5+1+2) of .filtered-game-description width*/
   flex-direction: column;
   justify-content: center;
   padding-left: 3%;
-  width: 50%;
 }
 
 /* name part of .filtered-game-name-platform-tags */
@@ -886,7 +897,7 @@ body {
 .filtered-game-discount {
   display: flex;
   justify-content: center;
-  flex: 1; /* this part contribute 1/(4+1+1) of .filtered-game-description width*/
+  flex: 1; /* this part contribute 1/(5+1+2) of .filtered-game-description width*/
 }
 
 .filtered-game-discount span {
@@ -907,7 +918,7 @@ body {
   justify-content: center;
   align-items: flex-end;
   padding-right: 12px;
-  flex: 1; /* this part contribute 1/(4+1+1) of .filtered-game-description width*/
+  flex: 2; /* this part contribute 2/(5+1+2) of .filtered-game-description width*/
 }
 
 .filtered-game-price span {
