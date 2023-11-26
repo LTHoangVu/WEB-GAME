@@ -37,10 +37,10 @@
         </div>
         <div style="clear: left"></div>
         <div class="checkout_content_box">
-          <div class="cart_item_list">
-            <div class="cart_item">
+          <div id="cart_item_list" class="cart_item_list">
+            <!--<div class="cart_item">
               <div class="cart_item_price">
-                <div class="price">321.000₫</div>
+                <div class="price">321000₫</div>
                 <a class="remove_link" href="#"
                   >Remove</a
                 >
@@ -50,6 +50,8 @@
                   <img
                     src="./assets/images/game/wildmender.jpg"
                     alt="Wildmender"
+                    width="120"
+                    height="50"
                   >
                 </a>
               </div>
@@ -63,7 +65,7 @@
 
             <div class="cart_item">
               <div class="cart_item_price">
-                <div class="price">249.000₫</div>
+                <div class="price">249000₫</div>
                 <a class="remove_link" href="#"
                   >Remove</a
                 >
@@ -73,6 +75,8 @@
                   <img
                     src="./assets/images/game/child-of-light.jpg"
                     alt="Child of Light"
+                    width="120"
+                    height="50"
                   >
                 </a>
               </div>
@@ -82,12 +86,12 @@
                 </div>
                 <a href="#">Child of Light</a><br>
               </div>
-            </div>
+            </div>-->
           </div>
           <div class="purchase_section">
             <div class="cart_total">
               <div class="cart_estimated_total_text">Estimated total</div>
-              <div id="cart_estimated_total" class="price">570.000₫</div>
+              <div id="cart_estimated_total" class="price"><!--570000₫--></div>
             </div>
             <div class="cart_purchase_desc">
               Make sure your items are included in the cart list before purchasing.
@@ -126,13 +130,14 @@
             <a id="continue_shopping_button" href="/"
               ><span>Continue Shopping</span></a
             >
-            <a class="remove_link" href="#"
+            <a id="remove_all" class="remove_link" href="#"
               >Remove all items</a
             >
           </div>
         </div>
       </div>
     </main>
+    <script src="./assets/src/cart.js" type="module"></script>
   </body>
 </html>
 
