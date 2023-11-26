@@ -34,7 +34,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Motiva Sans", "sans-serif";
+  font-family: 'Motiva Sans', 'sans-serif';
 }
 
 button {
@@ -421,14 +421,13 @@ a {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 104px);
-  background-image: url("../images/background.jpg");
+  background-image: url('../images/background.jpg');
   background-repeat: repeat;
   background-position: top center;
 }
 
 @media screen and (max-width: 912px) {
   .page-content {
-    margin-top: 70px;
     min-height: calc(100vh - 70px);
   }
 }
@@ -742,7 +741,7 @@ a {
 }
 
 .order-oldprice::before {
-  content: "";
+  content: '';
   left: 0px;
   right: 0px;
   position: absolute;
@@ -773,6 +772,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+  .order__info__left {
+    text-align: right;
+  }
 }
 
 .order__tags-list {
