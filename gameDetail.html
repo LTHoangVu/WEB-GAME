@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>game page</title>
+    <title>Game page</title>
     <!-- Add favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
@@ -35,93 +35,17 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
-  
+    <script src="./assets/src/scripts.js"></script>
  
   </head>
 
   <body>
     
-      <header class="header">
+      <header class="header" id="header">
         <!-- Global header -->
-        <div class="global-header">
-          <div class="container">
-            <div class="global-header-wrap">
-              <!-- Global header logo -->
-              <a href="/">
-                <img src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="steam-logo" class="global-header__logo" />
-              </a>
-    
-              <!-- Global header nav -->
-              <nav class="global-nav">
-                <ul class="global-nav-list">
-                  <!-- Store item -->
-                  <li class="global-nav-item">
-                    <a class="global-nav-item__header" href="#">STORE</a>
-                    <ul class="global-nav-submenu">
-                      <li><a class="global-nav-submenu-item" href="">Home</a></li>
-                      <li>
-                        <a class="global-nav-submenu-item" href="">Discovery Queue</a>
-                      </li>
-                      <li>
-                        <a class="global-nav-submenu-item" href="">Wishlist</a>
-                      </li>
-                      <li>
-                        <a class="global-nav-submenu-item" href="">Points Shop</a>
-                      </li>
-                      <li><a class="global-nav-submenu-item" href="">News</a></li>
-                      <li>
-                        <a class="global-nav-submenu-item" href="">Stats</a>
-                      </li>
-                    </ul>
-                  </li>
-    
-                  <!-- Community item -->
-                  <li class="global-nav-item">
-                    <a class="global-nav-item__header" href="#">COMMUNITY</a>
-                    <ul class="global-nav-submenu">
-                      <li><a class="global-nav-submenu-item" href="">Home</a></li>
-                      <li>
-                        <a class="global-nav-submenu-item" href="">Discussion</a>
-                      </li>
-                      <li>
-                        <a class="global-nav-submenu-item" href="">Work Shop</a>
-                      </li>
-                      <li>
-                        <a class="global-nav-submenu-item" href="">Market</a>
-                      </li>
-                      <li>
-                        <a class="global-nav-submenu-item" href="">Broadcasts</a>
-                      </li>
-                    </ul>
-                  </li>
-    
-                  <!-- About item -->
-                  <li class="global-nav-item">
-                    <a class="global-nav-item__header" href="#">ABOUT</a>
-                  </li>
-    
-                  <!-- Support item -->
-                  <li class="global-nav-item">
-                    <a class="global-nav-item__header" href="#">SUPPORT</a>
-                  </li>
-                </ul>
-              </nav>
-    
-              <!-- Global header action  -->
-              <div class="global-header-action">
-                <div class="global-header-action-container">
-                  <a class="global-header__install-btn global-header__btn" href="#!">
-                    <i class="fa fa-download"></i> Install Steam
-                  </a>
-                  <a class="global-header__login-btn global-header__btn" href="#!">login</a>
-                  <button class="global-header__language-btn global-header__btn">
-                    language <i class="fa fa-caret-down"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <script>
+          load('#header', './assets/templates/header.html');
+        </script>
     
         <!-- Hero -->
         <div class="hero">
@@ -225,11 +149,9 @@
   
         <div class="container">
             <div class="address_game">
-              <p class="breadcrumbs">All games </p>
+              <p class="breadcrumbs">All games</p>
               <div class="breadcrumbs"> > </div>
-              <p class="breadcrumbs">Anime games </p>
-              <div class="breadcrumbs"> > </div>
-              <p class="breadcrumbs"> Honkai Impact 3rd </p>
+              <p class="breadcrumbs">Current game</p>
     
             </div>
             <div class="filtered-game-container"></div>
@@ -263,11 +185,10 @@
 
       </div>
     
-
+      <script src="./assets/script/buy_game.js" type="module"></script>
   </body>
   <footer>
     <p>© Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
   </footer>
 </html>
 
-<script src="./assets/script/buy_game.js" type="module"></script>

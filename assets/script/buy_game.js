@@ -2,25 +2,25 @@ var params = new URLSearchParams(window.location.search);
 var id = params.get("id");
 
 async function loadDataGameInfo() {
-  var resData;
-
-  try {
-    const response = await fetch("http://localhost:8080/products/" + id);
-    if (!response.ok) {
-      const error = new Error("Fetching product failed");
-      error.code = response.status;
-      error.info = await response.json();
-      throw error;
+    var resData;
+    try {
+      const response = await fetch('http://localhost:8080/products/' + id);
+      if (!response.ok) {
+        const error = new Error('Fetching product failed');
+        error.code = response.status;
+        error.info = await response.json();
+        throw error;
+      }
+      resData = await response.json();
+      return resData;
+    } catch (error) {
+      console.log(error);
     }
-    resData = await response.json();
-    return resData;
-  } catch (error) {
-    console.log(error);
-  }
 }
 
-//create game tab
-loadDataGameInfo().then((data) => {
+
+// create game tab
+loadDataGameInfo().then(data => {
   console.log(data);
   const game = data.game;
   document.title = game.title;
@@ -70,20 +70,20 @@ loadDataGameInfo().then((data) => {
                      }
                      
                       
-                      <p class="buy_block">Add to cart</p>
+                      <a href="#" class="buy_block" id="add_to_cart">Add to cart</a>
                      
                     
-                  </div>
+                    </div>
              
                 </div>
             </div>
       </div>`;
-  const gameTabContainers = document.querySelector(".filtered-game-container");
+      const gameTabContainers = document.querySelector(".filtered-game-container");
+      gameTabContainers.innerHTML = html;
+      console.log(gameTabContainers);
+      addGameToCart();
+})
 
-  console.log(html);
-  gameTabContainers.innerHTML = html;
-  console.log(gameTabContainers);
-});
 
 // get game tag
 function getGameTag(game) {
@@ -95,3 +95,45 @@ function getGameTag(game) {
   }
   return html;
 }
+
+
+// add game to cart
+async function addGameToCart() {
+  const addToCartBtn = document.getElementById('add_to_cart');
+  console.log(addToCartBtn);
+  let button = addToCartBtn;
+  button.onclick = async function() {
+    await addDataToCart(id);
+    window.location.assign('./cart.html');
+  };
+}
+
+async function addDataToCart(idGame) {
+  const token = localStorage.getItem('token');
+  if (token) {
+    try {
+      const response = await fetch('http://localhost:8080/shop/post-cart', { 
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({gameId: idGame})
+      });
+      if (!response.ok) {
+        const error = new Error('Adding game to cart failed');
+        error.code = response.status;
+        error.info = await response.json();
+        throw error;
+      }
+      const resData = await response.json();
+      return resData;
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    window.location.assign('./login.html');
+  }
+}
+
+
