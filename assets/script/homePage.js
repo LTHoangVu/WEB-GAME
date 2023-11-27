@@ -57,11 +57,14 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
       return `
     <article class="feature-item fade">
     <!-- Main image -->
-    <img
-      src="${item.imageUrl}"
-      alt="${item.title}-thumb"
-      class="feature-item__game-thumb"
-    />
+    <a href="./gameDetail.html?id=${item._id}" 
+    class="feature-item__game-thumb-wrap">
+      <img
+        src="${item.imageUrl}"
+        alt="${item.title}-thumb"
+        class="feature-item__game-thumb"
+      />
+    </a>
 
     <!-- Info -->
     <div class="feature-item__info">
@@ -94,7 +97,7 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
       </div>
 
       <!-- Action btn -->
-      <a class="feature-item__btn" href="./gamedetail.html?id=${
+      <a class="feature-item__btn" href="./gameDetail.html?id=${
         item._id
       }" >More details...</a>
     </div>
@@ -123,7 +126,7 @@ function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
       return ` <div class="special-item fade">
          ${item
            .map((game) => {
-             return `<article class="special-item-child">
+             return `<a class="special-item-child" href="./gameDetail.html?id=${game._id}">
           <!-- Game thumb -->
           <img
             src="${game.imageUrl}"
@@ -139,7 +142,7 @@ function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
               >Up to -${game.saleoff}%</strong
             >
           </div>
-        </article>`;
+        </a>`;
            })
            .join("\n")}
         </div>`;
@@ -171,8 +174,7 @@ async function loadCategoriesHomepage() {
   const html = smallGroups
     .map((tagGroup) => {
       return `
-  <div class="category-item fade">
-
+  <div class="category-item fade">  
     ${tagGroup
       .map((tagItem) => {
         return `

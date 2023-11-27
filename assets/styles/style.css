@@ -437,9 +437,14 @@ body {
   transition: opacity 0.2s ease;
 }
 
-.feature-item__game-thumb {
+.feature-item__game-thumb-wrap {
   width: 616px;
   height: 380px;
+}
+
+.feature-item__game-thumb {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }

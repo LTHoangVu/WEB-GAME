@@ -1,31 +1,29 @@
-
 var params = new URLSearchParams(window.location.search);
-var id = params.get('id');
+var id = params.get("id");
 
 async function loadDataGameInfo() {
-   var resData;
+  var resData;
 
-    try {
-      const response = await fetch('http://localhost:8080/products/' + id);
-      if (!response.ok) {
-      const error = new Error('Fetching product failed');
+  try {
+    const response = await fetch("http://localhost:8080/products/" + id);
+    if (!response.ok) {
+      const error = new Error("Fetching product failed");
       error.code = response.status;
       error.info = await response.json();
       throw error;
-      }
-      resData = await response.json();
-      return resData;
-      } catch (error) {
-      console.log(error);
-      }
+    }
+    resData = await response.json();
+    return resData;
+  } catch (error) {
+    console.log(error);
   }
+}
 
-
-  
 //create game tab
-loadDataGameInfo().then(data => {
- console.log(data);
- const game = data.game;
+loadDataGameInfo().then((data) => {
+  console.log(data);
+  const game = data.game;
+  document.title = game.title;
   const html = `<div class="filtered-game">
       <h2 class="heading"${game.title}></h2>
               <div class="media_game">
@@ -56,18 +54,18 @@ loadDataGameInfo().then(data => {
                 
                     <div class="button_buy">
                       
-                     ${game.price ?
-                     ( `<p class="price_block">-${game.saleoff}%</p>
+                     ${
+                       game.price
+                         ? `<p class="price_block">-${game.saleoff}%</p>
                     
                       <div class="filtered-game-price">
                         <span class="original-price">${game.oldprice}</span>
                         <span class="discounted-price">${game.price}</span>
-                      </div>`)
-                      :
-                      (`<div class="filtered-game-price">
+                      </div>`
+                         : `<div class="filtered-game-price">
                       <span class="original-price-free">Free to play</span>
-                    </div>`)
-                    }
+                    </div>`
+                     }
                      
                       
                       <p class="buy_block">Add to cart</p>
@@ -78,29 +76,20 @@ loadDataGameInfo().then(data => {
                 </div>
             </div>
       </div>`;
-      const gameTabContainers = document.querySelector(
-        ".filtered-game-container"
-      );
-      
-      console.log(html);
-      gameTabContainers.innerHTML = html;
-      console.log(gameTabContainers);
-}
-)
+  const gameTabContainers = document.querySelector(".filtered-game-container");
 
-    
-  
+  console.log(html);
+  gameTabContainers.innerHTML = html;
+  console.log(gameTabContainers);
+});
 
-
-  // get game tag
-  function getGameTag(game) {
-    let html = "";
-    for (let i = 0; i < game.tags.length; i++) {
-      if (i === game.tags.length - 1) {
-        html += `<span class="game-tag">${game.tags[i].tagName}</span>\n`;
-      } else html += `<span class="game-tag">${game.tags[i].tagName}</span>\n`;
-    }
-    return html;
+// get game tag
+function getGameTag(game) {
+  let html = "";
+  for (let i = 0; i < game.tags.length; i++) {
+    if (i === game.tags.length - 1) {
+      html += `<span class="game-tag">${game.tags[i].tagName}</span>\n`;
+    } else html += `<span class="game-tag">${game.tags[i].tagName}</span>\n`;
   }
-
-
+  return html;
+}
