@@ -159,11 +159,6 @@ function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
   specialSlide.start();
 }
 
-<<<<<<< HEAD
-// Slide effect
-const categorySlide = new Slide("category", "grid");
-categorySlide.start();
-=======
 // Load categories on Homepage
 async function loadCategoriesHomepage() {
   // Get categories
@@ -177,7 +172,6 @@ async function loadCategoriesHomepage() {
     const chunk = tags.slice(i, i + chunkSize);
     smallGroups.push(chunk);
   }
->>>>>>> 3b7ca6763292f8f942e9f04c42f9e5a21d119b27
 
   loadCategoriesOnHeader(smallGroups);
   loadCategoriesOnAside(tags);
