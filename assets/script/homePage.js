@@ -147,7 +147,6 @@ function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
 
 // Slide effect
 const categorySlide = new Slide("category", "grid");
-
 categorySlide.start();
 
 export { loadDataOnHomepage };

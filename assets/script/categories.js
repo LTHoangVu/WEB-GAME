@@ -1,9 +1,27 @@
-import fetchData from "./fetchData.js";
+import { fetchProductsData } from "./fetchData.js";
+import { Slide } from "./slide.js";
 
 async function loadDataOnCategories() {
-  const data = await fetchData();
-  const games = data.games;
+  const query = new URLSearchParams(window.location.search);
+  const category = query.get("category");
+  const data = await fetchProductsData();
+  const games = [];
+
+  for (const game of data.games) {
+    if (
+      game.tags.filter((tag) => tag.tagName.toLowerCase() === category).length >
+      0
+    ) {
+      games.push(game);
+    }
+  }
+
+  console.log(games);
+
   loadGamesOnMoreGame(games);
+  loadGamesOnFeature(games);
+  const featureSlide = new Slide("featured", "grid", 3000);
+  featureSlide.start();
 }
 
 function loadGamesOnMoreGame(games) {
@@ -12,7 +30,7 @@ function loadGamesOnMoreGame(games) {
     .map((item) => {
       return `
      
-        <div class="filtered-game-container">
+        <a class="filtered-game-container" href="../../pageNam?id=${item._id}">
             <img
             src="${item.imageUrl}"
             alt="${item.title}"
@@ -40,9 +58,9 @@ function loadGamesOnMoreGame(games) {
                 <span class="game-price">${
                   item.price > 1000 ? item.price : "Free to play"
                 }</span>
-                <button>Add to Cart</button>
+                <button>View Details...</button>
             </div>
-        </div>
+        </a>
     `;
     })
     .join("\n");
@@ -50,4 +68,42 @@ function loadGamesOnMoreGame(games) {
     htmlContent + `<button class="filtered-show-more">Show more</button>`;
 }
 
-export { loadDataOnCategories };
+function loadGamesOnFeature(games) {
+  const feature = document.getElementById("featured");
+  const htmlContent = games
+    .map((item) => {
+      return `
+
+      <div class="featured-item fade">
+      <img
+        src="${item.imageUrl}"
+        alt="${item.title}"
+      />
+
+      <div class="featured-game-infor-container">
+        <h2 class="featured-game-name">${item.title}</h2>
+
+        <p class="featured-game-date">
+          Release date: <time datetime="2021-11-19">NOV 19, 2021</time>
+        </p>
+
+        <span class="featured-game-viewers"
+          >Averages <span>172,269 reviews</span></span
+        >
+
+        <div class="featured-game-tags">
+         ${item.tags.map((tag) => ` <span class="game-tag">${tag}</span>`)}
+        </div>
+
+        <p class="featured-game-status">
+          ${item.description}
+        </p>
+      </div>
+    </div>
+    `;
+    })
+    .join("\n");
+  feature.innerHTML += htmlContent;
+}
+
+export { loadDataOnCategories, loadGamesOnFeature };

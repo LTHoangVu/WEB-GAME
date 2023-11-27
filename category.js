@@ -1,3 +1,7 @@
-import { loadDataOnCategories } from "./assets/script/categories.js";
+import {
+  loadDataOnCategories,
+  loadGamesOnFeature,
+} from "./assets/script/categories.js";
 
 loadDataOnCategories();
+loadGamesOnFeature();
