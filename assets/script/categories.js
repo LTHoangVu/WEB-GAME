@@ -55,10 +55,13 @@ function loadGamesOnMoreGame(games) {
             </div>
 
             <div class="filtered-game-price">
-                <span class="game-price">${
-                  item.price > 1000 ? item.price : "Free to play"
+                <span class="sale">${
+                  item.saleoff > 0 ? item.saleoff + "%" : "Not Sale"
                 }</span>
-                <button>View Details...</button>
+                <span class="game-price">${
+                  item.price > 1000 ? item.price + "đ" : "Free to play"
+                }</span>
+                <button class="view-button">View Details...</button>
             </div>
         </a>
     `;
@@ -74,7 +77,7 @@ function loadGamesOnFeature(games) {
     .map((item) => {
       return `
 
-      <div class="featured-item fade">
+    <div class="featured-item fade">
       <img
         src="${item.imageUrl}"
         alt="${item.title}"
@@ -88,11 +91,15 @@ function loadGamesOnFeature(games) {
         </p>
 
         <span class="featured-game-viewers"
-          >Averages <span>172,269 reviews</span></span
+          >Averages <span>${(
+            Math.random() * 100000
+          ).toFixed()} reviews</span></span
         >
 
         <div class="featured-game-tags">
-         ${item.tags.map((tag) => ` <span class="game-tag">${tag}</span>`)}
+        ${item.tags
+          .map((tag) => `<span class="game-tag">${tag.tagName}</span>`)
+          .join("\n")}
         </div>
 
         <p class="featured-game-status">

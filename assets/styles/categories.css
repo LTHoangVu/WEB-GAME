@@ -347,29 +347,25 @@ body {
 }
 
 /* ================ SIDE BAR ================ */
-/* .featured {
-  margin-top: 2rem;
-} */
-
-.background-featured-container {
-  padding: 6rem;
-  background: radial-gradient(rgb(129, 128, 128), black);
-  padding-top: 100px;
-}
-
 .featured {
   position: relative;
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
+  margin-top: 10rem;
 }
 
 .featured-item {
   width: 100%;
   background: linear-gradient(to right, #282d38, #18171b);
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 3rem;
   margin-bottom: 5rem;
   display: none;
+}
+
+.featured-item img {
+  width: 100%;
+  height: 44rem;
 }
 
 .featured-game-infor-container {
@@ -496,6 +492,17 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.sale {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 0.8rem;
+  background-color: #4c6b22;
+  font-size: 3rem;
+  color: #beee11;
 }
 
 .game-price {
@@ -632,9 +639,84 @@ body {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1290px) {
+  .filtered-game-container {
+    width: 100%;
+    height: 60px;
+  }
+
+  .filtered-game-description {
+    justify-content: space-around;
+  }
+
+  .filtered-game-name {
+    font-size: 1rem;
+  }
+
+  .sale {
+    font-size: 1.5rem;
+  }
+
+  .filtered-game-situation {
+    font-size: 0.8rem;
+  }
 }
 
+@media screen and (max-width: 900px) {
+  .filtered-game-container {
+    width: 100%;
+    height: 40px;
+  }
+
+  .filtered-game-description {
+    justify-content: space-around;
+  }
+
+  .filtered-game-name {
+    font-size: 0.8rem;
+  }
+
+  .sale {
+    font-size: 1rem;
+  }
+
+  .filtered-game-price {
+    width: 9rem;
+    height: 2.9rem;
+  }
+
+  .filtered-game-situation {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .filtered-game-container {
+    width: 100%;
+    height: 60px;
+  }
+
+  .filtered-game-description {
+    justify-content: space-around;
+  }
+
+  .filtered-game-name {
+    font-size: 0.5rem;
+  }
+
+  .sale {
+    font-size: 0.8rem;
+  }
+
+  .filtered-game-situation {
+    font-size: 0.3rem;
+  }
+
+  .filtered-game-price {
+    width: 6rem;
+    height: 1.8rem;
+  }
+}
 /* ================ Animation ================ */
 /* Fading animation */
 .fade {
