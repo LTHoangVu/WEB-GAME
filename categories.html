@@ -186,20 +186,6 @@
                   language <i class="fa fa-caret-down"></i>
                 </button>
               </div>
-              <!-- <div class="language-popup">
-                <a class="language-popup-compoents" href=""
-                  >简体中文 (Simplified Chinese)</a
-                >
-                <a class="language-popup-compoents" href=""
-                  >日本語 (Japanese)</a
-                >
-                <a class="language-popup-compoents" href=""
-                  >Русский (Russian)</a
-                >
-                <a class="language-popup-compoents" href=""
-                  >Tiếng Việt (Vietnamese)</a
-                >
-              </div> -->
             </div>
           </div>
         </div>
@@ -251,8 +237,20 @@
                 <li class="nav-item">
                   <a class="nav-item__header" href="#"> Categories </a>
                   <ul class="nav-submenu">
-                    <li><a class="nav-submenu-item" href="">Action</a></li>
-                    <li><a class="nav-submenu-item" href="">Adventure</a></li>
+                    <li>
+                      <a
+                        class="nav-submenu-item"
+                        href="./categories.html?category=action"
+                        >Action</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="nav-submenu-item"
+                        href="./categories.html?category=adventure"
+                        >Adventure</a
+                      >
+                    </li>
                     <li>
                       <a class="nav-submenu-item" href="">Role-Playing</a>
                     </li>
@@ -307,119 +305,27 @@
         </div>
       </div>
     </header>
+
     <main>
       <!--SIDE BAR-->
       <section class="featured">
-        <div class="background-featured-container">
-          <div class="featured-container">
-            <div class="featured-item fade">
-              <img
-                src="https://cdn.akamai.steamstatic.com/steam/apps/1517290/hero_capsule.jpg?t=1699025913"
-                alt="BATTLE FIELD"
-              />
+        <!-- <div class="background-featured-container"> -->
+        <div class="featured" id="featured">
+          <!-- Control group -->
+          <div class="chevron chevron-left">
+            <i class="fa fa-chevron-left fa-3x"></i>
+          </div>
 
-              <div class="featured-game-infor-container">
-                <h2 class="featured-game-name">BATTLE FIELD 2042</h2>
-
-                <p class="featured-game-date">
-                  Release date: <time datetime="2021-11-19">NOV 19, 2021</time>
-                </p>
-
-                <span class="featured-game-viewers"
-                  >Averages <span>172,269 reviews</span></span
-                >
-
-                <div class="featured-game-tags">
-                  <span class="game-tag">Action</span>
-                  <span class="game-tag">FPS</span>
-                  <span class="game-tag">Multiplayer</span>
-                  <span class="game-tag">Shot</span>
-                  <span class="game-tag">War</span>
-                </div>
-
-                <p class="featured-game-status">
-                  Tame the unknown in Season 6: Sinister Creations. Battlefield™
-                  2042 is a first-person shooter that marks the return of the
-                  franchise's iconic all-out war.
-                </p>
-              </div>
-            </div>
-
-            <div class="featured-item fade">
-              <img
-                src="https://cdn.akamai.steamstatic.com/steam/apps/1517290/hero_capsule.jpg?t=1699025913"
-                alt="BATTLE FIELD"
-              />
-
-              <div class="featured-game-infor-container">
-                <h2 class="featured-game-name">BATTLE FIELD 2042</h2>
-
-                <p class="featured-game-date">
-                  Release date: <time datetime="2021-11-19">NOV 19, 2021</time>
-                </p>
-
-                <span class="featured-game-viewers"
-                  >Averages <span>172,269 reviews</span></span
-                >
-
-                <div class="featured-game-tags">
-                  <span class="game-tag">Action</span>
-                  <span class="game-tag">FPS</span>
-                  <span class="game-tag">Multiplayer</span>
-                  <span class="game-tag">Shot</span>
-                  <span class="game-tag">War</span>
-                </div>
-
-                <p class="featured-game-status">
-                  Tame the unknown in Season 6: Sinister Creations. Battlefield™
-                  2042 is a first-person shooter that marks the return of the
-                  franchise's iconic all-out war.
-                </p>
-              </div>
-            </div>
-
-            <div class="featured-item fade">
-              <img
-                src="https://cdn.akamai.steamstatic.com/steam/apps/1517290/hero_capsule.jpg?t=1699025913"
-                alt="BATTLE FIELD"
-              />
-
-              <div class="featured-game-infor-container">
-                <h2 class="featured-game-name">BATTLE FIELD 2042</h2>
-
-                <p class="featured-game-date">
-                  Release date: <time datetime="2021-11-19">NOV 19, 2021</time>
-                </p>
-
-                <span class="featured-game-viewers"
-                  >Averages <span>172,269 reviews</span></span
-                >
-
-                <div class="featured-game-tags">
-                  <span class="game-tag">Action</span>
-                  <span class="game-tag">FPS</span>
-                  <span class="game-tag">Multiplayer</span>
-                  <span class="game-tag">Shot</span>
-                  <span class="game-tag">War</span>
-                </div>
-
-                <p class="featured-game-status">
-                  Tame the unknown in Season 6: Sinister Creations. Battlefield™
-                  2042 is a first-person shooter that marks the return of the
-                  franchise's iconic all-out war.
-                </p>
-              </div>
-            </div>
-            <!-- Control group -->
-            <div class="chevron chevron-left">
-              <i class="fa fa-chevron-left fa-3x"></i>
-            </div>
-
-            <div class="chevron chevron-right">
-              <i class="fa fa-chevron-right fa-3x"></i>
-            </div>
+          <div class="chevron chevron-right">
+            <i class="fa fa-chevron-right fa-3x"></i>
           </div>
         </div>
+        <!-- Slide control group -->
+        <div
+          class="feature__slide-control-group slide-control-group"
+          id="feature__slide-control-group"
+        ></div>
+        <!-- </div> -->
       </section>
 
       <!---->

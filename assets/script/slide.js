@@ -30,12 +30,16 @@ class Slide {
 
   showItem() {
     this.slideItems[this.currentIndex].style.display = this.displayName;
-    this.slideDots[this.currentIndex].classList.add("active");
+    if (this.slideDots.length) {
+      this.slideDots[this.currentIndex].classList.add("active");
+    }
   }
 
   hideItem() {
     this.slideItems[this.currentIndex].style.display = "none";
-    this.slideDots[this.currentIndex].classList.remove("active");
+    if (this.slideDots.length) {
+      this.slideDots[this.currentIndex].classList.remove("active");
+    }
   }
 
   showClickedSlide(index) {
