@@ -1,4 +1,5 @@
-async function fetchData() {
+// Fetch all products
+async function fetchProductsData() {
   try {
     const response = await fetch("http://localhost:8080/products/");
     if (!response.ok) {
@@ -14,4 +15,4 @@ async function fetchData() {
   }
 }
 
-export default fetchData;
+export { fetchProductsData };

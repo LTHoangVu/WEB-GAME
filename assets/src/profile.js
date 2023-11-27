@@ -47,17 +47,9 @@ fetchUser().then(({ user }) => {
               .map((tag) => {
                 return `<li class="order__tag-item">${tag.tagName}</li>`;
               })
-              .join('')}
+              .join(',')}
         </ul>
     </div>
-    <section class="order__info__right">
-        <div class="order-saleoff">${saleOffText}</div>
-   
-        <div class="order-prices">
-            <p class="order-oldprice">${oldPriceText}</p>
-            <p class="order-newprice">${priceText}</p>
-        </div>
-    </section>
     </li>
     `;
     })
