@@ -25,10 +25,6 @@ function loadGameTab(games) {
                 class="fa-brands fa-windows fa-lg"
                 style="color: # 7f97a5"
               ></i>
-              <i
-                class="fa-brands fa-apple fa-lg"
-                style="color: #7f97a5"
-              ></i>
             </div>
             <div class="filtered-game-tags">
               ${getGameTag(item)}
@@ -64,13 +60,10 @@ function loadGameTab(games) {
     randomArray.push(i);
   }
   randomArray = shuffle(randomArray);
-  console.log(randomArray);
 
   for (let i = 0; i < gameTabContainers.length; i++) {
     gameTabContainers[i].innerHTML += html[randomArray[i]];
   }
-
-  console.log(gameTabContainers[0]);
 }
 
 function cleanDataGameTab() {
