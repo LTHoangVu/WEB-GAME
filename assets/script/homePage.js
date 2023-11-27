@@ -199,13 +199,15 @@ function loadCategoriesOnHeader(categories) {
 
 function loadCategoriesOnAside(categories) {
   const asideNavList = document.getElementById("aside-nav__list");
-  asideNavList.innerHTML = categories
-    .map((tag) => {
-      return ` <li><a href="./categories.html?category=${tag
-        .replace(/\s+/g, "")
-        .toLowerCase()}" class="aside-nav__item">${tag}</a></li>`;
-    })
-    .join("\n");
+  asideNavList.innerHTML =
+    categories
+      .map((tag) => {
+        return ` <li><a href="./categories.html?category=${tag
+          .replace(/\s+/g, "")
+          .toLowerCase()}" class="aside-nav__item">${tag}</a></li>`;
+      })
+      .join("\n") +
+    `<li><a href="./categories.html?category=all" class="aside-nav__item">All</a></li>`;
 }
 
 function loadCategoriesPartInHomepage(categories) {
