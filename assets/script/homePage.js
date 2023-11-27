@@ -219,7 +219,9 @@ function loadCategoriesPartInHomepage(categories) {
     ${tagGroup
       .map((tagItem) => {
         return `
-      <a href="./categories?category=${tagItem.toLowerCase()}" class="category-item-child">
+      <a href="./categories.html?category=${tagItem
+        .replace(/\s+/g, "")
+        .toLowerCase()}" class="category-item-child">
         <img
           src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
           alt=""
