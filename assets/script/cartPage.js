@@ -22,7 +22,7 @@ async function loadItemsOnCart(cart) {
                 <a class="remove_link remove_each" href="#">Remove</a>
             </div>
             <div class="cart_item_img">
-                <a href="/games.html?id=${item._id}">
+                <a href="/gameDetail.html?id=${item._id}">
                     <img src="${item.imageUrl}" alt="${item.title}" width="120" height="50">
                 </a>
             </div>
@@ -30,7 +30,7 @@ async function loadItemsOnCart(cart) {
                 <div class="cart_item_platform">
                     <span class="win_platform_img"></span>
                 </div>
-                <a href="/games.html?id=${item._id}">${item.title}</a><br>
+                <a href="/gameDetail.html?id=${item._id}">${item.title}</a><br>
             </div>
         </div>`;
     cartListContainer.innerHTML += itemHtmlContent;
