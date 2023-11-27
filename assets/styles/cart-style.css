@@ -80,9 +80,9 @@ a {
     margin-right: auto;
 }
 
-  @media screen and (max-width: 912px) {
+@media screen and (max-width: 912px) {
     .container {
-      max-width: 100%;
+        max-width: 100%;
     }
 }
 

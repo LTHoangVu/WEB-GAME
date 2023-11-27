@@ -71,6 +71,7 @@ function loadGamesOnMoreGame(games) {
     htmlContent + `<button class="filtered-show-more">Show more</button>`;
 }
 
+<<<<<<< HEAD:assets/script/categories.js
 function loadGamesOnFeature(games) {
   const feature = document.getElementById("featured");
   const htmlContent = games
@@ -114,3 +115,6 @@ function loadGamesOnFeature(games) {
 }
 
 export { loadDataOnCategories, loadGamesOnFeature };
+=======
+loadDataOnCategories();
+>>>>>>> 3b7ca6763292f8f942e9f04c42f9e5a21d119b27:assets/script/category.js
