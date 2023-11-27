@@ -207,6 +207,36 @@ async function loadCategoriesHomepage() {
   // Create slide effect
   const categorySlide = new Slide("category", "grid");
   categorySlide.start();
+
+  // Nav submenu
+  const navSubmenu = document.getElementById("nav-submenu");
+  const asideNavList = document.getElementById("aside-nav__list");
+
+  navSubmenu.innerHTML = smallGroups
+    .map((tagGroup) => {
+      return `
+       <div class="nav-submenu-small-group">
+          ${tagGroup
+            .map((tag) => {
+              return `
+            <li><a class="nav-submenu-item" href="./categories.html?category=${tag
+              .replace(/\s+/g, "")
+              .toLowerCase()}">${tag}</a></li>
+            `;
+            })
+            .join("\n")}
+       </div>
+      `;
+    })
+    .join("\n");
+
+  asideNavList.innerHTML = tags
+    .map((tag) => {
+      return ` <li><a href="./categories.html?category=${tag
+        .replace(/\s+/g, "")
+        .toLowerCase()}" class="aside-nav__item">${tag}</a></li>`;
+    })
+    .join("\n");
 }
 
 export { loadDataOnHomepage, loadCategoriesHomepage };

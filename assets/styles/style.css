@@ -271,7 +271,8 @@ body {
   color: white;
   font-weight: 500;
   font-size: 1.4rem;
-  padding: 10px 15px 9px;
+  padding: 10px 30px 9px;
+  text-align: center;
 }
 
 .nav-item:first-child .nav-item__header,
@@ -291,8 +292,11 @@ body {
 }
 
 .nav-submenu {
-  min-width: 200px;
-  padding: 6px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  min-width: 550px;
+  padding: 13px 0 8px;
   position: absolute;
   top: 26px;
   background: rgb(46, 48, 56);
@@ -317,12 +321,17 @@ body {
   z-index: 999;
 }
 
+.nav-submenu-small-group ~ .nav-submenu-small-group {
+  border-left: 0.1px solid gray;
+}
+
 .nav-submenu-item {
   display: block;
   color: white;
   font-weight: 400;
-  font-size: 1.1rem;
-  padding: 10px 15px;
+  font-size: 1.3rem;
+  padding: 10px;
+  text-align: center;
 }
 
 .nav-submenu-item:hover {
@@ -395,13 +404,13 @@ body {
 
 .aside-nav__header {
   color: #536f86;
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .aside-nav__list {
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .aside-nav__list li ~ li {
@@ -409,8 +418,10 @@ body {
 }
 
 .aside-nav__item {
+  display: inline-block;
+  padding: 5px 0;
   color: #7a8b9d;
-  font-size: 12px;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
