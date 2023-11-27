@@ -1,5 +1,5 @@
 var params = new URLSearchParams(window.location.search);
-var id = params.get('id');
+var id = params.get("id");
 
 async function loadDataGameInfo() {
     var resData;
@@ -28,10 +28,12 @@ loadDataGameInfo().then(data => {
       <h2 class="heading"${game.title}></h2>
               <div class="media_game">
                 <iframe  
-                        autoplay loop muted reload="auto"
+                        autoplay loop muted reload="auto" 
                         src="${game.videoUrl}" type="video/mp4">
                        
                 </iframe>
+                
+                
                 <div class="info_game">
   
                   <img src="${game.imageUrl}" alt="${game.title}">
@@ -54,18 +56,18 @@ loadDataGameInfo().then(data => {
                 
                     <div class="button_buy">
                       
-                      ${game.price ?
-                      ( `<p class="price_block">-${game.saleoff}%</p>
-                      
-                        <div class="filtered-game-price">
-                          <span class="original-price">${game.oldprice}</span>
-                          <span class="discounted-price">${game.price}</span>
-                        </div>`)
-                        :
-                        (`<div class="filtered-game-price">
-                        <span class="original-price-free">Free to play</span>
-                      </div>`)
-                      }
+                     ${
+                       game.price
+                         ? `<p class="price_block">-${game.saleoff}%</p>
+                    
+                      <div class="filtered-game-price">
+                        <span class="original-price">${game.oldprice}</span>
+                        <span class="discounted-price">${game.price}</span>
+                      </div>`
+                         : `<div class="filtered-game-price">
+                      <span class="original-price-free">Free to play</span>
+                    </div>`
+                     }
                      
                       
                       <a href="#" class="buy_block" id="add_to_cart">Add to cart</a>
@@ -76,9 +78,7 @@ loadDataGameInfo().then(data => {
                 </div>
             </div>
       </div>`;
-      const gameTabContainers = document.querySelector(
-        ".filtered-game-container"
-      );
+      const gameTabContainers = document.querySelector(".filtered-game-container");
       gameTabContainers.innerHTML = html;
       console.log(gameTabContainers);
       addGameToCart();

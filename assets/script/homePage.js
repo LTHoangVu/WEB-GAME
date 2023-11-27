@@ -1,19 +1,30 @@
 import { Slide } from "./slide.js";
-import { fetchProductsData } from "./fetchData.js";
+import { fetchProductsData, fetchCategoriesData } from "./fetchData.js";
 
 // Load game data on Homepage
 async function loadDataOnHomepage() {
   const data = await fetchProductsData();
   const gamesData = data.games;
 
+  // Get random games
+  const randomGames = [];
+  const existedIndexes = [];
+  while (existedIndexes.length < 10) {
+    const randomIndex = Math.floor(Math.random() * gamesData.length);
+    if (!existedIndexes.includes(randomIndex)) {
+      randomGames.push(gamesData[randomIndex]);
+      existedIndexes.push(randomIndex);
+    }
+  }
+
   // Load 4 first games on feature
   loadGamesOnFeature(
-    gamesData.slice(0, 4),
+    randomGames.slice(0, 4),
     "feature-group",
     "feature__slide-control-group"
   );
 
-  // Load the most 9 sold off games
+  // // Load the most 9 sold off games
   const mostSaleOffGames = gamesData.filter((item) => item.saleoff);
   loadGamesOnSpecial(
     mostSaleOffGames.slice(0, 9),
@@ -46,24 +57,19 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
       return `
     <article class="feature-item fade">
     <!-- Main image -->
-    <img
-      src="${item.imageUrl}"
-      alt="${item.title}-thumb"
-      class="feature-item__game-thumb"
-    />
+    <a href="./gameDetail.html?id=${item._id}" 
+    class="feature-item__game-thumb-wrap">
+      <img
+        src="${item.imageUrl}"
+        alt="${item.title}-thumb"
+        class="feature-item__game-thumb"
+      />
+    </a>
 
     <!-- Info -->
     <div class="feature-item__info">
       <!-- Game title -->
       <h3 class="feature-item__app-name line-clamp-2">${item.title}</h3>
-
-      <!-- Screenshots group -->
-      <div class="feature-item__screenshots">
-        <img src="./assets/images/screenshot-01.jpg" alt="" />
-        <img src="./assets/images/screenshot-02.jpg" alt="" />
-        <img src="./assets/images/screenshot-03.jpg" alt="" />
-        <img src="./assets/images/screenshot-04.jpg" alt="" />
-      </div>
 
       <!-- Category tags -->
       <div class="feature-item__game-tags">
@@ -75,7 +81,7 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
           ${
             !item.saleoff
               ? `<span class="feature-item__price-normal">${
-                  item.price ? item.price + "₫" : "Free to play"
+                  item.price > 1000 ? item.price + "₫" : "Free to play"
                 }</span>`
               : `<div class="feature-item__price-group">
                     <span class="feature-item__percent">
@@ -89,6 +95,11 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
           <i class="fa fa-windows"></i>
         </div>
       </div>
+
+      <!-- Action btn -->
+      <a class="feature-item__btn" href="./gameDetail.html?id=${
+        item._id
+      }" >More details...</a>
     </div>
   </article>
     `;
@@ -102,20 +113,20 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
 }
 
 function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
-  const smallGroup = [];
+  const smallGroups = [];
 
   const chunkSize = 3;
   for (let i = 0; i < data.length; i += chunkSize) {
     const chunk = data.slice(i, i + chunkSize);
-    smallGroup.push(chunk);
+    smallGroups.push(chunk);
   }
 
-  const html = smallGroup
+  const html = smallGroups
     .map((item) => {
       return ` <div class="special-item fade">
          ${item
            .map((game) => {
-             return `<article class="special-item-child">
+             return `<a class="special-item-child" href="./gameDetail.html?id=${game._id}">
           <!-- Game thumb -->
           <img
             src="${game.imageUrl}"
@@ -131,23 +142,71 @@ function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
               >Up to -${game.saleoff}%</strong
             >
           </div>
-        </article>`;
+        </a>`;
            })
            .join("\n")}
         </div>`;
     })
     .join("\n");
 
-  loadGamesOnSpecificPart(smallGroup, listGameID, dotsGroupID, html);
+  loadGamesOnSpecificPart(smallGroups, listGameID, dotsGroupID, html);
 
   // Slide effect
   const specialSlide = new Slide("special", "grid", 5000);
   specialSlide.start();
 }
 
-// Slide effect
-const categorySlide = new Slide("category", "grid");
+// Load categories on Homepage
+async function loadCategoriesHomepage() {
+  // Get categories
+  const data = await fetchCategoriesData();
+  const tags = data.tags.map((tag) => tag.tagName);
 
-categorySlide.start();
+  // Seperate into small groups
+  const smallGroups = [];
+  const chunkSize = 4; // Item each group
+  for (let i = 0; i < tags.length; i += chunkSize) {
+    const chunk = tags.slice(i, i + chunkSize);
+    smallGroups.push(chunk);
+  }
 
-export { loadDataOnHomepage };
+  // Handle categories array
+  const html = smallGroups
+    .map((tagGroup) => {
+      return `
+  <div class="category-item fade">  
+    ${tagGroup
+      .map((tagItem) => {
+        return `
+      <a href="./categories?category=${tagItem.toLowerCase()}" class="category-item-child">
+        <img
+          src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
+          alt=""
+          class="category-item-child__img"
+        />
+        <div class="category-item-child__gradient"></div>
+        <span class="category-item-child__label">${tagItem.toUpperCase()}</span>
+      </a>`;
+      })
+      .join("\n")}
+  </div>`;
+    })
+    .join("\n");
+  const category = document.getElementById("category-group");
+  category.innerHTML += html;
+
+  // Add dots control group
+  const slideControlGroup = document.querySelector(
+    "#category .slide-control-group"
+  );
+  smallGroups.forEach(
+    () =>
+      (slideControlGroup.innerHTML += `<div class="slide-control-item"></div>`)
+  );
+
+  // Create slide effect
+  const categorySlide = new Slide("category", "grid");
+  categorySlide.start();
+}
+
+export { loadDataOnHomepage, loadCategoriesHomepage };

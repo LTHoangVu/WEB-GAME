@@ -50,4 +50,4 @@ function loadGamesOnMoreGame(games) {
     htmlContent + `<button class="filtered-show-more">Show more</button>`;
 }
 
-export { loadDataOnCategories };
+loadDataOnCategories();
