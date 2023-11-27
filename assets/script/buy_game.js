@@ -28,10 +28,12 @@ loadDataGameInfo().then((data) => {
       <h2 class="heading"${game.title}></h2>
               <div class="media_game">
                 <iframe  
-                        autoplay loop muted reload="auto"
+                        autoplay loop muted reload="auto" 
                         src="${game.videoUrl}" type="video/mp4">
                        
                 </iframe>
+                
+                
                 <div class="info_game">
   
                   <img src="${game.imageUrl}" alt="${game.title}">
