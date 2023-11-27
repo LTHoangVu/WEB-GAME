@@ -170,8 +170,47 @@ async function loadCategoriesHomepage() {
     smallGroups.push(chunk);
   }
 
+  loadCategoriesOnHeader(smallGroups);
+  loadCategoriesOnAside(tags);
+  loadCategoriesPartInHomepage(smallGroups);
+}
+
+function loadCategoriesOnHeader(categories) {
+  // Nav submenu
+  const navSubmenu = document.getElementById("nav-submenu");
+  navSubmenu.innerHTML = categories
+    .map((tagGroup) => {
+      return `
+   <div class="nav-submenu-small-group">
+      ${tagGroup
+        .map((tag) => {
+          return `
+        <li><a class="nav-submenu-item" href="./categories.html?category=${tag
+          .replace(/\s+/g, "")
+          .toLowerCase()}">${tag}</a></li>
+        `;
+        })
+        .join("\n")}
+   </div>
+  `;
+    })
+    .join("\n");
+}
+
+function loadCategoriesOnAside(categories) {
+  const asideNavList = document.getElementById("aside-nav__list");
+  asideNavList.innerHTML = categories
+    .map((tag) => {
+      return ` <li><a href="./categories.html?category=${tag
+        .replace(/\s+/g, "")
+        .toLowerCase()}" class="aside-nav__item">${tag}</a></li>`;
+    })
+    .join("\n");
+}
+
+function loadCategoriesPartInHomepage(categories) {
   // Handle categories array
-  const html = smallGroups
+  const html = categories
     .map((tagGroup) => {
       return `
   <div class="category-item fade">  
@@ -199,7 +238,7 @@ async function loadCategoriesHomepage() {
   const slideControlGroup = document.querySelector(
     "#category .slide-control-group"
   );
-  smallGroups.forEach(
+  categories.forEach(
     () =>
       (slideControlGroup.innerHTML += `<div class="slide-control-item"></div>`)
   );
@@ -207,36 +246,6 @@ async function loadCategoriesHomepage() {
   // Create slide effect
   const categorySlide = new Slide("category", "grid");
   categorySlide.start();
-
-  // Nav submenu
-  const navSubmenu = document.getElementById("nav-submenu");
-  const asideNavList = document.getElementById("aside-nav__list");
-
-  navSubmenu.innerHTML = smallGroups
-    .map((tagGroup) => {
-      return `
-       <div class="nav-submenu-small-group">
-          ${tagGroup
-            .map((tag) => {
-              return `
-            <li><a class="nav-submenu-item" href="./categories.html?category=${tag
-              .replace(/\s+/g, "")
-              .toLowerCase()}">${tag}</a></li>
-            `;
-            })
-            .join("\n")}
-       </div>
-      `;
-    })
-    .join("\n");
-
-  asideNavList.innerHTML = tags
-    .map((tag) => {
-      return ` <li><a href="./categories.html?category=${tag
-        .replace(/\s+/g, "")
-        .toLowerCase()}" class="aside-nav__item">${tag}</a></li>`;
-    })
-    .join("\n");
 }
 
 export { loadDataOnHomepage, loadCategoriesHomepage };
