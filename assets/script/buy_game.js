@@ -138,6 +138,7 @@ async function addDataToCart(idGame) {
     }
   } else {
     window.location.assign('./login.html');
+    return token;
   }
 }
 
