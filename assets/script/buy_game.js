@@ -103,8 +103,13 @@ async function addGameToCart() {
   console.log(addToCartBtn);
   let button = addToCartBtn;
   button.onclick = async function() {
-    await addDataToCart(id);
-    window.location.assign('./cart.html');
+    const data = await addDataToCart(id);
+    if (data === undefined) {
+      window.alert("This game has already been purchased or added to your cart!");
+    }
+    else {
+      window.location.assign('./cart.html');
+    }
   };
 }
 

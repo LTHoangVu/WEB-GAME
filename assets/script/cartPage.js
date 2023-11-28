@@ -7,7 +7,7 @@ async function loadDataOnCart() {
   loadItemsOnCart(cartData);
   deleteItemsOnCart(cartData);
   deleteAllItemsOnCart();
-  addItemsToProfile();
+  addItemsToProfile(cartData);
 }
 
 async function loadItemsOnCart(cart) {
@@ -159,13 +159,18 @@ async function addDataToProfile() {
   }
 }
 
-async function addItemsToProfile() {
+async function addItemsToProfile(cart) {
   const purchaseBtn = document.getElementById('myself_purchase_button');
   console.log(purchaseBtn);
   let button = purchaseBtn;
   button.onclick = async function() {
-    await addDataToProfile();
-    window.location.assign('./profile.html')
+    if (cart.length != 0) {
+      await addDataToProfile();
+      window.location.assign('./profile.html');
+    }
+    else {
+      window.alert("No items in your cart!");
+    }
   };
 }
 
