@@ -10,8 +10,8 @@ const $$ = document.querySelectorAll.bind(document);
  */
 function initJsToggle() {
   console.log(123);
-  $$('.js-toggle').forEach((button) => {
-    const target = button.getAttribute('toggle-target');
+  $$(".js-toggle").forEach((button) => {
+    const target = button.getAttribute("toggle-target");
     if (!target) {
       document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
     }
@@ -19,17 +19,17 @@ function initJsToggle() {
       if (!$(target)) {
         return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
       }
-      const isHidden = $(target).classList.contains('hide');
+      const isHidden = $(target).classList.contains("hide");
 
       requestAnimationFrame(() => {
-        $(target).classList.toggle('hide', !isHidden);
-        $(target).classList.toggle('show', isHidden);
+        $(target).classList.toggle("hide", !isHidden);
+        $(target).classList.toggle("show", isHidden);
       });
     };
   });
 }
 
-window.addEventListener('template-loaded', initJsToggle);
+window.addEventListener("template-loaded", initJsToggle);
 
 /**
  * Hàm tải template
@@ -55,22 +55,22 @@ function load(selector, path) {
       }
     })
     .finally(() => {
-      window.dispatchEvent(new Event('template-loaded'));
+      window.dispatchEvent(new Event("template-loaded"));
     });
 }
 
 const getUser = async () => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem("token");
   if (token) {
     try {
-      const response = await fetch('http://localhost:8080/auth/user', {
+      const response = await fetch("http://localhost:8080/auth/user", {
         headers: {
           Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
       });
       if (!response.ok) {
-        const error = new Error('Fetching user failed');
+        const error = new Error("Fetching user failed");
         error.code = response.status;
         error.info = await response.json();
         throw error;
@@ -81,10 +81,10 @@ const getUser = async () => {
       console.log(error);
     }
   } else {
-    const profileEle = $('.profile-info');
-    profileEle.style.display = 'none';
-    const logoutBtn = $('.logout-btn');
-    logoutBtn.style.display = 'none';
+    const profileEle = $(".profile-info");
+    profileEle.style.display = "none";
+    const logoutBtn = $(".logout-btn");
+    logoutBtn.style.display = "none";
   }
 };
 
@@ -93,7 +93,7 @@ function checkUser() {
     .then((response) => {
       if (response) {
         const user = response.user;
-        const profileEle = $('.profile-info');
+        const profileEle = $(".profile-info");
         profileEle.innerHTML = `
       <a href="./profile.html">
           <div class="profile-inner">
@@ -106,18 +106,18 @@ function checkUser() {
           </div>
       </a>
       `;
-        const navItems = $$('.global-nav-item.mobile');
+        const navItems = $$(".global-nav-item.mobile");
         navItems.forEach((item) => {
-          item.style.display = 'none';
+          item.style.display = "none";
         });
 
-        const logoutBtn = $('.global-nav-item:last-child');
-        logoutBtn.classList.add('.logout-btn');
+        const logoutBtn = $(".global-nav-item:last-child");
+        logoutBtn.classList.add(".logout-btn");
 
-        const actionEle = $('.global-header-action-container');
+        const actionEle = $(".global-header-action-container");
 
         actionEle.innerHTML = `
-        <p class="header-name">${user.username}</p>
+        <a href="./profile.html" class="header-name">${user.username}</a>
           <img src="./assets/images/avatar.jpg" alt="" class="header-avatar" />
           <div class="header-dropdown">
             <ul>
@@ -128,15 +128,15 @@ function checkUser() {
             </ul>
         </div>`;
 
-        const logoutBtns = $$('.logout-btn');
+        const logoutBtns = $$(".logout-btn");
         logoutBtns.forEach((btn) => {
           btn.onclick = () => {
-            localStorage.removeItem('token');
-            window.location.assign('./login.html');
+            localStorage.removeItem("token");
+            window.location.assign("./login.html");
           };
         });
       } else {
-        const actionEle = $('.global-header-action-container');
+        const actionEle = $(".global-header-action-container");
         actionEle.innerHTML = `
         <a
         class="global-header__action-btn global-header__btn"
@@ -154,4 +154,4 @@ function checkUser() {
     .catch();
 }
 
-window.addEventListener('template-loaded', checkUser);
+window.addEventListener("template-loaded", checkUser);

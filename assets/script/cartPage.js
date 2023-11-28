@@ -1,45 +1,4 @@
 import { fetchUserCart } from './fetchCart.js';
-/*
-import { fetchProductsData } from "./fetchData.js";
-
-async function addItemsToCart() {
-  const data = await fetchProductsData();
-  const gamesData = data.games;
-  for (let i = 0; i < 5; i++) {
-    addDataToCart(gamesData[i]._id);
-  }
-}
-
-async function addDataToCart(idGame) {
-  const token = localStorage.getItem('token');
-  if (token) {
-    try {
-      const response = await fetch('http://localhost:8080/shop/post-cart', { 
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({gameId: idGame})
-      });
-      if (!response.ok) {
-        const error = new Error('Adding game to cart failed');
-        error.code = response.status;
-        error.info = await response.json();
-        throw error;
-      }
-      const resData = await response.json();
-      return resData;
-    } catch (error) {
-      console.log(error);
-    }
-  } else {
-    window.location.assign('./login.html');
-  }
-}
-
-export { addItemsToCart };
-*/
 
 async function loadDataOnCart() {
   const data = await fetchUserCart();
@@ -48,7 +7,7 @@ async function loadDataOnCart() {
   loadItemsOnCart(cartData);
   deleteItemsOnCart(cartData);
   deleteAllItemsOnCart();
-  addItemsToProfile();
+  addItemsToProfile(cartData);
 }
 
 async function loadItemsOnCart(cart) {
@@ -63,7 +22,7 @@ async function loadItemsOnCart(cart) {
                 <a class="remove_link remove_each" href="#">Remove</a>
             </div>
             <div class="cart_item_img">
-                <a href="http://localhost:8080/products/${item._id}">
+                <a href="/gameDetail.html?id=${item._id}">
                     <img src="${item.imageUrl}" alt="${item.title}" width="120" height="50">
                 </a>
             </div>
@@ -71,7 +30,7 @@ async function loadItemsOnCart(cart) {
                 <div class="cart_item_platform">
                     <span class="win_platform_img"></span>
                 </div>
-                <a href="http://localhost:8080/products/${item._id}">${item.title}</a><br>
+                <a href="/gameDetail.html?id=${item._id}">${item.title}</a><br>
             </div>
         </div>`;
     cartListContainer.innerHTML += itemHtmlContent;
@@ -200,13 +159,18 @@ async function addDataToProfile() {
   }
 }
 
-async function addItemsToProfile() {
+async function addItemsToProfile(cart) {
   const purchaseBtn = document.getElementById('myself_purchase_button');
   console.log(purchaseBtn);
   let button = purchaseBtn;
   button.onclick = async function() {
-    await addDataToProfile();
-    window.location.assign('./profile.html')
+    if (cart.length != 0) {
+      await addDataToProfile();
+      window.location.assign('./profile.html');
+    }
+    else {
+      window.alert("No items in your cart!");
+    }
   };
 }
 
