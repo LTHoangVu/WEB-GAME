@@ -34,7 +34,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Motiva Sans", "sans-serif";
+  font-family: 'Motiva Sans', 'sans-serif';
 }
 
 button {
@@ -129,7 +129,7 @@ a {
 
 .drop-down__item {
   display: inline-block;
-  width: 100%;
+  width: 180px;
   padding: 8px 18px;
   font-size: 13px;
   color: #dcdedf;
@@ -419,7 +419,7 @@ a {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 104px);
-  background-image: url("../images/background.jpg");
+  background-image: url('../images/background.jpg');
   background-repeat: repeat;
   background-position: top center;
 }
@@ -739,7 +739,7 @@ a {
 }
 
 .order-oldprice::before {
-  content: "";
+  content: '';
   left: 0px;
   right: 0px;
   position: absolute;

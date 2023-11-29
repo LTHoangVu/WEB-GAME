@@ -24,13 +24,16 @@ async function loadDataOnHomepage() {
     "feature__slide-control-group"
   );
 
-  // // Load the most 9 sold off games
+  // Load the most 9 sold off games
   const mostSaleOffGames = gamesData.filter((item) => item.saleoff);
   loadGamesOnSpecial(
     mostSaleOffGames.slice(0, 9),
     "special-group",
     "special__slide-control-group"
   );
+
+  // Search box
+  handleSearchBox(gamesData);
 }
 
 // Load game on specific part (game data, game list container, dots group container, list item)
@@ -156,11 +159,6 @@ function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
   specialSlide.start();
 }
 
-<<<<<<< HEAD
-// Slide effect
-const categorySlide = new Slide("category", "grid");
-categorySlide.start();
-=======
 // Load categories on Homepage
 async function loadCategoriesHomepage() {
   // Get categories
@@ -174,7 +172,6 @@ async function loadCategoriesHomepage() {
     const chunk = tags.slice(i, i + chunkSize);
     smallGroups.push(chunk);
   }
->>>>>>> 3b7ca6763292f8f942e9f04c42f9e5a21d119b27
 
   loadCategoriesOnHeader(smallGroups);
   loadCategoriesOnAside(tags);
@@ -256,6 +253,67 @@ function loadCategoriesPartInHomepage(categories) {
   // Create slide effect
   const categorySlide = new Slide("category", "grid");
   categorySlide.start();
+}
+
+// Handle search box
+function handleSearchBox(games) {
+  const searchBox = document.getElementById("search-form-input");
+  const formResult = document.getElementById("hero__form-result");
+
+  // Handle user input
+  searchBox.addEventListener("input", (e) => handleInput(e, games, formResult));
+
+  // Handle user blur or focus
+  searchBox.addEventListener("blur", (e) => {
+    formResult.style.display = "none";
+  });
+
+  searchBox.addEventListener("focus", (e) => {
+    formResult.style.display = "block";
+  });
+
+  // Prevent enter key submitting
+  searchBox.addEventListener("keypress", (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+    }
+  });
+}
+
+// Handle user input
+function handleInput(e, games, formResult) {
+  const keyWord = e.target.value;
+
+  // Check if user have type yet
+  if (keyWord) {
+    const filteredGames = games.filter((game) =>
+      game.title.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    const html = filteredGames
+      .map((game) => {
+        return `
+      <a href="./gameDetail.html?id=${game._id}" class="hero-filtered-game">
+        <img src="${game.imageUrl}" alt="${game.title}" class="hero-filtered-game__img"/>
+
+        <div class="hero-filtered-game__info"> 
+          <h7 class="hero-filtered-game__title line-clamp-2">${game.title}</h7>
+        </div>
+
+      </a>
+    `;
+      })
+      .join("\n");
+    if (html) {
+      formResult.innerHTML = html;
+      formResult.style.display = "block";
+    } else {
+      formResult.innerHTML = "";
+      formResult.style.display = "none";
+    }
+  } else {
+    formResult.innerHTML = "";
+    formResult.style.display = "none";
+  }
 }
 
 export { loadDataOnHomepage, loadCategoriesHomepage };
