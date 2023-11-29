@@ -30,7 +30,9 @@ function loadGamesOnMoreGame(games) {
     .map((item) => {
       return `
      
-        <a class="filtered-game-container" href="../../pageNam?id=${item._id}">
+        <a class="filtered-game-container" href="../../gameDetail.html?id=${
+          item._id
+        }">
             <img
             src="${item.imageUrl}"
             alt="${item.title}"
