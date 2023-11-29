@@ -618,6 +618,191 @@ body {
   color: white;
 }
 
+
+/* =============== Game Group ================ */
+.main-container {
+  background: #0e1014;
+  margin: 20px;
+  height: auto;
+  padding: 10px;
+}
+
+.row {
+  width: 100%;
+  height: auto-fit;
+  display: flex;
+  justify-content: center;
+}
+
+.items-01 {
+  background: black;
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+  height: 150x;
+  margin: 10px;
+  box-shadow: 0 0 5px rgb(49, 49, 49);
+}
+
+
+.item {
+  box-shadow: 0 0 3px #353b49;
+}
+
+.item-image {
+  width: 100%;
+  display: block;
+}
+
+.item-content {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
+  font-size: 1em;
+  height: 45px;
+}
+
+.platform-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px 0px;
+  width: 50%;
+}
+
+.platform-tags i {
+  margin-right: 5px;
+}
+
+.discount span{
+  font-size: 25px;
+  color: rgb(190, 238, 17);
+  border-radius: 2px;
+  padding: 5px 5px;
+  background-color: rgb(76, 107, 34);
+}
+
+.price{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 0px;
+}
+
+.price span{
+  width: fit-content;
+  display: block;
+}
+
+.original-price{
+  font-size: 15px;
+  color: RGB(115, 136, 149);
+  position: relative;
+}
+
+.discounted-price{
+  font-size: 30px;
+  color: white;
+}
+
+.original-price::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: inherit;
+
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+
+.items-02 {
+  background: black;
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+  height: auto;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0.2);
+}
+
+.items-03 {
+  background: black;
+  position: relative;
+  flex: 1;
+  max-width: 220px;
+  height: 150x;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0.2);
+}
+
+.items-04 {
+  background: black;
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0.2);
+}
+
+.btn {
+  position: relative;
+  margin: 10px;
+  left: 40%;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgb(190, 185, 185);
+  width: 160px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: grey;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(45, 44, 46);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0 20px rgba(151, 151, 151, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .btn {
+    font-size: 15px;
+    width: 130px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .btn {
+    font-size: 10px;
+    width: 100px;
+    padding: 10px;
+  }
+}
+
 /* ================ More game ================ */
 #more-game {
   display: flex;
