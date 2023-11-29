@@ -1,9 +1,9 @@
-import { fetchProductsData } from './fetchData.js';
-import { Slide } from './slide.js';
+import { fetchProductsData } from "./fetchData.js";
+import { Slide } from "./slide.js";
 
 async function loadDataOnCategories() {
   const query = new URLSearchParams(window.location.search);
-  const category = query.get('category');
+  const category = query.get("category");
   const data = await fetchProductsData();
   const games = [];
 
@@ -20,12 +20,12 @@ async function loadDataOnCategories() {
 
   loadGamesOnMoreGame(games);
   loadGamesOnFeature(games);
-  const featureSlide = new Slide('featured', 'grid', 3000);
+  const featureSlide = new Slide("featured", "grid", 3000);
   featureSlide.start();
 }
 
 function loadGamesOnMoreGame(games) {
-  const feature = document.getElementById('more-game');
+  const feature = document.getElementById("more-game");
   const htmlContent = games
     .map((item) => {
       return `
@@ -45,7 +45,7 @@ function loadGamesOnMoreGame(games) {
                             (tag) =>
                               `<span class="game-tag">${tag.tagName}</span>`
                           )
-                          .join('\n')}
+                          .join("\n")}
                     </div>
 
                     
@@ -56,23 +56,23 @@ function loadGamesOnMoreGame(games) {
 
             <div class="filtered-game-price">
                 <span class="sale">${
-                  item.saleoff > 0 ? item.saleoff + '%' : 'Not Sale'
+                  item.saleoff > 0 ? item.saleoff + "%" : "Not Sale"
                 }</span>
                 <span class="game-price">${
-                  item.price > 1000 ? item.price + 'đ' : 'Free to play'
+                  item.price > 1000 ? item.price + "đ" : "Free to play"
                 }</span>
                 <button class="view-button">View Details...</button>
             </div>
         </a>
     `;
     })
-    .join('\n');
+    .join("\n");
   feature.innerHTML =
     htmlContent + `<button class="filtered-show-more">Show more</button>`;
 }
 
 function loadGamesOnFeature(games) {
-  const feature = document.getElementById('featured');
+  const feature = document.getElementById("featured");
   const htmlContent = games
     .map((item) => {
       return `
@@ -99,7 +99,7 @@ function loadGamesOnFeature(games) {
         <div class="featured-game-tags">
         ${item.tags
           .map((tag) => `<span class="game-tag">${tag.tagName}</span>`)
-          .join('\n')}
+          .join("\n")}
         </div>
 
         <p class="featured-game-status">
@@ -109,12 +109,8 @@ function loadGamesOnFeature(games) {
     </div>
     `;
     })
-    .join('\n');
+    .join("\n");
   feature.innerHTML += htmlContent;
 }
 
 export { loadDataOnCategories, loadGamesOnFeature };
-<<<<<<< HEAD:assets/script/fetchCategories.js
-// loadDataOnCategories();
-=======
->>>>>>> 4ef9f9f09bbe0c49e49a7be9e1398b9b9833b0c4:assets/script/category.js
