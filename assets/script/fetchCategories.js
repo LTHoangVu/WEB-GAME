@@ -79,7 +79,7 @@ function loadGamesOnFeature(games) {
     .map((item) => {
       return `
 
-    <div class="featured-item fade">
+    <a class="featured-item fade" href="../../gameDetail.html?id=${item._id}">
       <img
         src="${item.imageUrl}"
         alt="${item.title}"
@@ -108,7 +108,7 @@ function loadGamesOnFeature(games) {
           ${item.description}
         </p>
       </div>
-    </div>
+    </a>
     `;
     })
     .join("\n");
