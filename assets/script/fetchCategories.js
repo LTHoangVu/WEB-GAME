@@ -18,14 +18,14 @@ async function loadDataOnCategories() {
 
   console.log(games);
 
-  loadGamedOnGameGroup(games);
+  loadGamesOnGameGroup(games);
   loadGamesOnMoreGame(games);
   loadGamesOnFeature(games);
   const featureSlide = new Slide("featured", "grid", 3000);
   featureSlide.start();
 }
 
-function loadGamedOnGameGroup(games) {
+function loadGamesOnGameGroup(games) {
   const feature = document.getElementById("game-group");
   const htmlContent = games
     .map((item) => {
@@ -33,7 +33,7 @@ function loadGamedOnGameGroup(games) {
     <div class="item">
               <img
                 src="${item.imageUrl}"
-                alt="${item.title}"
+                alt="game image"
                 class="item-image"
               />
               <div class="item-content">
@@ -44,13 +44,26 @@ function loadGamedOnGameGroup(games) {
                   ></i>
                   <i class="fa-brands fa-apple fa-lg" style="color: #7f97a5"></i>
                 </div>
-                <div class="discount">
-                  <span>-10%</span>
-                </div>
+                ${
+                  item.saleoff
+                    ? `<div class="discount">
+                  <span>${item.saleoff}%</span>
+                  </div>`
+                  : ``
+              }
                 <div class="price">
-                  <span class="original-price">900000</span>
-                  <span class="discouted-price">810000</span>
-                  </span>
+                ${
+                  !item.saleoff
+                    ? `<span class="original-price"></span>`
+                    : `<span class="original-price">${item.oldprice}₫</span>`
+                }
+                ${
+                  !item.price
+                    ? `<span class="discounted-price">Free To Play</span>`
+                    : `<span class="discounted-price">${item.price}₫</span>`
+                  // <span class="original-price">${item.oldprice}₫</span>
+                  // <span class="discounted-price">${item.price}₫</span>
+                }
                 </div>
               </div>
             </div>
