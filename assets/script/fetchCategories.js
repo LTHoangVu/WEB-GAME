@@ -129,7 +129,7 @@ function loadGamesOnFeature(games) {
     .map((item) => {
       return `
 
-    <div class="featured-item fade">
+    <a class="featured-item fade" href="../../gameDetail.html?id=${item._id}">
       <img
         src="${item.imageUrl}"
         alt="${item.title}"
@@ -137,10 +137,6 @@ function loadGamesOnFeature(games) {
 
       <div class="featured-game-infor-container">
         <h2 class="featured-game-name">${item.title}</h2>
-
-        <p class="featured-game-date">
-          Release date: <time datetime="2021-11-19">NOV 19, 2021</time>
-        </p>
 
         <span class="featured-game-viewers"
           >Averages <span>${(
@@ -158,7 +154,7 @@ function loadGamesOnFeature(games) {
           ${item.description}
         </p>
       </div>
-    </div>
+    </a>
     `;
     })
     .join("\n");
