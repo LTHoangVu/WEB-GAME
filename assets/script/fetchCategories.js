@@ -18,11 +18,41 @@ async function loadDataOnCategories() {
 
   console.log(games);
 
+  loadGamesOnRecommended(games);
   loadGamesOnGameGroup(games);
   loadGamesOnMoreGame(games);
   loadGamesOnFeature(games);
   const featureSlide = new Slide("featured", "grid", 3000);
   featureSlide.start();
+}
+
+function loadGamesOnRecommended(games) {
+  const feature = document.getElementById("recommended");
+  const htmlContent = games
+    .map((item) => {
+      return `
+      <li class="item">
+      <div class="item-img">
+        <img
+          src="${item.imageUrl}"
+          alt="game image"
+          draggable="false"
+        />
+      </div>
+      <div class="item-content">
+        <!--<div class="platform-tags">
+          <i class="fa-brands fa-windows fa-lg" style="color: #7f97a5"></i>
+          <i class="fa-brands fa-apple fa-lg" style="color: #7f97a5"></i>
+        </div>-->
+        <div class="price">
+          <span>Free to play</span>
+        </div>
+      </div>
+    </li>
+    `;
+    })
+    .join("\n");
+  feature.innerHTML = htmlContent;
 }
 
 function loadGamesOnGameGroup(games) {
