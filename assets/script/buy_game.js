@@ -196,8 +196,17 @@ function getGameTag(game) {
   let html = '';
   for (let i = 0; i < game.tags.length; i++) {
     if (i === game.tags.length - 1) {
-      html += `<span class="game-tag">${game.tags[i].tagName}</span>\n`;
-    } else html += `<span class="game-tag">${game.tags[i].tagName}</span>\n`;
+      html += `<a href="./categories.html?category=${game.tags[i].tagName
+        .replace(/\s+/g, '')
+        .toLowerCase()}"><span class="game-tag">${
+        game.tags[i].tagName
+      }</span></a>\n`;
+    } else
+      html += `<a href="./categories.html?category=${game.tags[i].tagName
+        .replace(/\s+/g, '')
+        .toLowerCase()}"><span class="game-tag">${
+        game.tags[i].tagName
+      }</span></a>\n`;
   }
   return html;
 }
