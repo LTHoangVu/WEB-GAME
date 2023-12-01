@@ -25,13 +25,26 @@
   .hero {
     margin: 0;
   }
+
   .hero-nav-group {
     padding: 13px 17px;
   }
+
   .search-form {
     margin-top: 13px;
     width: 100%;
   }
+
+  .hero__form-result {
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .hero-filtered-game__img {
+    height: 140px;
+  }
+
   .nav-item__header,
   .nav-item:first-child .nav-item__header {
     padding: 0;
@@ -40,6 +53,7 @@
   .video-background-container {
     display: none;
   }
+
   .hero-nav-group {
     display: block;
     position: static;
