@@ -567,8 +567,9 @@ body {
 }
 
 .featured-item img {
-  width: 100%;
-  height: 100%;
+  width: 42rem;
+  height: 40rem;
+  background-color: #1b2838;
 }
 
 .featured-game-infor-container {
@@ -578,7 +579,7 @@ body {
 
 .featured-game-infor-container > * {
   margin-bottom: 2rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: white;
 }
 
@@ -586,7 +587,6 @@ body {
   font-size: 2.8rem;
 }
 
-/*chỉ border đến phần viewers*/
 .featured-game-viewers {
   display: inline-block;
   border: 1px solid #171312;
@@ -618,9 +618,104 @@ body {
   color: white;
 }
 
-/* =============== Game Group ================ */
+/* =============== Recommended ================ */
+
 .main-container {
-  background: #0e1014;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  padding: 100px 0px 50px 15px;
+  justify-content: center;
+}
+
+.main-container h2 {
+  padding: 0 0 10px 35px;
+  color: #fff;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.main-container i {
+  height: 100px;
+  width: 50px;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  font-size: 5em;
+  transform: translateY(-50%);
+}
+
+.main-container i:first-child {
+  left: -25px;
+}
+
+.main-container i:last-child {
+  right: -10px;
+}
+
+.main-container .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+.carousel.dragging {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .item {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel .item {
+  scroll-snap-align: start;
+  height: 340px;
+  list-style: none;
+  background: var(--main-background);
+
+  display: flex;
+  cursor: pointer;
+  padding-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.item .item-img {
+  width: 300px;
+  height: 300px;
+  background: black;
+}
+
+.item .item-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .main-container .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-container .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+/* =============== Game Group ================ */
+.game-group-container {
+  background: var(--main-background);
   margin: 20px;
   height: auto;
   padding: 10px;
@@ -911,7 +1006,8 @@ body {
 }
 
 .filtered-game-container:hover {
-  scale: 1.1;
+  scale: 1.03;
+  background-color: #9fc5db;
 }
 
 .filtered-show-more {
@@ -1018,36 +1114,136 @@ body {
   color: white;
 }
 
-@media screen and (max-width: 1345px) {
-  .filtered-game-container {
-    width: 100%;
-    height: 60px;
+/* ================ Responsive ================ */
+@media screen and (max-width: 1400px) {
+  .featured-item img {
+    width: 42rem;
+    height: 40rem;
+  }
+
+  .featured-game-infor-container > * {
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+  }
+
+  .featured-game-name {
+    font-size: 2.4rem;
+  }
+
+  .featured-game-viewers {
+    border-radius: 3px;
+    padding: 3px;
+  }
+
+  .featured-game-tags span {
+    padding: 5px;
+    font-size: 0.8rem;
   }
 
   .filtered-game-container img {
-    width: 16rem;
-    height: 6rem;
+    width: 19rem;
+    height: 9rem;
   }
 
   .filtered-game-description {
-    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px 0;
+    line-height: 16px;
+  }
+
+  .filtered-game-name {
+    font-size: 1.3rem;
+  }
+
+  .game-tag {
+    font-size: 0.65rem;
+    padding: 4px;
+  }
+
+  .filtered-game-situation {
+    font-size: 1rem;
+  }
+
+  .filtered-game-price {
+    display: flex;
+  }
+
+  .sale {
+    height: 34px;
+    padding: 0.65rem;
+    font-size: 2rem;
+  }
+
+  .game-price {
+    height: 34px;
+    padding: 0.65rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+  }
+
+  .filtered-game-price button {
+    height: 3.4rem;
+    padding: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .featured-item {
+    column-gap: 1.5rem;
+  }
+
+  .featured-item img {
+    width: 42rem;
+    height: 40rem;
+  }
+
+  .featured-game-infor-container > * {
+    font-size: 0.85rem;
+    line-height: 1.7rem;
+    /* visibility: hidden; */
+  }
+
+  .featured-game-name {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .featured-game-viewers {
+    border-radius: 3px;
+    padding: 2px;
+  }
+
+  .featured-game-tags span {
+    padding: 3px;
+    font-size: 0.65rem;
+  }
+
+  .featured-game-status {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filtered-game-description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px 0;
+    line-height: 12px;
   }
 
   .filtered-game-name {
     font-size: 1rem;
   }
 
-  .sale {
-    font-size: 1.8rem;
-  }
-
-  .filtered-game-situation {
-    font-size: 0.8rem;
-  }
-
-  .filtered-game-price {
-    width: 9.4rem;
-    height: 3rem;
+  .game-tag {
+    font-size: 0.45rem;
+    padding: 3px;
   }
 
   .filtered-game-situation {
@@ -1056,132 +1252,213 @@ body {
 
   .filtered-game-price {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  }
+
+  .sale {
+    height: 29px;
+    padding: 0.45rem;
+    font-size: 1.6rem;
   }
 
   .game-price {
-    height: 3.3rem;
-    font-size: 1.3rem;
+    height: 29px;
+    padding: 0.65rem;
+    border-radius: 3px;
+    font-size: 0.65rem;
   }
 
   .filtered-game-price button {
-    width: 8.5rem;
-    height: 3rem;
-    padding: 2px;
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 1070px) {
-  .filtered-game-container {
-    width: 100%;
-    height: 50px;
-  }
-
-  .filtered-game-container img {
-    width: 14rem;
-    height: 5rem;
-  }
-
-  .filtered-game-description {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .filtered-game-name {
+    width: 9rem;
+    height: 29px;
+    padding: 3px;
     font-size: 0.8rem;
-  }
-
-  .sale {
-    font-size: 1.5rem;
-  }
-
-  .filtered-game-situation {
-    font-size: 0.7rem;
-  }
-
-  .filtered-game-price {
-    width: 8.5rem;
-    height: 2.4rem;
-  }
-
-  .filtered-game-situation {
-    font-size: 0.6rem;
-  }
-
-  .filtered-game-price {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  .game-price {
-    height: 3.3rem;
-    font-size: 1.3rem;
-  }
-
-  .filtered-game-price button {
-    width: 8rem;
-    height: 2.8rem;
-    padding: 2px;
-    font-size: 1.1rem;
+    cursor: pointer;
   }
 }
 
-@media screen and (max-width: 900px) {
-  .filtered-game-container {
-    width: 100%;
-    height: 40px;
+@media screen and (max-width: 1000px) {
+  .featured-item {
+    column-gap: 0.5rem;
   }
 
-  .filtered-game-container img {
-    width: 12rem;
-    height: 3rem;
+  .featured-item img {
+    width: 42rem;
+    height: 40rem;
   }
 
-  .filtered-game-description {
-    display: flex;
-    justify-content: space-around;
+  .featured-game-infor-container > * {
+    font-size: 0.8rem;
+    line-height: 1.8rem;
   }
 
-  .filtered-game-name {
+  .featured-game-status {
     font-size: 0.6rem;
   }
 
-  .sale {
+  .featured-game-name {
     font-size: 1.2rem;
   }
 
-  .filtered-game-situation {
-    font-size: 0.5rem;
+  .featured-game-viewers {
+    border-radius: 3px;
+    padding: 2px;
   }
 
-  .filtered-game-price {
-    width: 6.5rem;
-    height: 1.8rem;
+  .featured-game-tags span {
+    padding: 2.5px;
+    font-size: 0.65rem;
+  }
+
+  .filtered-game-description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 9px 0;
+    line-height: 9px;
+  }
+
+  .filtered-game-name {
+    font-size: 0.85rem;
+  }
+
+  .game-tag {
+    font-size: 0.35rem;
+    padding: 2.5px;
   }
 
   .filtered-game-situation {
-    font-size: 0.4rem;
+    font-size: 0.65rem;
   }
 
   .filtered-game-price {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  }
+
+  .sale {
+    height: 29px;
+    padding: 0.2rem;
+    font-size: 1.3rem;
   }
 
   .game-price {
-    height: 2.8rem;
-    font-size: 1rem;
+    height: 29px;
+    padding: 0.45rem;
+    border-radius: 3px;
+    font-size: 0.45rem;
   }
 
   .filtered-game-price button {
-    width: 7rem;
-    height: 2.5rem;
+    height: 29px;
+    padding: 3px;
+    font-size: 0.65rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .featured-item {
+    height: 40rem;
+  }
+
+  .featured-item img {
+    width: 54rem;
+    height: 40rem;
+  }
+
+  .featured-game-name {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .featured-item {
+    height: 25rem;
+  }
+
+  .featured-item img {
+    width: 45rem;
+    height: 25rem;
+  }
+
+  .featured-game-infor-container {
+    visibility: hidden;
+  }
+
+  .filtered-game-description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 9px 0;
+    line-height: 9px;
+  }
+
+  .filtered-game-name {
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+  }
+
+  .game-tag {
+    font-size: 0.35rem;
     padding: 2px;
+  }
+
+  .filtered-game-situation {
+    font-size: 0.55rem;
+  }
+
+  .filtered-game-price {
+    display: flex;
+  }
+
+  .sale {
+    height: 20px;
+    padding: 0.2rem;
     font-size: 0.9rem;
+  }
+
+  .game-price {
+    height: 20px;
+    padding: 0.45rem;
+    border-radius: 3px;
+    font-size: 0.55rem;
+  }
+
+  .filtered-game-price button {
+    width: 5.5rem;
+    height: 20px;
+    padding: 3px;
+    font-size: 0.55rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .featured-item {
+    height: 28rem;
+  }
+
+  .featured-item img {
+    width: 39rem;
+    height: 28rem;
+  }
+
+  .filtered-game-container {
+    height: 200px;
+  }
+
+  .filtered-game-container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .filtered-game-description {
+    visibility: hidden;
+  }
+
+  .filtered-game-price {
+    visibility: hidden;
   }
 }
 /* ================ Animation ================ */

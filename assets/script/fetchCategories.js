@@ -1,16 +1,18 @@
-import { fetchProductsData } from "./fetchData.js";
-import { Slide } from "./slide.js";
+import { fetchProductsData } from './fetchData.js';
+import { Slide } from './slide.js';
 
 async function loadDataOnCategories() {
   const query = new URLSearchParams(window.location.search);
-  const category = query.get("category");
+  const category = query.get('category');
   const data = await fetchProductsData();
   const games = [];
 
   for (const game of data.games) {
+    console.log(game);
     if (
-      game.tags.filter((tag) => tag.tagName.toLowerCase() === category).length >
-      0
+      game.tags.filter(
+        (tag) => tag.tagName.replace(/\s/g, '').toLowerCase() === category
+      ).length > 0
     ) {
       games.push(game);
     }
@@ -18,22 +20,52 @@ async function loadDataOnCategories() {
 
   console.log(games);
 
-  loadGamedOnGameGroup(games);
+  loadGamesOnRecommended(games);
+  loadGamesOnGameGroup(games);
   loadGamesOnMoreGame(games);
   loadGamesOnFeature(games);
-  const featureSlide = new Slide("featured", "grid", 3000);
+  const featureSlide = new Slide('featured', 'grid', 3000);
   featureSlide.start();
 }
 
-function loadGamedOnGameGroup(games) {
-  const feature = document.getElementById("game-group");
+function loadGamesOnRecommended(games) {
+  const feature = document.getElementById('recommended');
+  const htmlContent = games
+    .map((item) => {
+      return `
+      <li class="item">
+      <div class="item-img">
+        <img
+          src="${item.imageUrl}"
+          alt="game image"
+          draggable="false"
+        />
+      </div>
+      <div class="item-content">
+        <!--<div class="platform-tags">
+          <i class="fa-brands fa-windows fa-lg" style="color: #7f97a5"></i>
+          <i class="fa-brands fa-apple fa-lg" style="color: #7f97a5"></i>
+        </div>-->
+        <div class="price">
+          <span>Free to play</span>
+        </div>
+      </div>
+    </li>
+    `;
+    })
+    .join('\n');
+  feature.innerHTML = htmlContent;
+}
+
+function loadGamesOnGameGroup(games) {
+  const feature = document.getElementById('game-group');
   const htmlContent = games
     .map((item) => {
       return `
     <div class="item">
               <img
                 src="${item.imageUrl}"
-                alt="${item.title}"
+                alt="game image"
                 class="item-image"
               />
               <div class="item-content">
@@ -44,25 +76,38 @@ function loadGamedOnGameGroup(games) {
                   ></i>
                   <i class="fa-brands fa-apple fa-lg" style="color: #7f97a5"></i>
                 </div>
-                <div class="discount">
-                  <span>-10%</span>
-                </div>
+                ${
+                  item.saleoff
+                    ? `<div class="discount">
+                  <span>${item.saleoff}%</span>
+                  </div>`
+                    : ``
+                }
                 <div class="price">
-                  <span class="original-price">900000</span>
-                  <span class="discouted-price">810000</span>
-                  </span>
+                ${
+                  !item.saleoff
+                    ? `<span class="original-price"></span>`
+                    : `<span class="original-price">${item.oldprice}₫</span>`
+                }
+                ${
+                  !item.price
+                    ? `<span class="discounted-price">Free To Play</span>`
+                    : `<span class="discounted-price">${item.price}₫</span>`
+                  // <span class="original-price">${item.oldprice}₫</span>
+                  // <span class="discounted-price">${item.price}₫</span>
+                }
                 </div>
               </div>
             </div>
           </div>
     `;
     })
-    .join("\n");
+    .join('\n');
   feature.innerHTML = htmlContent;
 }
 
 function loadGamesOnMoreGame(games) {
-  const feature = document.getElementById("more-game");
+  const feature = document.getElementById('more-game');
   const htmlContent = games
     .map((item) => {
       return `
@@ -84,7 +129,7 @@ function loadGamesOnMoreGame(games) {
                             (tag) =>
                               `<span class="game-tag">${tag.tagName}</span>`
                           )
-                          .join("\n")}
+                          .join('\n')}
                     </div>
 
                     
@@ -95,28 +140,28 @@ function loadGamesOnMoreGame(games) {
 
             <div class="filtered-game-price">
                 <span class="sale">${
-                  item.saleoff > 0 ? item.saleoff + "%" : "Not Sale"
+                  item.saleoff > 0 ? item.saleoff + '%' : 'Not Sale'
                 }</span>
                 <span class="game-price">${
-                  item.price > 1000 ? item.price + "đ" : "Free to play"
+                  item.price > 1000 ? item.price + 'đ' : 'Free to play'
                 }</span>
                 <button class="view-button">View Details...</button>
             </div>
         </a>
     `;
     })
-    .join("\n");
+    .join('\n');
   feature.innerHTML =
     htmlContent + `<button class="filtered-show-more">Show more</button>`;
 }
 
 function loadGamesOnFeature(games) {
-  const feature = document.getElementById("featured");
+  const feature = document.getElementById('featured');
   const htmlContent = games
     .map((item) => {
       return `
 
-    <div class="featured-item fade">
+    <a class="featured-item fade" href="../../gameDetail.html?id=${item._id}">
       <img
         src="${item.imageUrl}"
         alt="${item.title}"
@@ -124,10 +169,6 @@ function loadGamesOnFeature(games) {
 
       <div class="featured-game-infor-container">
         <h2 class="featured-game-name">${item.title}</h2>
-
-        <p class="featured-game-date">
-          Release date: <time datetime="2021-11-19">NOV 19, 2021</time>
-        </p>
 
         <span class="featured-game-viewers"
           >Averages <span>${(
@@ -138,18 +179,23 @@ function loadGamesOnFeature(games) {
         <div class="featured-game-tags">
         ${item.tags
           .map((tag) => `<span class="game-tag">${tag.tagName}</span>`)
-          .join("\n")}
+          .join('\n')}
         </div>
 
         <p class="featured-game-status">
           ${item.description}
         </p>
       </div>
-    </div>
+    </a>
     `;
     })
-    .join("\n");
+    .join('\n');
   feature.innerHTML += htmlContent;
 }
 
-export { loadDataOnCategories, loadGamesOnFeature };
+export {
+  loadDataOnCategories,
+  loadGamesOnFeature,
+  loadGamesOnGameGroup,
+  loadGamesOnRecommended,
+};
