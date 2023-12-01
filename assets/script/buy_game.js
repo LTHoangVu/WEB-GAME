@@ -3,6 +3,17 @@ import { fetchProductsData, fetchCategoriesData } from './fetchData.js';
 var params = new URLSearchParams(window.location.search);
 var id = params.get('id');
 
+function convertISOToNormalDate(isoDateString) {
+  const date = new Date(isoDateString);
+
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+
+  const normalDateString = `${day}-${month}-${year}`;
+  return normalDateString;
+}
+
 async function loadDataGameInfo() {
   var resData;
   try {
@@ -34,8 +45,10 @@ loadDataGameInfo().then((data) => {
                 <div class="info_game">
                   <img src="${game.imageUrl}" alt="${game.title}">
                   <div class="if_game">${game.description}</div>
-                  <div class="dev">Development: ${game.developer}</div> 
-                  <div class="date">Released date: ${game.releaseDate}</div>
+         
+                  <div class="date">Released date: ${convertISOToNormalDate(
+                    game.releaseDate
+                  )}</div>
                   <div class="filtered-game-tags">${getGameTag(
                     game
                   )}</div>                   
