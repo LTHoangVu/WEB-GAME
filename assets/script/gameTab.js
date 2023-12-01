@@ -15,7 +15,7 @@ function loadGameTab(games) {
     ".filtered-game-container"
   );
   const html = games.map((item) => {
-    return `<div class="filtered-game">
+    return `<a class="filtered-game" href=/gameDetail.html?id=${item._id}>
         <img src="${item.imageUrl}" alt="game image" />
         <div class="filtered-game-description">
           <div class="filtered-game-name-platform-tags">
@@ -44,15 +44,13 @@ function loadGameTab(games) {
               : `<span class="original-price">${item.oldprice}₫</span>`
           }
           ${
-            !item.price
+            item.price < 1000 || !item.price
               ? `<span class="discounted-price">Free To Play</span>`
               : `<span class="discounted-price">${item.price}₫</span>`
-            // <span class="original-price">${item.oldprice}₫</span>
-            // <span class="discounted-price">${item.price}₫</span>
           }
           </div>
         </div>
-    </div>`;
+    </a>`;
   });
 
   let randomArray = [];
@@ -90,23 +88,22 @@ function getGameTag(game) {
 //effect for filterTab
 async function setFilterTabActive() {
   const filter_tab = document.querySelectorAll(".filter-tab");
-
   const anchor = document.querySelector(".see-more-anchor");
-  const checkbox = document.querySelector("#checkbox-container");
+  const seeMoreBtn = document.querySelector(".see-more-button");
   filter_tab.forEach((element) => {
     if (element.classList.contains("active")) {
       element.classList.remove("active");
     }
   });
   this.classList.add("active");
-  checkbox.style.display = "none";
+  //checkbox.style.display = "none";
   switch (this.innerText) {
     case "News & Trending":
       anchor.innerText = "New Realeases";
       break;
     case "Top Sellers":
       anchor.innerText = "Top Sellers";
-      checkbox.style.display = "flex";
+      //checkbox.style.display = "flex";
       break;
     case "Popular Upcoming":
       anchor.innerText = "Upcomming Realeases";
@@ -115,19 +112,19 @@ async function setFilterTabActive() {
       anchor.innerText = "Specials";
       break;
   }
-  console.log("OK");
 
   cleanDataGameTab();
   const data = await fetchProductsData();
   const games = data.games;
   loadGameTab(games);
-  addViewMoreEffect();
+  if (seeMoreBtn.textContent === "Show less") {
+    seeMoreBtn.click();
+  }
 }
 
 //view more button
 function addViewMoreEffect() {
-  const btn = document.querySelector(".see-more-anchor");
-  const btnLabel = document.querySelector(".see-more-less");
+  const btn = document.querySelector(".see-more-button");
 
   btn.addEventListener("click", () => {
     const gameTabContainers = document.querySelectorAll(
@@ -147,10 +144,10 @@ function addViewMoreEffect() {
 
     if (btn.classList.contains("nonactive")) {
       btn.classList.replace("nonactive", "active");
-      btnLabel.textContent = "Show less:";
+      btn.textContent = "Show less";
     } else {
       btn.classList.replace("active", "nonactive");
-      btnLabel.textContent = "See more:";
+      btn.textContent = "View more";
     }
   });
 }
