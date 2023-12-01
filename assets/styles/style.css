@@ -448,6 +448,7 @@ body {
 
 /* ================ Aside Nav Homepage ================ */
 .aside {
+  display: block;
   float: left;
   margin-top: 100px;
   margin-left: 45px;
