@@ -46,28 +46,11 @@ button {
   border: none;
 }
 
-html {
-  font-size: 62.5%;
-  height: 2000px;
-  position: relative;
-}
-
-body {
-  font-family: 'Motiva Sans', sans-serif;
-  font-size: 1.6rem;
-  background-color: var(--main-background);
-}
-
-button {
-  outline: none;
-  background: transparent;
-  border: none;
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
+
 .container {
   width: 940px;
   max-width: calc(100% - 48px);
@@ -235,6 +218,7 @@ a {
   background-color: rgb(23, 29, 37);
   z-index: 10;
 }
+
 @media screen and (max-width: 912px) {
   .global-header {
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
@@ -250,6 +234,7 @@ a {
   width: 36px;
   height: 31px;
 }
+
 @media screen and (max-width: 912px) {
   .header-more {
     display: block;
@@ -341,6 +326,7 @@ a {
   display: flex;
   column-gap: 13px;
 }
+
 @media screen and (max-width: 912px) {
   .global-nav-list {
     flex-direction: column;
@@ -350,6 +336,7 @@ a {
 .global-nav-item {
   position: relative;
 }
+
 @media screen and (max-width: 912px) {
   .global-nav-item {
     border-top: 1px solid #2f3138;
@@ -440,16 +427,13 @@ a {
 .hero-nav-group {
   position: absolute;
   top: 25px;
-
   width: 940px;
   max-width: calc(100% - 40px);
   margin: 0 auto;
   padding: 4px 0;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background: #396291;
   background: linear-gradient(
     90deg,
@@ -457,7 +441,6 @@ a {
     rgba(57, 98, 145, 0.8) 50%,
     rgba(15, 33, 110, 0.8) 100%
   );
-
   z-index: 1;
 }
 
@@ -494,8 +477,11 @@ a {
 }
 
 .nav-submenu {
-  min-width: 200px;
-  padding: 6px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  min-width: 550px;
+  padding: 13px 0 8px;
   position: absolute;
   top: 26px;
   background: rgb(46, 48, 56);
@@ -520,12 +506,17 @@ a {
   z-index: 999;
 }
 
+.nav-submenu-small-group ~ .nav-submenu-small-group {
+  border-left: 0.1px solid gray;
+}
+
 .nav-submenu-item {
   display: block;
   color: white;
   font-weight: 400;
-  font-size: 1.1rem;
-  padding: 10px 15px;
+  font-size: 1.3rem;
+  padding: 10px;
+  text-align: center;
 }
 
 .nav-submenu-item:hover {
@@ -577,13 +568,63 @@ a {
   cursor: pointer;
 }
 
-/* Background video */
+.hero__form-result {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: none;
+  width: 400px;
+  max-height: 400px;
+  overflow: scroll;
+  right: 0;
+  position: absolute;
+  background-color: #34444f;
+}
+
+.hero__form-result::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-filtered-game {
+  padding: 5px 7px;
+  display: grid;
+  grid-template-columns: 9fr 10fr;
+  background-color: transparent;
+  transition: background-color 0.15s ease;
+}
+
+.hero-filtered-game__img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+}
+
+.hero-filtered-game__info {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.hero-filtered-game__title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--white-text);
+  transition: color 0.15s ease;
+}
+
+.hero-filtered-game:hover {
+  background-color: var(--white-text);
+}
+
+.hero-filtered-game:hover .hero-filtered-game__title {
+  color: #000;
+}
 
 .address_game {
   display: flex;
   flex-direction: row;
   margin-top: 100px;
 }
+
 .breadcrumbs {
   color: #56707f;
   font-size: 20px;
@@ -591,9 +632,11 @@ a {
   font-weight: normal;
   padding: 5px;
 }
+
 .address_game p.breadcrumbs:hover {
   color: #fff;
 }
+
 .address_game p.breadcrumbs:active {
   color: #fff;
 }
@@ -601,12 +644,15 @@ a {
 div {
   display: block;
 }
+
 .main-content {
   margin-top: 50px;
 }
+
 .media_game {
   display: flex;
 }
+
 .info_game {
   display: flex;
   flex-direction: column;
@@ -617,18 +663,22 @@ div {
   line-height: 1.5;
   margin-bottom: 50px;
 }
+
 .if_game {
   color: #fff;
   font-size: 16px;
 }
+
 .dev {
   color: #8f98a0;
   font-size: 12px;
 }
+
 .date {
   color: #8f98a0;
   font-size: 12px;
 }
+
 .game-tag {
   background-color: rgba(103, 193, 245, 0.2);
   color: #67c1f5;
@@ -643,11 +693,13 @@ div {
   border-style: ridge;
   border-radius: 5px;
 }
+
 .filtered-game-tags span.game-tag:hover {
   background-color: #c6d4df;
   color: #fff;
   cursor: pointer;
 }
+
 .info_game img {
   width: 300px;
   margin-bottom: 40px;
@@ -657,11 +709,11 @@ div {
   width: 620px;
   height: 500px;
 }
+
 .filtered-game-tags {
   display: flex;
   flex-direction: row;
   padding: 0px;
-
   flex-wrap: wrap;
 }
 
@@ -678,9 +730,11 @@ div {
   color: #fff;
   margin-top: 100px;
 }
+
 .buy_games p {
   font-size: 45px;
 }
+
 .button_buy {
   display: flex;
   position: absolute;
@@ -691,10 +745,12 @@ div {
   padding: -50px 5px 5px 5px;
   flex-direction: row;
 }
+
 .button_buy p,
 .button_buy a {
   font-size: 20px;
 }
+
 .buy_block {
   display: flex;
   border-left: 5px solid black;
@@ -708,10 +764,12 @@ div {
   justify-content: center;
   align-items: center;
 }
+
 .button_buy a.buy_block:hover {
   background: #d3dfc3;
   color: #0e0d0d;
 }
+
 .price_block {
   display: flex;
   background-color: #4c6b22;
@@ -785,10 +843,8 @@ div {
   left: 0;
   right: 0;
   top: 50%;
-
   border-top: 1px solid;
   border-color: inherit;
-
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
@@ -802,11 +858,11 @@ div {
   position: relative;
   background-color: rgba(0, 0, 0, 0.2);
   height: 300px;
-
   color: #fff;
   margin-top: 100px;
 }
-.like_game {
+
+.like_game a {
   display: flex;
   flex-direction: column;
   border-top: 3px solid #1b2838;
@@ -814,24 +870,31 @@ div {
   border-right: 3px solid #1b2838;
   padding: 20px 20px 20px 20px;
   width: 313px;
+  height: 300px;
   line-height: 1.5;
 }
+
 .like_game img {
   margin-bottom: 20px;
 }
+
 .like_game p {
   font-size: 16px;
 }
-.most_like .like_game:hover {
+
+.most_like .like_game a:hover {
   border: 3px solid #4788d6;
 }
-.most_like .like_game:active {
+
+.most_like .like_game a:active {
   border: 3px solid #4788d6;
   background-color: #344654;
 }
-.like_game:fist-child {
+
+.like_game a:first-child {
   border-left: none;
 }
+
 ol,
 ul,
 li {
