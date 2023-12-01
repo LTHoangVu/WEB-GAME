@@ -5,6 +5,7 @@ async function loadDataOnCategories() {
   const query = new URLSearchParams(window.location.search);
   const category = query.get('category');
   const data = await fetchProductsData();
+  // const gamesData = data.games;
   const games = [];
 
   for (const game of data.games) {
@@ -15,8 +16,8 @@ async function loadDataOnCategories() {
       games.push(game);
     }
   }
-
-  console.log(games);
+  // console.log(games);
+  // handleSearchBox(gamesData);
 
   loadGamesOnMoreGame(games);
   loadGamesOnFeature(games);
