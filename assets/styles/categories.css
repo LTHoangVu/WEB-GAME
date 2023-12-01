@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Motiva Sans", sans-serif;
+  font-family: 'Motiva Sans', sans-serif;
   font-size: 1.6rem;
 }
 
@@ -618,7 +618,6 @@ body {
   color: white;
 }
 
-
 /* =============== Game Group ================ */
 .main-container {
   background: #0e1014;
@@ -643,7 +642,6 @@ body {
   margin: 10px;
   box-shadow: 0 0 5px rgb(49, 49, 49);
 }
-
 
 .item {
   box-shadow: 0 0 3px #353b49;
@@ -677,7 +675,7 @@ body {
   margin-right: 5px;
 }
 
-.discount span{
+.discount span {
   font-size: 25px;
   color: rgb(190, 238, 17);
   border-radius: 2px;
@@ -685,7 +683,7 @@ body {
   background-color: rgb(76, 107, 34);
 }
 
-.price{
+.price {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -693,25 +691,25 @@ body {
   padding-right: 0px;
 }
 
-.price span{
+.price span {
   width: fit-content;
   display: block;
 }
 
-.original-price{
+.original-price {
   font-size: 15px;
   color: RGB(115, 136, 149);
   position: relative;
 }
 
-.discounted-price{
+.discounted-price {
   font-size: 30px;
   color: white;
 }
 
 .original-price::before {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   top: 50%;
   right: 0;
@@ -724,7 +722,6 @@ body {
   -o-transform: rotate(-5deg);
   transform: rotate(-5deg);
 }
-
 
 .items-02 {
   background: black;
