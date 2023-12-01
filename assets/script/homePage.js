@@ -75,8 +75,13 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
       <h3 class="feature-item__app-name line-clamp-2">${item.title}</h3>
 
       <!-- Category tags -->
-      <div class="feature-item__game-tags">
-        ${item.tags.map((tag) => `<span>${tag.tagName}</span>`)}
+      <div class="feature-item__tags-group" >
+        ${item.tags.map(
+          (tag) =>
+            `<a class="feature-item__tag" href="./categories.html?category=${tag.tagName
+              .replace(/\s+/g, "")
+              .toLowerCase()}">${tag.tagName}</a>`
+        )}
       </div>
 
       <!-- Price and platform -->

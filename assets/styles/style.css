@@ -527,11 +527,11 @@ body {
   color: var(--white-text);
 }
 
-.feature-item__game-tags {
+.feature-item__tags-group {
   margin-top: 13px;
 }
 
-.feature-item__game-tags span,
+.feature-item__tag,
 .feature-item__price-normal,
 .feature-item__percent,
 .feature-item__old-price,
@@ -541,7 +541,7 @@ body {
   color: var(--white-text);
 }
 
-.feature-item__game-tags span {
+.feature-item__tag {
   display: inline-block;
   padding: 4px 5px;
   border-radius: 2px;
