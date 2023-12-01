@@ -265,7 +265,9 @@ function handleSearchBox(games) {
 
   // Handle user blur or focus
   searchBox.addEventListener("blur", (e) => {
-    formResult.style.display = "none";
+    if (!formResult.matches(":hover")) {
+      formResult.style.display = "none";
+    }
   });
 
   searchBox.addEventListener("focus", (e) => {
