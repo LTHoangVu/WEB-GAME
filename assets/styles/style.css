@@ -784,6 +784,7 @@ body {
     rgba(27, 40, 56, 1) 0%,
     rgba(42, 71, 94, 1) 85%
   );
+  padding-top: 2%;
 }
 
 .filtered-game-content {
@@ -805,45 +806,25 @@ body {
 .filtered-game-container.hide {
   display: none;
 }
-/* _____________________check box style___________________ */
-#checkbox-container {
-  position: relative;
-  display: none;
-  align-items: center;
-  margin: 12px 0px 6px 0px;
-  padding: 10px 0px;
+/* _____________________view more button___________________ */
+
+.see-more-button {
+  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: rgb(207, 204, 204);
+  margin-top: 1%;
+  border: 1px solid rgb(155, 152, 152);
+  border-radius: 2px;
+  padding: 8px 14px;
+  cursor: pointer;
 }
 
-#checkbox-container i {
-  position: absolute;
-  left: 95%;
+.see-more-button:hover {
+  border-color: white;
 }
 
-#checkbox-container i:hover ~ span {
-  display: inline;
-}
-
-#checkbox-container span {
-  display: none;
-  position: absolute;
-  top: -40px;
-  left: 210px;
-  font-size: 11px;
-  color: rgb(56, 73, 89);
-  background-color: rgb(202, 199, 199);
-  width: 280px;
-  height: auto;
-  padding: 8px 4px;
-  border-radius: 4px;
-}
-
-#checkbox-include-free-game {
-  margin-left: 1%;
-}
-/* _______________________end checkbox____________________________ */
+/* _______________________end view more button____________________________ */
 
 /* ______________________filtered game style______________________ */
 /* align content in game container */
@@ -860,7 +841,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: rgb(207, 204, 204);
-  display: inline-block;
+  display: none;
   padding: 7px 5px 12px 5px;
   margin-top: 1%;
 }
