@@ -17,9 +17,14 @@ async function loadDataOnCategories() {
       games.push(game);
     }
   }
+  console.log(games);
 
   loadCategoriesHomepage();
   handleSearchBox(gamesData);
+
+  loadGamesOnFeature(games);
+  // loadGamesOnGameGroup(games);
+  loadGamesOnMoreGame(games);
 
   const featureSlide = new Slide("featured", "grid", 3000);
   featureSlide.start();
@@ -70,11 +75,13 @@ function loadGamesOnMoreGame(games) {
     `;
     })
     .join("\n");
-  feature.innerHTML =
-    htmlContent + `<button class="filtered-show-more">Show more</button>`;
+  feature.innerHTML = htmlContent;
+  // feature.innerHTML =
+  //   htmlContent + `<button class="filtered-show-more">Show more</button>`;
 }
 
 function loadGamesOnFeature(games) {
+  console.log(games);
   const feature = document.getElementById("featured");
   const htmlContent = games
     .map((item) => {
@@ -270,7 +277,4 @@ function loadCategoriesPartInHomepage(categories) {
   categorySlide.start();
 }
 
-export {
-  loadDataOnCategories,
-  loadGamesOnFeature,
-};
+export { loadDataOnCategories, loadGamesOnFeature };

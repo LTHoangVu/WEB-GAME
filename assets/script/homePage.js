@@ -113,6 +113,7 @@ function loadGamesOnFeature(data, listGameID, dotsGroupID) {
     `;
     })
     .join("\n");
+
   loadGamesOnSpecificPart(data, listGameID, dotsGroupID, html);
 
   // Slide effect
@@ -143,7 +144,7 @@ function loadGamesOnSpecial(data, listGameID, dotsGroupID) {
           />
           <div class="special-item-child__content">
             <!-- Game title -->
-            <h3 class="special-item-child__app-name">${game.title}</h3>
+            <h3 class="special-item-child__app-name line-clamp-2">${game.title}</h3>
 
             <!-- Sale % -->
             <strong class="special-item-child__sale-off"
@@ -207,15 +208,13 @@ function loadCategoriesOnHeader(categories) {
 
 function loadCategoriesOnAside(categories) {
   const asideNavList = document.getElementById("aside-nav__list");
-  asideNavList.innerHTML =
-    categories
-      .map((tag) => {
-        return ` <li><a href="./categories.html?category=${tag
-          .replace(/\s+/g, "")
-          .toLowerCase()}" class="aside-nav__item">${tag}</a></li>`;
-      })
-      .join("\n") +
-    `<li><a href="./categories.html?category=all" class="aside-nav__item">All</a></li>`;
+  asideNavList.innerHTML = categories
+    .map((tag) => {
+      return ` <li><a href="./categories.html?category=${tag
+        .replace(/\s+/g, "")
+        .toLowerCase()}" class="aside-nav__item">${tag}</a></li>`;
+    })
+    .join("\n");
 }
 
 function loadCategoriesPartInHomepage(categories) {

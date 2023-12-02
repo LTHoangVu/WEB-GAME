@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Motiva Sans", sans-serif;
+  font-family: 'Motiva Sans', sans-serif;
   font-size: 1.6rem;
 }
 
@@ -622,15 +622,16 @@ body {
 /* =============== Recommended ================ */
 
 .main-container {
-  max-width: 1200px;
-  width: 100%;
+  display: flex;
+  max-width: 1500px;
+  width: auto;
   position: relative;
-  padding: 100px 0px 50px 15px;
+  padding: 50px;
   justify-content: center;
+  align-items: center;
 }
 
-.main-container h2 {
-  padding: 0 0 10px 35px;
+h2 {
   color: #fff;
   font-size: 35px;
   text-shadow: 2px 2px 4px #000000;
@@ -651,22 +652,22 @@ body {
 }
 
 .main-container i:first-child {
-  left: -25px;
+  left: -40px;
 }
 
 .main-container i:last-child {
-  right: -10px;
+  right: -40px;
 }
 
 .main-container .carousel {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
-  gap: 15px;
+  gap: 1px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: 0;
+  scrollbar-width: none;
 }
 
 .carousel.dragging {
@@ -692,12 +693,6 @@ body {
   flex-direction: column;
 }
 
-.rcm_item .item-img {
-  width: 380px;
-  height: 380px;
-  background: #fff;
-}
-
 .rcm_item .item-img img {
   max-width: 100%;
   height: 380px;
@@ -719,10 +714,6 @@ body {
   justify-content: flex-start;
   padding: 10px 0px;
   width: 50%;
-}
-
-.rcm_item .rcm_item-content .rcm_platform-tags i{
-
 }
 
 .rcm_item .rcm_item-content .rcm_price {
@@ -753,21 +744,21 @@ body {
     height: 300px;
     background: #fff;
   }
-  
+
   .rcm_item .item-img img {
     max-width: 100%;
     height: 300px;
     object-fit: fill;
   }
-  
+
   .rcm_item .rcm_item-content {
     font-size: 15px;
     background: black;
     width: 300px;
     text-align: end;
-    color: #24313f;
+    color: #1f78dd;
   }
-  
+
   .rcm_item .rcm_item-content .rcm_platform-tags {
     display: flex;
     flex-direction: row;
@@ -775,7 +766,7 @@ body {
     padding: 10px 0px;
     width: 50%;
   }
-  
+
   .rcm_item .rcm_item-content .rcm_price {
     padding: 10px;
   }
@@ -791,7 +782,7 @@ body {
 
 .row {
   width: 100%;
-  height: auto-fit;
+  height: auto;
   display: flex;
   justify-content: center;
 }
@@ -801,7 +792,7 @@ body {
   position: relative;
   flex: 1;
   max-width: 300px;
-  height: 150x;
+  height: 220px;
   margin: 10px;
   box-shadow: 0 0 5px rgb(49, 49, 49);
 }
@@ -872,7 +863,7 @@ body {
 
 .original-price::before {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   top: 50%;
   right: 0;
@@ -901,7 +892,7 @@ body {
   position: relative;
   flex: 1;
   max-width: 220px;
-  height: 150x;
+  height: 170px;
   margin: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0.2);
 }
@@ -1074,7 +1065,7 @@ body {
 }
 
 .filtered-game-container:hover {
-  scale: 1.03;
+  scale: 1.1;
   background-color: #9fc5db;
 }
 
@@ -1096,90 +1087,17 @@ body {
   background-color: white;
 }
 /* ================ Global footer ================ */
-.global-footer {
-  margin-top: 100px;
+footer {
+  right: 0;
+  left: 0;
+  height: 100px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(23, 26, 33);
-  padding: 30px 0px 40px 0px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  border-top: 1px solid rgb(90, 89, 89);
-  border-bottom: 1px solid rgb(90, 89, 89);
-}
-
-.valve-logo {
-  width: 10%;
-}
-
-.valve-logo img {
-  width: 100%;
-}
-
-.steam-logo {
-  width: 10%;
-  height: fit-content;
-  object-fit: contain;
-}
-
-.footer-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  padding-left: 15px;
-  width: 80%;
-}
-
-.footer-text > div {
+  position: absolute;
   color: #8f98a0;
-  padding-bottom: 3px;
-}
-
-.footer-text div a {
-  text-decoration: none;
-  color: rgb(207, 207, 207);
-}
-
-.footer-text div a:hover {
-  color: white;
-}
-
-.footer-text button {
-  font-size: 1.5rem;
-  color: rgb(103, 193, 245);
-  background-color: rgb(33, 44, 61);
-  border-style: none;
-  border-radius: 2px;
-  padding: 5px 15px;
-  margin: 15px auto 40px auto;
-  cursor: pointer;
-}
-
-.footer-text button:hover {
-  color: white;
-  background-color: rgb(100, 184, 233);
-}
-
-.valve-link {
-  font-size: 1.3rem;
-  margin-right: 20%;
-  padding-top: 20px;
-  color: rgb(207, 207, 207);
-}
-
-.valve-link a {
-  text-decoration: none;
-  color: rgb(207, 207, 207);
-}
-
-.valve-link a:hover {
-  color: white;
+  margin-top: 100px;
 }
 
 /* ================ Responsive ================ */
@@ -1752,4 +1670,8 @@ body {
 
 .hero-filtered-game:hover .hero-filtered-game__title {
   color: #000;
+}
+
+.recommended-heading {
+  margin-left: 40px;
 }
