@@ -792,3 +792,15 @@ a {
   line-height: 20px;
   font-size: 1.4rem;
 }
+
+footer {
+  right: 0;
+  left: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(23, 26, 33);
+  position: absolute;
+  color: #8f98a0;
+}

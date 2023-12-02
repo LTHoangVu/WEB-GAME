@@ -726,3 +726,16 @@ span.win_platform_img {
     padding: 5px 25px;
     background-color: #ffffff;
 }
+
+footer {
+    right: 0;
+    left: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23, 26, 33);
+    position: absolute;
+    color: #8f98a0;
+    margin-top: 100px;
+}
