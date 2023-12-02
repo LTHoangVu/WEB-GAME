@@ -644,8 +644,10 @@ body {
   cursor: pointer;
   position: absolute;
   top: 55%;
-  font-size: 5em;
+  font-size: 4em;
   transform: translateY(-50%);
+  color: #fff;
+  text-shadow: 2px 4px 10px;
 }
 
 .main-container i:first-child {
@@ -708,6 +710,7 @@ body {
   width: 380px;
   text-align: end;
   color: #24313f;
+  text-shadow: 2px 1px 4px #28323f;
 }
 
 .rcm_item .rcm_item-content .rcm_platform-tags {
