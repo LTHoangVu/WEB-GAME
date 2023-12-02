@@ -16,8 +16,12 @@
     max-width: 100%;
   }
 
-  /* Hide chevron */
+  /* Hide slide control group */
   .chevron {
+    display: none;
+  }
+
+  .slide-control-group {
     display: none;
   }
 
@@ -58,5 +62,97 @@
     display: block;
     position: static;
     max-width: 100%;
+  }
+
+  /* Feature */
+  .feature-group {
+    display: flex;
+    column-gap: 10px;
+    overflow: scroll;
+    padding-bottom: 30px;
+  }
+
+  .feature-item {
+    display: block !important;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+    -webkit-box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+  }
+
+  .feature-item__tags-group,
+  .feature-item__platform,
+  .feature-item__btn {
+    display: none;
+  }
+
+  .feature-item__game-thumb-wrap {
+    display: block;
+    height: auto;
+    width: 430px;
+  }
+
+  .feature-item__game-thumb {
+    height: auto;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .feature-item__info {
+    padding-bottom: 13px;
+  }
+
+  .feature-item__more-info {
+    margin-top: 20px;
+  }
+
+  /* Special */
+  .special-group {
+    display: flex;
+    column-gap: 10px;
+    overflow: scroll;
+    padding-bottom: 20px;
+  }
+
+  .special-item {
+    display: grid;
+  }
+
+  .special-item-child {
+    width: 282px;
+    border-radius: 5px;
+    box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+    -webkit-box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+  }
+
+  .special-item-child__thumb {
+    width: auto;
+  }
+
+  /* Categories */
+  .category-group {
+    display: flex;
+    column-gap: 10px;
+    overflow: scroll;
+    padding-bottom: 20px;
+  }
+
+  .category-item {
+    display: grid;
+  }
+
+  .category-item-child {
+    width: 282px;
+    border-radius: 5px;
+    box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+    -webkit-box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heading {
+    text-align: left;
   }
 }
