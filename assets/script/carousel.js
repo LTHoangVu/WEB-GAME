@@ -1,6 +1,6 @@
 const carousel = document.querySelector(".carousel");
 const arrowButtons = document.querySelectorAll(".main-container i");
-const firstItemWidth = carousel.querySelector(".item").offsetWidth;
+const firstItemWidth = carousel.querySelector(".rcm_item").offsetWidth;
 
 let isDragging = false,
   startX,
