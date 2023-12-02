@@ -1,5 +1,3 @@
-import { loadDataOnCategories, loadGamesOnFeature} from "./fetchCategories.js";
+import { loadDataOnCategories } from './fetchCategories.js';
 
 loadDataOnCategories();
-loadGamesOnFeature();
-
