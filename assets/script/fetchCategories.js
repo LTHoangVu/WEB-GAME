@@ -1,9 +1,9 @@
-import { fetchProductsData, fetchCategoriesData } from './fetchData.js';
-import { Slide } from './slide.js';
+import { fetchProductsData, fetchCategoriesData } from "./fetchData.js";
+import { Slide } from "./slide.js";
 
 async function loadDataOnCategories() {
   const query = new URLSearchParams(window.location.search);
-  const category = query.get('category');
+  const category = query.get("category");
   const data = await fetchProductsData();
   const gamesData = data.games;
   const games = [];
@@ -11,7 +11,7 @@ async function loadDataOnCategories() {
   for (const game of data.games) {
     if (
       game.tags.filter(
-        (tag) => tag.tagName.replace(/\s/g, '').toLowerCase() === category
+        (tag) => tag.tagName.replace(/\s/g, "").toLowerCase() === category
       ).length > 0
     ) {
       games.push(game);
@@ -26,12 +26,12 @@ async function loadDataOnCategories() {
   loadGamesOnMoreGame(games);
   loadGamesOnFeature(games);
 
-  const featureSlide = new Slide('featured', 'grid', 3000);
+  const featureSlide = new Slide("featured", "grid", 3000);
   featureSlide.start();
 }
 
 function loadGamesOnRecommended(games) {
-  const feature = document.getElementById('recommended');
+  const feature = document.getElementById("recommended");
   const htmlContent = games
     .map((item) => {
       return `
@@ -55,12 +55,12 @@ function loadGamesOnRecommended(games) {
     </li>
     `;
     })
-    .join('\n');
+    .join("\n");
   feature.innerHTML = htmlContent;
 }
 
 function loadGamesOnGameGroup(games) {
-  const feature = document.getElementById('game-group');
+  const feature = document.getElementById("game-group");
   const htmlContent = games
     .map((item) => {
       return `
@@ -104,12 +104,12 @@ function loadGamesOnGameGroup(games) {
           </div>
     `;
     })
-    .join('\n');
+    .join("\n");
   feature.innerHTML = htmlContent;
 }
 
 function loadGamesOnMoreGame(games) {
-  const feature = document.getElementById('more-game');
+  const feature = document.getElementById("more-game");
   const htmlContent = games
     .map((item) => {
       return `
@@ -131,7 +131,7 @@ function loadGamesOnMoreGame(games) {
                             (tag) =>
                               `<span class="game-tag">${tag.tagName}</span>`
                           )
-                          .join('\n')}
+                          .join("\n")}
                     </div>
 
                     
@@ -142,23 +142,23 @@ function loadGamesOnMoreGame(games) {
 
             <div class="filtered-game-price">
                 <span class="sale">${
-                  item.saleoff > 0 ? item.saleoff + '%' : 'Not Sale'
+                  item.saleoff > 0 ? item.saleoff + "%" : "Not Sale"
                 }</span>
                 <span class="game-price">${
-                  item.price > 1000 ? item.price + 'đ' : 'Free to play'
+                  item.price > 1000 ? item.price + "đ" : "Free to play"
                 }</span>
                 <button class="view-button">View Details...</button>
             </div>
         </a>
     `;
     })
-    .join('\n');
+    .join("\n");
   feature.innerHTML =
     htmlContent + `<button class="filtered-show-more">Show more</button>`;
 }
 
 function loadGamesOnFeature(games) {
-  const feature = document.getElementById('featured');
+  const feature = document.getElementById("featured");
   const htmlContent = games
     .map((item) => {
       return `
@@ -181,7 +181,7 @@ function loadGamesOnFeature(games) {
         <div class="featured-game-tags">
         ${item.tags
           .map((tag) => `<span class="game-tag">${tag.tagName}</span>`)
-          .join('\n')}
+          .join("\n")}
         </div>
 
         <p class="featured-game-status">
@@ -191,30 +191,30 @@ function loadGamesOnFeature(games) {
     </a>
     `;
     })
-    .join('\n');
+    .join("\n");
   feature.innerHTML += htmlContent;
 }
 
 function handleSearchBox(games) {
-  const searchBox = document.getElementById('search-form-input');
-  const formResult = document.getElementById('hero__form-result');
+  const searchBox = document.getElementById("search-form-input");
+  const formResult = document.getElementById("hero__form-result");
 
   // Handle user input
-  searchBox.addEventListener('input', (e) => handleInput(e, games, formResult));
+  searchBox.addEventListener("input", (e) => handleInput(e, games, formResult));
 
   // Handle user blur or focus
-  searchBox.addEventListener('blur', (e) => {
-    if (!formResult.matches(':hover')) {
-      formResult.style.display = 'none';
+  searchBox.addEventListener("blur", (e) => {
+    if (!formResult.matches(":hover")) {
+      formResult.style.display = "none";
     }
   });
 
-  searchBox.addEventListener('focus', (e) => {
-    formResult.style.display = 'block';
+  searchBox.addEventListener("focus", (e) => {
+    formResult.style.display = "block";
   });
 
   // Prevent enter key submitting
-  searchBox.addEventListener('keypress', (e) => {
+  searchBox.addEventListener("keypress", (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
     }
@@ -243,17 +243,17 @@ function handleInput(e, games, formResult) {
       </a>
     `;
       })
-      .join('\n');
+      .join("\n");
     if (html) {
       formResult.innerHTML = html;
-      formResult.style.display = 'block';
+      formResult.style.display = "block";
     } else {
-      formResult.innerHTML = '';
-      formResult.style.display = 'none';
+      formResult.innerHTML = "";
+      formResult.style.display = "none";
     }
   } else {
-    formResult.innerHTML = '';
-    formResult.style.display = 'none';
+    formResult.innerHTML = "";
+    formResult.style.display = "none";
   }
 }
 
@@ -278,7 +278,7 @@ async function loadCategoriesHomepage() {
 
 function loadCategoriesOnHeader(categories) {
   // Nav submenu
-  const navSubmenu = document.getElementById('nav-submenu');
+  const navSubmenu = document.getElementById("nav-submenu");
   navSubmenu.innerHTML = categories
     .map((tagGroup) => {
       return `
@@ -287,27 +287,27 @@ function loadCategoriesOnHeader(categories) {
         .map((tag) => {
           return `
         <li><a class="nav-submenu-item" href="./categories.html?category=${tag
-          .replace(/\s+/g, '')
+          .replace(/\s+/g, "")
           .toLowerCase()}">${tag}</a></li>
         `;
         })
-        .join('\n')}
+        .join("\n")}
    </div>
   `;
     })
-    .join('\n');
+    .join("\n");
 }
 
 function loadCategoriesOnAside(categories) {
-  const asideNavList = document.getElementById('aside-nav__list');
+  const asideNavList = document.getElementById("aside-nav__list");
   asideNavList.innerHTML =
     categories
       .map((tag) => {
         return ` <li><a href="./categories.html?category=${tag
-          .replace(/\s+/g, '')
+          .replace(/\s+/g, "")
           .toLowerCase()}" class="aside-nav__item">${tag}</a></li>`;
       })
-      .join('\n') +
+      .join("\n") +
     `<li><a href="./categories.html?category=all" class="aside-nav__item">All</a></li>`;
 }
 
@@ -321,7 +321,7 @@ function loadCategoriesPartInHomepage(categories) {
       .map((tagItem) => {
         return `
       <a href="./categories.html?category=${tagItem
-        .replace(/\s+/g, '')
+        .replace(/\s+/g, "")
         .toLowerCase()}" class="category-item-child">
         <img
           src="https://store.steampowered.com/categories/homepageimage/category/fighting_martial_arts?cc=us&l=english"
@@ -332,16 +332,16 @@ function loadCategoriesPartInHomepage(categories) {
         <span class="category-item-child__label">${tagItem.toUpperCase()}</span>
       </a>`;
       })
-      .join('\n')}
+      .join("\n")}
   </div>`;
     })
-    .join('\n');
-  const category = document.getElementById('category-group');
+    .join("\n");
+  const category = document.getElementById("category-group");
   category.innerHTML += html;
 
   // Add dots control group
   const slideControlGroup = document.querySelector(
-    '#category .slide-control-group'
+    "#category .slide-control-group"
   );
   categories.forEach(
     () =>
@@ -349,7 +349,7 @@ function loadCategoriesPartInHomepage(categories) {
   );
 
   // Create slide effect
-  const categorySlide = new Slide('category', 'grid');
+  const categorySlide = new Slide("category", "grid");
   categorySlide.start();
 }
 

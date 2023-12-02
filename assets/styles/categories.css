@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Motiva Sans', sans-serif;
+  font-family: "Motiva Sans", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -805,7 +805,7 @@ body {
 
 .original-price::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   top: 50%;
   right: 0;
