@@ -21,9 +21,6 @@ async function loadDataOnCategories() {
   loadCategoriesHomepage();
   handleSearchBox(gamesData);
 
-  loadGamesOnMoreGame(games);
-  loadGamesOnFeature(games);
-
   const featureSlide = new Slide("featured", "grid", 3000);
   featureSlide.start();
 }
