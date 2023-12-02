@@ -64,6 +64,10 @@
     max-width: 100%;
   }
 
+  .nav-submenu {
+    min-width: 330px;
+  }
+
   /* Feature */
   .feature-group {
     display: flex;
@@ -149,10 +153,24 @@
     -webkit-box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
     -moz-box-shadow: 4px 6px 8px 1px rgba(0, 0, 0, 0.79);
   }
+
+  .game-filter-tabs {
+    margin: 0;
+  }
+
+  .total-content {
+    overflow: scroll;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .heading {
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .feature-item__game-thumb-wrap {
+    width: 340px;
   }
 }
