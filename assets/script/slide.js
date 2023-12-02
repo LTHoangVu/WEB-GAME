@@ -24,7 +24,17 @@ class Slide {
     });
 
     if (this.delayTime) {
-      this.intervalID = setInterval(() => this.nextSlide(), this.delayTime);
+      // Start slide in large window
+      if (window.innerWidth > 909) {
+        this.intervalID = setInterval(() => this.nextSlide(), this.delayTime);
+      }
+
+      window.addEventListener("resize", () => {
+        clearInterval(this.intervalID);
+        if (window.innerWidth > 909) {
+          this.intervalID = setInterval(() => this.nextSlide(), this.delayTime);
+        }
+      });
     }
   }
 
