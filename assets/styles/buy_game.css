@@ -743,7 +743,6 @@ div {
   bottom: -10%;
   right: 20px;
   justify-content: space-between;
-  padding: -50px 5px 5px 5px;
   flex-direction: row;
 }
 

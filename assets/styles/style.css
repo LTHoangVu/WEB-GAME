@@ -872,7 +872,7 @@ body {
 
 .filtered-game img {
   width: 30%;
-  object-fit: stretch;
+  object-fit: fill;
   cursor: pointer;
 }
 
