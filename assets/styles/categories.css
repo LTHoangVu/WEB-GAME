@@ -989,7 +989,7 @@ h2 {
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 500px) {
   .item-content{
     display: none;
   }
