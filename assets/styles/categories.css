@@ -990,13 +990,10 @@ h2 {
 }
 
 @media (max-width: 500px) {
-  .item-content{
+  .item-content {
     display: none;
   }
-
 }
-
-
 
 /* ================ More game ================ */
 #more-game {
@@ -1717,5 +1714,6 @@ footer {
 }
 
 .recommended-heading {
-  margin-left: 40px;
+  margin-top: 8rem;
+  text-align: center;
 }
