@@ -915,8 +915,7 @@ h2 {
 
 .btn {
   position: relative;
-  margin: 10px;
-  left: 40%;
+  margin: auto;
   font-size: 18px;
   font-weight: bold;
   background: rgb(190, 185, 185);
