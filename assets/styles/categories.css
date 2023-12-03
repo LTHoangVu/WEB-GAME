@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Motiva Sans', sans-serif;
+  font-family: "Motiva Sans", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -622,7 +622,8 @@ body {
 /* =============== Recommended ================ */
 
 .main-container {
-  display:flex;
+  margin: auto;
+  display: flex;
   max-width: 1200px;
   width: 100%;
   position: relative;
@@ -644,7 +645,7 @@ h2 {
   line-height: 100px;
   cursor: pointer;
   position: absolute;
-  top: 55%;
+  top: 50%;
   font-size: 4em;
   transform: translateY(-50%);
   color: #fff;
@@ -701,31 +702,26 @@ h2 {
 .rcm_item .rcm_item-content {
   font-size: 20px;
   background: black;
-  width: 380px;
-  text-align: end;
+  width: 353px;
+  text-align: center;
   color: #24313f;
   text-shadow: 2px 1px 4px #28323f;
 }
-
 
 .rcm_item .rcm_item-content .rcm_price {
   padding: 10px;
   width: auto-fit;
 }
 
-.rcm_price:hover{
+.rcm_price:hover {
   color: #fff;
   text-shadow: 2px 2px 10px #fff;
 }
 
-
-
 @media screen and (max-width: 1150px) {
   .main-container {
-    display:flex;
+    display: flex;
     max-width: 800px;
-    left: 15%;
-
   }
   .main-container .carousel {
     grid-auto-columns: calc((100% / 2) - 10px);
@@ -736,7 +732,7 @@ h2 {
     width: 352px;
     list-style: none;
     background: var(--main-background);
-  
+
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -744,10 +740,10 @@ h2 {
     flex-direction: column;
   }
   .rcm_item .item-img img {
-  max-width: 100%;
-  height: 380px;
-  object-fit: fill;
-}
+    max-width: 100%;
+    height: 380px;
+    object-fit: fill;
+  }
   .rcm_item .rcm_item-content {
     font-size: 20px;
     background: black;
@@ -758,29 +754,10 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1016px) {
-  .main-container {
-    left: 10%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .main-container {
-    left: 5%;
-  }
-}
-
-@media screen and (max-width: 835px) {
-  .main-container {
-    left: 0%;
-  }
-}
-
 @media screen and (max-width: 765px) {
   .main-container {
-    display:flex;
+    display: flex;
     max-width: 420px;
-    left: 5%;
   }
   .main-container .carousel {
     grid-auto-columns: 100%;
@@ -791,14 +768,12 @@ h2 {
   .h2 {
     font-size: 20px;
   }
-  
-
 }
 
 /* =============== Game Group ================ */
 .game-group-container {
   background: var(--main-background);
-  margin: 20px;
+  margin: auto;
   height: auto;
   padding: 10px;
 }
@@ -858,7 +833,7 @@ h2 {
   background-color: rgb(76, 107, 34);
 }
 
-.items-02 .discount span{
+.items-02 .discount span {
   font-size: 25px;
 }
 
@@ -894,7 +869,7 @@ h2 {
 
 .original-price::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   top: 50%;
   right: 0;
@@ -970,7 +945,6 @@ h2 {
 }
 
 @media (max-width: 835px) {
-  
   .items-03 .original-price {
     font-size: 8px;
   }
@@ -978,12 +952,12 @@ h2 {
   .items-03 .discounted-price {
     font-size: 10px;
   }
-  
-  .items-03 .discount span{
+
+  .items-03 .discount span {
     font-size: 10px;
   }
 
-  .items-03 .platform-tags i{
+  .items-03 .platform-tags i {
     font-size: 15px;
   }
   .btn {
@@ -993,19 +967,20 @@ h2 {
   }
 }
 
-@media (max-width: 550px) {
-  
-  .items-01 .price{
-font-size: 10px;
+@media (max-width: 640px) {
+  .items-01 .price {
+    font-size: 10px;
   }
-  .items-02 .discount span{
-    display: none;
-  }
-  
-  .items-03 .discount span{
+  .items-02 .discount span {
     display: none;
   }
 
+  .items-03 .discount span {
+    display: none;
+  }
+  .items-04 .price {
+    font-size: 10px;
+  }
 
   .btn {
     font-size: 10px;
@@ -1013,6 +988,15 @@ font-size: 10px;
     padding: 10px;
   }
 }
+
+@media (max-width: 470px) {
+  .item-content{
+    display: none;
+  }
+
+}
+
+
 
 /* ================ More game ================ */
 #more-game {
