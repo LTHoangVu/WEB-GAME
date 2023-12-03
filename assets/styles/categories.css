@@ -622,11 +622,11 @@ body {
 /* =============== Recommended ================ */
 
 .main-container {
-  display: flex;
-  max-width: 1500px;
-  width: auto;
+  display:flex;
+  max-width: 1200px;
+  width: 100%;
   position: relative;
-  padding: 50px;
+  padding: 10px 50px 50px 50px;
   justify-content: center;
   align-items: center;
 }
@@ -652,18 +652,18 @@ h2 {
 }
 
 .main-container i:first-child {
-  left: -40px;
+  left: -0px;
 }
 
 .main-container i:last-child {
-  right: -40px;
+  right: 0px;
 }
 
 .main-container .carousel {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
-  gap: 1px;
+  gap: 15px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -681,13 +681,12 @@ h2 {
 
 .carousel .rcm_item {
   scroll-snap-align: start;
-  height: 420px;
+  height: auto;
   list-style: none;
   background: var(--main-background);
 
   display: flex;
   cursor: pointer;
-  padding-bottom: 15px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -702,74 +701,98 @@ h2 {
 .rcm_item .rcm_item-content {
   font-size: 20px;
   background: black;
-  width: 475px;
-  text-align: center;
-  color: #2e4a67;
+  width: 380px;
+  text-align: end;
+  color: #24313f;
   text-shadow: 2px 1px 4px #28323f;
 }
 
-.rcm_item .rcm_item-content .rcm_platform-tags {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 10px 0px;
-  width: 50%;
-}
 
 .rcm_item .rcm_item-content .rcm_price {
   padding: 10px;
+  width: auto-fit;
 }
 
+.rcm_price:hover{
+  color: #fff;
+  text-shadow: 2px 2px 10px #fff;
+}
+
+
+
 @media screen and (max-width: 1150px) {
+  .main-container {
+    display:flex;
+    max-width: 800px;
+    left: 15%;
+
+  }
   .main-container .carousel {
-    grid-auto-columns: calc((100% / 2) - 9px);
+    grid-auto-columns: calc((100% / 2) - 10px);
+  }
+  .carousel .rcm_item {
+    scroll-snap-align: start;
+    height: auto;
+    width: 352px;
+    list-style: none;
+    background: var(--main-background);
+  
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .rcm_item .item-img img {
+  max-width: 100%;
+  height: 380px;
+  object-fit: fill;
+}
+  .rcm_item .rcm_item-content {
+    font-size: 20px;
+    background: black;
+    width: auto-fit;
+    text-align: center;
+    color: #24313f;
+    text-shadow: 2px 1px 4px #28323f;
+  }
+}
+
+@media screen and (max-width: 1016px) {
+  .main-container {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-container {
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .main-container {
+    left: 0%;
   }
 }
 
 @media screen and (max-width: 765px) {
+  .main-container {
+    display:flex;
+    max-width: 420px;
+    left: 5%;
+  }
   .main-container .carousel {
     grid-auto-columns: 100%;
   }
 }
 
-@media screen and (max-width: 360px) {
-  .main-container .carousel {
-    grid-auto-columns: 100%;
+@media screen and (max-width: 400px) {
+  .h2 {
+    font-size: 20px;
   }
-  .carousel .rcm_item {
-    height: 300px;
-  }
-  .rcm_item .item-img {
-    width: 300px;
-    height: 300px;
-    background: #fff;
-  }
+  
 
-  .rcm_item .item-img img {
-    max-width: 100%;
-    height: 300px;
-    object-fit: fill;
-  }
-
-  .rcm_item .rcm_item-content {
-    font-size: 15px;
-    background: black;
-    width: 300px;
-    text-align: end;
-    color: #1f78dd;
-  }
-
-  .rcm_item .rcm_item-content .rcm_platform-tags {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 10px 0px;
-    width: 50%;
-  }
-
-  .rcm_item .rcm_item-content .rcm_price {
-    padding: 10px;
-  }
 }
 
 /* =============== Game Group ================ */
@@ -792,7 +815,7 @@ h2 {
   position: relative;
   flex: 1;
   max-width: 300px;
-  height: 220px;
+  height: auto;
   margin: 10px;
   box-shadow: 0 0 5px rgb(49, 49, 49);
 }
@@ -807,13 +830,12 @@ h2 {
 }
 
 .item-content {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: black;
   color: aliceblue;
-  font-size: 1em;
   height: 45px;
 }
 
@@ -830,11 +852,14 @@ h2 {
 }
 
 .discount span {
-  font-size: 25px;
   color: rgb(190, 238, 17);
   border-radius: 2px;
-  padding: 5px 5px;
+  padding: 5px;
   background-color: rgb(76, 107, 34);
+}
+
+.items-02 .discount span{
+  font-size: 25px;
 }
 
 .price {
@@ -851,14 +876,20 @@ h2 {
 }
 
 .original-price {
-  font-size: 15px;
   color: RGB(115, 136, 149);
   position: relative;
 }
 
 .discounted-price {
-  font-size: 30px;
   color: white;
+}
+
+.items-02 .discounted-price {
+  font-size: 25px;
+}
+
+.items-03 .original-price {
+  font-size: 10px;
 }
 
 .original-price::before {
@@ -892,7 +923,7 @@ h2 {
   position: relative;
   flex: 1;
   max-width: 220px;
-  height: 170px;
+  height: auto;
   margin: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0.2);
 }
@@ -938,7 +969,23 @@ h2 {
   text-decoration: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 835px) {
+  
+  .items-03 .original-price {
+    font-size: 8px;
+  }
+
+  .items-03 .discounted-price {
+    font-size: 10px;
+  }
+  
+  .items-03 .discount span{
+    font-size: 10px;
+  }
+
+  .items-03 .platform-tags i{
+    font-size: 15px;
+  }
   .btn {
     font-size: 15px;
     width: 130px;
@@ -946,7 +993,20 @@ h2 {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
+  
+  .items-01 .price{
+font-size: 10px;
+  }
+  .items-02 .discount span{
+    display: none;
+  }
+  
+  .items-03 .discount span{
+    display: none;
+  }
+
+
   .btn {
     font-size: 10px;
     width: 100px;
