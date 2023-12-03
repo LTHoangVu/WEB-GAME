@@ -1,7 +1,3 @@
-import { loadDataOnCategories, loadGamesOnFeature, loadGamesOnGameGroup, loadGamesOnRecommended } from "./fetchCategories.js";
+import { loadDataOnCategories } from './fetchCategories.js';
 
 loadDataOnCategories();
-loadGamesOnRecommended();
-loadGamesOnGameGroup();
-loadGamesOnFeature();
-
