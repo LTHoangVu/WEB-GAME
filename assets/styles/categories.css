@@ -702,9 +702,9 @@ h2 {
 .rcm_item .rcm_item-content {
   font-size: 20px;
   background: black;
-  width: 380px;
-  text-align: end;
-  color: #24313f;
+  width: 475px;
+  text-align: center;
+  color: #2e4a67;
   text-shadow: 2px 1px 4px #28323f;
 }
 
