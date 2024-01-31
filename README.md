@@ -1,6 +1,6 @@
-<img width="1424" alt="image" src="https://github.com/TruongLeTrule/IE104.O11.CNCL-Group-06/assets/104788686/1f70a25a-3d9e-4fab-9fd2-9796dae72351"># Cyberoyal gamestore
+# Cyberoyal gamestore
 
-<img width="1425" alt="image" src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/4e62e221-dff6-4088-9116-22dc9d07fe29">
+<img width="1424" alt="image" src="https://github.com/TruongLeTrule/IE104.O11.CNCL-Group-06/assets/104788686/1f70a25a-3d9e-4fab-9fd2-9796dae72351">
 
 
 ## 🖥️ Tech Stack
