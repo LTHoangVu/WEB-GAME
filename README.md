@@ -1,6 +1,6 @@
 # Cyberoyal gamestore
 
-<img width="1424" alt="image" src="https://github.com/TruongLeTrule/IE104.O11.CNCL-Group-06/assets/104788686/1f70a25a-3d9e-4fab-9fd2-9796dae72351">
+<img width="1424" alt="image" src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/4e62e221-dff6-4088-9116-22dc9d07fe29">
 
 
 ## 🖥️ Tech Stack
@@ -34,7 +34,18 @@
   </tr>
 </table>
 
-# IE104.O11.CNCL-Group-06
+## Responsive Preview:
+
+<table>
+  <tr>
+    <td><img src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/348b1f8a-1fd7-4e4e-906a-9b9037750892" alt="mockup" /></td>
+    <td><img src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/c6bf5b13-2f78-4a17-a748-75a9d1ec23a0" alt="mockups" /></td>
+  </tr>
+</table>
+
+
+
+# BACKEND
 <ol>
   <li>Set up backend following this <a href="https://github.com/TruongLeTrule/IE104.O11.CNCL-Group-06-BACKEND">repo</a></li>
   <li>Clone this repo to your local</li>
