@@ -1,4 +1,6 @@
-# Cyberoyal gamestore
+<img width="1424" alt="image" src="https://github.com/TruongLeTrule/IE104.O11.CNCL-Group-06/assets/104788686/1f70a25a-3d9e-4fab-9fd2-9796dae72351"># Cyberoyal gamestore
+
+<img width="1425" alt="image" src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/4e62e221-dff6-4088-9116-22dc9d07fe29">
 
 
 ## 🖥️ Tech Stack
@@ -17,6 +19,20 @@
 ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)&nbsp;
 ![jwt](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)&nbsp;
 
+## Preview :
+
+![home](https://github.com/ntritin62/reactjs-bookstore/assets/104788686/4e62e221-dff6-4088-9116-22dc9d07fe29)
+
+<table>
+  <tr>
+    <td><img src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/34053048-8fea-45f8-83eb-82986e4263ea" alt="mockup" /></td>
+    <td><img src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/ee0d346a-22f0-41be-873d-2dda1dabc191" alt="mockups" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/6e04774a-0eb4-42a7-8640-29358605e908" alt="mockup" /></td>
+    <td><img src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/86ae617d-64eb-462c-870e-6bedc6a3db96" alt="mockups" /></td>
+  </tr>
+</table>
 
 # IE104.O11.CNCL-Group-06
 <ol>
