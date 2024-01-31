@@ -1,4 +1,4 @@
-# Cyberoyal gamestore
+<h1># Cyberoyal gamestore</h1>
 
 <img width="1424" alt="image" src="https://github.com/ntritin62/reactjs-bookstore/assets/104788686/4e62e221-dff6-4088-9116-22dc9d07fe29">
 
